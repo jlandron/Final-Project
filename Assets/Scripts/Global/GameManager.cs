@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private int hitPoint;
     private bool _isPaused;
+    //for prototyping only!!!!!! DELETE FOR BUILD!!!
+    private int _numScenes;
 
     private void Awake( ) {
         if( _instance == null ) {
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour {
     }
     private void Start( ) {
         Screen.SetResolution( 1600, 900, false );
+        _numScenes = SceneManager.sceneCount;
     }
     private void Update( ) {
         if( SceneManager.GetActiveScene( ).name == ( "_preload" ) ) {
@@ -37,6 +40,15 @@ public class GameManager : MonoBehaviour {
                 _isPaused = false;
                 Time.timeScale = 1;
             }
+        }
+        //for prototyping only!!!!!! DELETE FOR BUILD!!!
+        if( Input.GetKeyDown( KeyCode.Minus ) ) {
+            int prevScene = SceneManager.GetActiveScene( ).buildIndex - 1;
+            SceneManager.LoadScene( prevScene );
+        }
+        if( Input.GetKeyDown( KeyCode.Equals ) ) {
+            int nextScene = SceneManager.GetActiveScene( ).buildIndex + 1;
+            SceneManager.LoadScene( nextScene );
         }
     }
 
