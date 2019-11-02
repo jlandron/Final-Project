@@ -31,7 +31,9 @@ public class PlayerHealthSystem : MonoBehaviour {
     }
 
     public void UpdateUI( ) {
-        m_HealthDisplay.text = "Health: " + m_Health;
+        if( m_HealthDisplay != null ) {
+            m_HealthDisplay.text = "Health: " + m_Health;
+        }
     }
 
     private void OnTriggerEnter2D( Collider2D collision ) {

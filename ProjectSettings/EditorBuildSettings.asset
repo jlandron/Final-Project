@@ -9,21 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/_preload.unity
     guid: 5c193f0594e36824086bd411fd6d3d0a
   - enabled: 1
-    path: Assets/Scenes/Basic Scene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/GameLevel.unity
+    guid: 7805b84d818fad946b5b005a17bcf8b7
   - enabled: 1
-    path: Assets/Scenes/WeaponAim.unity
-    guid: e508db288d3bf7c409237761c2ab802c
-  - enabled: 1
-    path: Assets/Scenes/PressEToInteractPrototype.unity
-    guid: 3ae96a554a712b4438216bfd07cb7ad6
-  - enabled: 1
-    path: Assets/Scenes/HealthSystem.unity
-    guid: 1aa5cb44e65f2c346b2e8292f7e380dd
-  - enabled: 1
-    path: Assets/Scenes/DrainingBatteryAndRecharge.unity
-    guid: 2f0a289c244cd5549a346013ab447f37
-  - enabled: 1
-    path: Assets/Scenes/2DLightingPrototype.unity
-    guid: 48d287932a6c8434f93c4a4dec1bd740
+    path: Assets/Scenes/RandomDungeon.unity
+    guid: e48b3984083dedd48a0424d7e3ed9300
   m_configObjects: {}

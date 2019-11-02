@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private int hitPoint;
     private bool _isPaused;
+
     //for prototyping only!!!!!! DELETE FOR BUILD!!!
     private int _numScenes;
 
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour {
         if( SceneManager.GetActiveScene( ).name == ( "_preload" ) ) {
             SceneManager.LoadScene( 1 );
         }
+        
         if( Input.GetKeyDown( KeyCode.Q ) ) {
             Application.Quit( );
         }
@@ -41,15 +43,16 @@ public class GameManager : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
-        //for prototyping only!!!!!! DELETE FOR BUILD!!!
-        if( Input.GetKeyDown( KeyCode.Minus ) ) {
-            int prevScene = SceneManager.GetActiveScene( ).buildIndex - 1;
-            SceneManager.LoadScene( prevScene );
-        }
-        if( Input.GetKeyDown( KeyCode.Equals ) ) {
-            int nextScene = SceneManager.GetActiveScene( ).buildIndex + 1;
-            SceneManager.LoadScene( nextScene );
+        
+        if( Debug.isDebugBuild ) {
+            if( Input.GetKeyDown( KeyCode.Minus ) ) {
+                int prevScene = SceneManager.GetActiveScene( ).buildIndex - 1;
+                SceneManager.LoadScene( prevScene );
+            }
+            if( Input.GetKeyDown( KeyCode.Equals ) ) {
+                int nextScene = SceneManager.GetActiveScene( ).buildIndex + 1;
+                SceneManager.LoadScene( nextScene );
+            }
         }
     }
-
 }
