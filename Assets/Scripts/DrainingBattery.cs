@@ -1,36 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class DrainingBattery : MonoBehaviour
-{
-    [SerializeField]
-    private float TotalHp = 100;
-    [SerializeField]
-    public float CurrentHp;
-    
-    void Start()
-    {
-        CurrentHp = TotalHp;
+public class DrainingBattery : MonoBehaviour {
+    private Image _image;
+    private void Start( ) {
+        _image = GetComponent<Image>( );
     }
-
-    void Update()
-    {
-        if (CurrentHp > 0f)
-        {
-            DamageOverTime();
-        }
-        if (CurrentHp < 0f)
-        {
-            CurrentHp = TotalHp;
-        }
-    }
-
-    void DamageOverTime()
-    {
-        CurrentHp -= .05f;
-        transform.localScale = new Vector3((CurrentHp / TotalHp), 1, 1);
+    public void DrainOverTime( float percentage ) {
+        _image.transform.localScale = new Vector3( ( percentage ), 1, 1 );
         // add change color later
+        if( percentage < 0.25f ) {
+            _image.color = Color.red;
+        } else {
+            _image.color = Color.green;
+        }
     }
-
 }

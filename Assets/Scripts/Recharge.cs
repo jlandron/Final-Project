@@ -1,40 +1,45 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
-public class Recharge : MonoBehaviour
-{
+public class Recharge : MonoBehaviour {
     [SerializeField]
-    public DrainingBattery battery;
+    private DrainingBattery battery;
+    [SerializeField]
+    private float maxCharge = 100;
+    [SerializeField]
+    private float currentCharge;
+    [SerializeField]
+    private Light2D light;
+    private bool _charging;
 
-    void Start()
-    {
-        
+    void Start( ) {
+        currentCharge = maxCharge;
+        _charging = false;
     }
 
-    void Update()
-    {
-        
+    void Update( ) {
+        if( currentCharge > 0f && !_charging ) {
+            light.gameObject.SetActive( true );
+            currentCharge -= .05f;
+            battery.DrainOverTime( currentCharge / maxCharge );
+        } else if( _charging ) {
+            light.gameObject.SetActive( true );
+        } else {
+            light.gameObject.SetActive( false );
+        }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        CheckTrigger(collision.gameObject);
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        CheckTrigger(collision.gameObject);
-    }
-
-    private void CheckTrigger(GameObject g)
-    {
-        if (g.name == "LightSource")
-        {
-            if (battery.CurrentHp < 100)
-            {
-                battery.CurrentHp += 0.5f ;
+    private void OnTriggerEnter2D( Collider2D collision ) {
+        if( collision.gameObject.tag == "LightSource" ) {
+            _charging = true;
+            if( currentCharge < maxCharge ) {
+                currentCharge += 0.5f;
             }
+        }
+    }
+
+    private void OnTriggerExit2D( Collider2D collision ) {
+        if( collision.gameObject.tag == "LightSource" ) {
+            _charging = false;
         }
     }
 
