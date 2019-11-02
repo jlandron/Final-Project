@@ -6,9 +6,12 @@ public class Fader : MonoBehaviour {
 
     [SerializeField]
     private Image image;
+    private void Awake( ) {
+        DontDestroyOnLoad( image );
+    }
 
     public IEnumerator FadeOut( float time ) {
-        DontDestroyOnLoad( image );
+        
         float alphaValue = 0;
         while( alphaValue <= 1 ) {
             alphaValue += Time.deltaTime / time;
