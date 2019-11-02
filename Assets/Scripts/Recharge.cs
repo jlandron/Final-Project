@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class Recharge : MonoBehaviour {
@@ -21,19 +22,30 @@ public class Recharge : MonoBehaviour {
         if( currentCharge > 0f && !_charging ) {
             light.gameObject.SetActive( true );
             currentCharge -= .05f;
-            battery.DrainOverTime( currentCharge / maxCharge );
+            
         } else if( _charging ) {
             light.gameObject.SetActive( true );
-        } else {
-            light.gameObject.SetActive( false );
-        }
-    }
-    private void OnTriggerEnter2D( Collider2D collision ) {
-        if( collision.gameObject.tag == "LightSource" ) {
-            _charging = true;
             if( currentCharge < maxCharge ) {
                 currentCharge += 0.5f;
             }
+        } else {
+            light.gameObject.SetActive( false );
+        }
+        battery.SetLevel( currentCharge / maxCharge );
+        SetIntensity( );
+    }
+
+    private void SetIntensity( ) {
+        if( currentCharge / maxCharge <= 0.25f ) {
+            light.intensity = ( ( 4 * currentCharge ) / maxCharge );
+        } else {
+            light.intensity = 1f;
+        }
+    }
+
+    private void OnTriggerEnter2D( Collider2D collision ) {
+        if( collision.gameObject.tag == "LightSource" ) {
+            _charging = true;
         }
     }
 
