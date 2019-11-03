@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dust2
       objectReference: {fileID: 0}
+    - target: {fileID: 1967492123270704, guid: 1bebafe46ad6c91498badf5d89804451, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4072303999023846, guid: 1bebafe46ad6c91498badf5d89804451, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.4
@@ -287,7 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57750975}
   - component: {fileID: 57750976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +413,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ef5b10f5f1873b4a8a4aa48100dff75, type: 2}
+  - {fileID: 2100000, guid: 9fc8e257dc441d14cb1e95197718d5e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -463,6 +467,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fog_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6912302007437971800, guid: e4ead791388f6404f92b5c8ba6b811ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6912302007437971801, guid: e4ead791388f6404f92b5c8ba6b811ee,
         type: 3}
@@ -892,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168199594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LightSources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285168748}
   - component: {fileID: 285168749}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: house3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1359,6 +1368,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun_rays (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3896190172618083185, guid: bdc5bffc844faf442879f786475c26a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3896190172617829079, guid: bdc5bffc844faf442879f786475c26a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1485,7 +1499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 588384881}
   - component: {fileID: 588384880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1567,6 +1581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sun_rays (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3896190172618083185, guid: bdc5bffc844faf442879f786475c26a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3896190172617829079, guid: bdc5bffc844faf442879f786475c26a9,
         type: 3}
@@ -1650,7 +1669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602836617}
   - component: {fileID: 602836616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: train
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1731,7 +1750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622600856}
   - component: {fileID: 622600855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1879,35 +1898,6 @@ PrefabInstance:
       propertyPath: m_HealthDisplay
       value: 
       objectReference: {fileID: 1075470350}
-    - target: {fileID: 1642263940, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7113582
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642263940, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70282966
-      objectReference: {fileID: 0}
-    - target: {fileID: 6885970412139532357, guid: 5747476c963dd2a41941f5e4070b81af,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
-      propertyPath: m_Color.r
-      value: 0.6698113
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
-      propertyPath: m_Color.b
-      value: 0.7776735
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
 --- !u!4 &684620535 stripped
@@ -2076,7 +2066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875508318}
   - component: {fileID: 875508317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2157,7 +2147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885594023}
   - component: {fileID: 885594024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2340,7 +2330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 999120624}
   - component: {fileID: 999120625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2854,7 +2844,7 @@ GameObject:
   - component: {fileID: 1094282480}
   - component: {fileID: 1094282479}
   - component: {fileID: 1094282481}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LoadDungeon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2896,7 +2886,7 @@ Transform:
   m_GameObject: {fileID: 1094282478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.9, y: -3.8, z: 0}
-  m_LocalScale: {x: 7.8125, y: 1, z: 1}
+  m_LocalScale: {x: 10.9375, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -3128,6 +3118,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun_rays (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3896190172618083185, guid: bdc5bffc844faf442879f786475c26a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3896190172617829079, guid: bdc5bffc844faf442879f786475c26a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3210,7 +3205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194734079}
   - component: {fileID: 1194734080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AboveBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3225,8 +3220,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194734078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.354221, y: 5.3518524, z: 50}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalPosition: {x: -8.4, y: 12.9, z: 50}
+  m_LocalScale: {x: 9.115488, y: 9.115488, z: 0.73512}
   m_Children: []
   m_Father: {fileID: 2031997040}
   m_RootOrder: 0
@@ -3360,6 +3355,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248564103}
   m_CullTransparentMesh: 0
+--- !u!1 &1293064837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293064838}
+  - component: {fileID: 1293064840}
+  - component: {fileID: 1293064839}
+  m_Layer: 0
+  m_Name: houses (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1293064838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293064837}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 59.93, y: 4.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1359188431}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1293064839
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293064837}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.2, y: 10.8}
+  m_EdgeRadius: 0
+--- !u!212 &1293064840
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293064837}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1601386359
+  m_SortingLayer: 2
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 38664b655f933244aa4df408bdef1f92, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1359188430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,6 +3502,7 @@ Transform:
   - {fileID: 1522720181}
   - {fileID: 1532226224}
   - {fileID: 1548463139}
+  - {fileID: 1293064838}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3413,6 +3517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ChargingLightSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1527981101670254191, guid: a7be727bdb907c74d98cdd82742f01a4,
         type: 3}
@@ -3522,6 +3631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fog_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 342823323548447103, guid: 16c2c1cf27139e045a7c2213da9cbed9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 342823323548447096, guid: 16c2c1cf27139e045a7c2213da9cbed9,
         type: 3}
@@ -4047,7 +4161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624770648}
   - component: {fileID: 1624770649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4128,7 +4242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1643633462}
   - component: {fileID: 1643633463}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4309,7 +4423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1793299034}
   - component: {fileID: 1793299035}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses4 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4390,7 +4504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844599771}
   - component: {fileID: 1844599772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4488,7 +4602,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1916719557}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
+  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4579,7 +4693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928754700}
   - component: {fileID: 1928754701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4858,7 +4972,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ef5b10f5f1873b4a8a4aa48100dff75, type: 2}
+  - {fileID: 2100000, guid: 9fc8e257dc441d14cb1e95197718d5e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4911,7 +5025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2134504159}
   - component: {fileID: 2134504160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: houses2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4994,6 +5108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartInteractable
       objectReference: {fileID: 0}
+    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373606, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5059,6 +5178,11 @@ PrefabInstance:
       propertyPath: wantToShow
       value: 
       objectReference: {fileID: 30195679}
+    - target: {fileID: 3022276532709661242, guid: 6f1b4e21ffcbef149b90848da1170be3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3022276532709661240, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
