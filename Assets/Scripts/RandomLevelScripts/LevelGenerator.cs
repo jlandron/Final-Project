@@ -126,8 +126,14 @@ public class LevelGenerator : MonoBehaviour {
                 direction = Random.Range( 1, 6 );
             } else {
                 StopGeneration = true;
-                endPoint.transform.position = transform.position;
+                Invoke( "MoveThings", 1 );
             }
         }
+    }
+    /**
+     * Used to place objects around the map after generation of all tiles.  
+     */
+    private void MoveThings( ) {
+        endPoint.transform.position = transform.position;
     }
 }

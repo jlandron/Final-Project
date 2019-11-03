@@ -9,6 +9,7 @@ TagManager:
   - Chunk
   - Wall
   - Fire
+  - End
   layers:
   - Default
   - TransparentFX
