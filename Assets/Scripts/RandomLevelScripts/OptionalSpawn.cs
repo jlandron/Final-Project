@@ -1,17 +1,13 @@
 ﻿using UnityEngine;
 
 public class OptionalSpawn : MonoBehaviour {
+
+    public int spawnPercentage = 50;
+    private int _alwaysSpawn = 100;
     private void Awake( ) {
-        int rand = Random.Range( 0, 2 );
-        switch( rand ) {
-            case 0:
-            gameObject.SetActive( true );
-            break;
-            case 1:
-            gameObject.SetActive( false );
-            break;
-            default:
-            break;
-        }
+        int rand = Random.Range(0, _alwaysSpawn );
+        if(rand > spawnPercentage ) {
+            this.gameObject.SetActive( false );
+        } 
     }
 }

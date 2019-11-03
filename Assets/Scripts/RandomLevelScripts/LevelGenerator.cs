@@ -7,7 +7,9 @@ public class LevelGenerator : MonoBehaviour {
 
     public Transform[] startingPositions;
     public GameObject[] rooms; // index 0 --> closed, index 1 --> LR, index 2 --> LRB, index 3 --> LRT, index 4 --> LRBT
+    public GameObject entryRoom;
     public GameObject[] backgrounds;
+    public GameObject endPoint;
 
     private int direction;
     private bool stopGeneration;
@@ -27,11 +29,11 @@ public class LevelGenerator : MonoBehaviour {
     public bool StopGeneration { get => stopGeneration; private set => stopGeneration = value; }
 
     private void Start( ) {
-        int randStartingPos = Random.Range( 0, startingPositions.Length );
+        int randStartingPos = Random.Range( 1, startingPositions.Length - 1 );
         transform.position = startingPositions[ randStartingPos ].position;
-        Instantiate( rooms[ 1 ], transform.position, Quaternion.identity );
+        Instantiate( entryRoom, transform.position, Quaternion.identity );
         player.transform.position = transform.position;
-        direction = Random.Range( 1, 6 );
+        direction = Random.Range( 1, 5 );
     }
 
     private void Update( ) {
@@ -114,8 +116,6 @@ public class LevelGenerator : MonoBehaviour {
 
                 }
 
-
-
                 Vector2 pos = new Vector2( transform.position.x, transform.position.y - moveIncrement );
                 transform.position = pos;
 
@@ -126,8 +126,8 @@ public class LevelGenerator : MonoBehaviour {
                 direction = Random.Range( 1, 6 );
             } else {
                 StopGeneration = true;
+                endPoint.transform.position = transform.position;
             }
-
         }
     }
 }

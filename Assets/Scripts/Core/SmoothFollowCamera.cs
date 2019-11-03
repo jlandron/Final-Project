@@ -23,10 +23,10 @@ public class SmoothFollowCamera : MonoBehaviour {
             float targetY = m_Target.position.y + m_YOffset;
 
             if( Mathf.Abs( transform.position.x - targetX ) > margin )
-                targetX = Mathf.Lerp( transform.position.x, targetX, 1 / m_DampTime * Time.deltaTime );
+                targetX = Mathf.Lerp( transform.position.x, targetX, m_DampTime * Time.deltaTime );
 
             if( Mathf.Abs( transform.position.y - targetY ) > margin )
-                targetY = Mathf.Lerp( transform.position.y, targetY, 1 / m_DampTime * Time.deltaTime );
+                targetY = Mathf.Lerp( transform.position.y, targetY, m_DampTime * Time.deltaTime );
 
             transform.position = new Vector3( targetX, targetY, transform.position.z );
         }
