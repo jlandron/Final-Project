@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3735429971248463828}
   m_Layer: 8
   m_Name: SpawnChunk
-  m_TagString: Untagged
+  m_TagString: Chunk
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

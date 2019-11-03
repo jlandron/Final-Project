@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - LightSource
+  - Chunk
+  - Wall
   layers:
   - Default
   - TransparentFX
