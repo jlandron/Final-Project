@@ -8,6 +8,7 @@ TagManager:
   - LightSource
   - Chunk
   - Wall
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - 
   - Room
-  - 
+  - DontTouch
   - 
   - 
   - 
