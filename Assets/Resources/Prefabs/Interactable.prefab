@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3022276532251373607}
   - component: {fileID: 3022276532251373600}
   - component: {fileID: 4451695879676479601}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3022276532709661241}
   - component: {fileID: 3022276532709661240}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000089c88ca0
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
