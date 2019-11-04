@@ -423,7 +423,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -486,6 +486,7 @@ MonoBehaviour:
     m_Bits: 307
   m_LaserPoint: {fileID: 8829197462945892178}
   m_LineRenderer: {fileID: 2988553569313160020}
+  m_Reticle: {fileID: 0}
   m_LaserBeamLength: 15
 --- !u!1 &7361931428480787982
 GameObject:

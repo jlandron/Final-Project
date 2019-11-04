@@ -26,7 +26,7 @@ public class PlayerHealthSystem : MonoBehaviour {
             m_Health--;
             UpdateUI( );
         } else {
-            SceneManager.LoadScene( "HealthSystem" );
+            SceneManager.LoadScene( "RandomDungeon_Brown" );
         }
     }
 
