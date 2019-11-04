@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7682016526447280520}
   - component: {fileID: 7682016526447280521}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallSpawnPoint
   m_TagString: Wall
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}

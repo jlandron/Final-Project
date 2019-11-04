@@ -9,7 +9,7 @@ public class WeaponControl : MonoBehaviour
     public LineRenderer m_LineRenderer;
     public ReticleControl m_Reticle;
 
-    public float m_LaserBeamLength = 3f;
+    public float m_LaserBeamLength = 25f;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +53,7 @@ public class WeaponControl : MonoBehaviour
         // Hit enemy, decrease health
         if(hit.collider != null)
         {
-            if (hit.collider.tag == "Enemy")
+            if (hit.collider.gameObject.tag == "Enemy")
             {
                 EnemyBehavior enemy = hit.transform.GetComponent<EnemyBehavior>();
                 if (enemy != null)
@@ -61,8 +61,7 @@ public class WeaponControl : MonoBehaviour
                     enemy.DecrementHealth();
                 }
             }
-            Debug.Log( "Raycast hit: " + hit.collider.gameObject.name );
-
+            
             endPoint = hit.point;
         }
         Debug.DrawLine( startPoint, endPoint, Color.cyan );

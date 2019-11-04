@@ -6,6 +6,8 @@ public class PlayerHealthSystem : MonoBehaviour {
     public Text m_HealthDisplay = null;
 
     private int m_DefaultHealth = 3;
+    private float m_hitTime = 0;
+    private float m_timeBetweenHits = 1;
     private int m_Health;
 
     // Start is called before the first frame update
@@ -13,7 +15,9 @@ public class PlayerHealthSystem : MonoBehaviour {
         m_Health = m_DefaultHealth;
         UpdateUI( );
     }
-
+    private void Update( ) {
+        m_hitTime += Time.deltaTime;
+    }
     public void IncrementHealth( ) {
         if( m_Health < m_DefaultHealth ) {
             m_Health++;
@@ -26,7 +30,10 @@ public class PlayerHealthSystem : MonoBehaviour {
             m_Health--;
             UpdateUI( );
         } else {
-            SceneManager.LoadScene( "RandomDungeon_Brown" );
+            //SceneManager.LoadScene( "RandomDungeon_Brown" );
+            //todo: add fader
+            this.gameObject.transform.position = FindObjectOfType<LevelGenerator>( ).spawnLocation;
+            m_Health = m_DefaultHealth;
         }
     }
 
@@ -37,8 +44,11 @@ public class PlayerHealthSystem : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D( Collider2D collision ) {
-        if( collision.gameObject.tag == "Enemy" ) {
-            DecrementHealth( );
+        if(m_hitTime > m_timeBetweenHits ) {
+            if( collision.gameObject.tag == "Enemy" ) {
+                m_hitTime = 0;
+                DecrementHealth( );
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 313842454712533982}
   - component: {fileID: 313842454712533983}
   - component: {fileID: 313842454712533969}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Forest_terrain_dirt_128px_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

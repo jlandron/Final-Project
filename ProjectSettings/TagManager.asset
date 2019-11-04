@@ -23,9 +23,8 @@ TagManager:
   - Room
   - Player
   - DontTouch
-  - 
-  - 
-  - 
+  - Tiles
+  - Enemy
   - 
   - 
   - 

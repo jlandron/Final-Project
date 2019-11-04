@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6912302007437971801}
   - component: {fileID: 6912302007437971802}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fog_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,6 +10,7 @@ public class LevelGenerator : MonoBehaviour {
     public GameObject entryRoom;
     public GameObject[] backgrounds;
     public GameObject endPoint;
+    public Vector2 spawnLocation;
 
     private int direction;
     private bool stopGeneration;
@@ -31,6 +32,7 @@ public class LevelGenerator : MonoBehaviour {
     private void Start( ) {
         int randStartingPos = Random.Range( 1, startingPositions.Length - 1 );
         transform.position = startingPositions[ randStartingPos ].position;
+        spawnLocation = new Vector2(transform.position.x, transform.position.y);
         Instantiate( entryRoom, transform.position, Quaternion.identity );
         player.transform.position = transform.position;
         direction = Random.Range( 1, 5 );
@@ -96,7 +98,7 @@ public class LevelGenerator : MonoBehaviour {
             if( transform.position.y > minY ) {
                 // Now I must replace the room BEFORE going down with a room that has a DOWN opening, so type 3 or 5
                 Collider2D previousRoom = Physics2D.OverlapCircle( transform.position, 1, whatIsRoom );
-                Debug.Log( previousRoom );
+                
                 if( previousRoom.GetComponent<Room>( ).type != 4 && previousRoom.GetComponent<Room>( ).type != 2 ) {
 
                     // My problem : if the level generation goes down TWICE in a row, there's a chance that the previous room is just 

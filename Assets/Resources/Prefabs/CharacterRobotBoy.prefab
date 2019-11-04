@@ -70,49 +70,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &3502248045089577157
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8829197462945892178}
-  - component: {fileID: 1142961664}
-  m_Layer: 2
-  m_Name: Laser Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8829197462945892178
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3502248045089577157}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.891069, y: -0.4593296, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6885970412118226503}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1142961664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3502248045089577157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c75f5546950cb64bb2c42d24ba71b05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6885970411951852106
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +241,6 @@ Transform:
   - {fileID: 6885970412118226501}
   - {fileID: 6885970412118226497}
   - {fileID: 6885970411951852105}
-  - {fileID: 8829197462945892178}
   - {fileID: 2056960802422665462}
   - {fileID: 2193265615980046925}
   m_Father: {fileID: 0}
@@ -414,7 +370,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 7
+    m_Bits: 2563
 --- !u!114 &6885970412124233605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +416,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6885970412118714983}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0fd5c927bc36cd479602069d5c005f8, type: 3}
   m_Name: 
@@ -476,7 +432,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6885970412118714983}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac4a1f74aee75246aa64b6daeccc2d9, type: 3}
   m_Name: 
@@ -497,10 +453,10 @@ MonoBehaviour:
   m_MainCamera: {fileID: 0}
   m_HitLayer:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 4608
   m_LineRenderer: {fileID: 2988553569313160020}
   m_Reticle: {fileID: 2193265615980046899}
-  m_LaserBeamLength: 20
+  m_LaserBeamLength: 100
 --- !u!1 &7361931428480787982
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +486,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6885970412118226503}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &2988553569313160020
 LineRenderer:
@@ -641,11 +597,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reticle
       objectReference: {fileID: 0}
-    - target: {fileID: 596957745764186800, guid: b78ce5d6d6bc43441bfed25430954ab9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 596957745764186831, guid: b78ce5d6d6bc43441bfed25430954ab9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -684,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 596957745764186831, guid: b78ce5d6d6bc43441bfed25430954ab9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 596957745764186831, guid: b78ce5d6d6bc43441bfed25430954ab9,
         type: 3}

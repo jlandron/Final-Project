@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2165217436824673571}
   - component: {fileID: 2165217436824673756}
   - component: {fileID: 2165217436824673570}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Forest_terrain_red_128px_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

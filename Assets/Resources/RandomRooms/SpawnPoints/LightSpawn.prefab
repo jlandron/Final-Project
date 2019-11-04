@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8237649601946727352}
   - component: {fileID: 6317894518332238467}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3896190172617829079}
   - component: {fileID: 3896190172637272385}
   - component: {fileID: 3896190172638094825}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sun_rays
   m_TagString: Untagged
   m_Icon: {fileID: 0}

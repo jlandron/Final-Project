@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2251507981706344875}
   - component: {fileID: 2251507981706344874}
   - component: {fileID: 2251507981706344872}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Forest_terrain_blue_128px_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

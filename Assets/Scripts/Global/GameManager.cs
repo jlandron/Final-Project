@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
-#if UNITY_EDITOR
+
         if( Debug.isDebugBuild ) {
             if( Input.GetKeyDown( KeyCode.Minus ) ) {
                 int prevScene = SceneManager.GetActiveScene( ).buildIndex - 1;
@@ -55,5 +55,5 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
-#endif
+
 }
