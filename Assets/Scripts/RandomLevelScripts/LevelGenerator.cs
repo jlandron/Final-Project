@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class LevelGenerator : MonoBehaviour {
 
     public Transform[] startingPositions;
-    public Transform startingPosition;
     public GameObject[] rooms; // index 0 --> closed, index 1 --> LR, index 2 --> LRB, index 3 --> LRT, index 4 --> LRBT
+    public GameObject entryRoom;
+    public GameObject[] backgrounds;
+    public GameObject endPoint;
 
     private int direction;
     private bool stopGeneration;
@@ -27,12 +29,11 @@ public class LevelGenerator : MonoBehaviour {
     public bool StopGeneration { get => stopGeneration; private set => stopGeneration = value; }
 
     private void Start( ) {
-
-        int randStartingPos = Random.Range( 0, startingPositions.Length );
+        int randStartingPos = Random.Range( 1, startingPositions.Length - 1 );
         transform.position = startingPositions[ randStartingPos ].position;
-        Instantiate( rooms[ 1 ], transform.position, Quaternion.identity );
+        Instantiate( entryRoom, transform.position, Quaternion.identity );
         player.transform.position = transform.position;
-        direction = Random.Range( 1, 6 );
+        direction = Random.Range( 1, 5 );
     }
 
     private void Update( ) {
@@ -96,16 +97,16 @@ public class LevelGenerator : MonoBehaviour {
                 // Now I must replace the room BEFORE going down with a room that has a DOWN opening, so type 3 or 5
                 Collider2D previousRoom = Physics2D.OverlapCircle( transform.position, 1, whatIsRoom );
                 Debug.Log( previousRoom );
-                if( previousRoom.GetComponent<RoomType>( ).type != 4 && previousRoom.GetComponent<RoomType>( ).type != 2 ) {
+                if( previousRoom.GetComponent<Room>( ).type != 4 && previousRoom.GetComponent<Room>( ).type != 2 ) {
 
                     // My problem : if the level generation goes down TWICE in a row, there's a chance that the previous room is just 
                     // a LRB, meaning there's no TOP opening for the other room ! 
 
                     if( downCounter >= 2 ) {
-                        previousRoom.GetComponent<RoomType>( ).DestroyRoom( );
+                        previousRoom.GetComponent<Room>( ).DestroyRoom( );
                         Instantiate( rooms[ 4 ], transform.position, Quaternion.identity );
                     } else {
-                        previousRoom.GetComponent<RoomType>( ).DestroyRoom( );
+                        previousRoom.GetComponent<Room>( ).DestroyRoom( );
                         int randRoomDownOpening = Random.Range( 2, 5 );
                         if( randRoomDownOpening == 3 ) {
                             randRoomDownOpening = 2;
@@ -114,8 +115,6 @@ public class LevelGenerator : MonoBehaviour {
                     }
 
                 }
-
-
 
                 Vector2 pos = new Vector2( transform.position.x, transform.position.y - moveIncrement );
                 transform.position = pos;
@@ -127,8 +126,14 @@ public class LevelGenerator : MonoBehaviour {
                 direction = Random.Range( 1, 6 );
             } else {
                 StopGeneration = true;
+                Invoke( "MoveThings", 1 );
             }
-
         }
+    }
+    /**
+     * Used to place objects around the map after generation of all tiles.  
+     */
+    private void MoveThings( ) {
+        endPoint.transform.position = transform.position;
     }
 }

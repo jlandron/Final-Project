@@ -27,6 +27,7 @@ public class LoadDungeon : MonoBehaviour
 
         DontDestroyOnLoad( gameObject );
         _fader = FindObjectOfType<Fader>( );
+        DontDestroyOnLoad( _fader );
         if( !_fader ) {
             Debug.Log( "fader not found!" );
         }
@@ -36,6 +37,7 @@ public class LoadDungeon : MonoBehaviour
         
         yield return new WaitForSeconds( fadeInTime );
         yield return _fader.FadeIn( fadeInTime );
+        Destroy( _fader );
         Destroy( gameObject );
     }
 }
