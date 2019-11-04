@@ -13,7 +13,9 @@ public class Fader : MonoBehaviour {
         while( alphaValue <= 1 ) {
             alphaValue += Time.deltaTime / time;
             Color c = new Color( 0, 0, 0, alphaValue );
-            image.color = c;
+            if( image != null ) {
+                image.color = c;
+            }
             yield return null;
         }
     }
@@ -22,7 +24,9 @@ public class Fader : MonoBehaviour {
         while( alphaValue >= 0 ) {
             alphaValue -= Time.deltaTime / time;
             Color c = new Color( 0, 0, 0, alphaValue );
-            image.color = c;
+            if(image != null ) {
+                image.color = c;
+            }
             yield return null;
         }
     }

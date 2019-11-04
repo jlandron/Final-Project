@@ -18,7 +18,7 @@ public class SmoothFollowCamera : MonoBehaviour {
     }
 
     void Update( ) {
-        if( m_Target ) {
+        if( m_Target != null) {
             float targetX = m_Target.position.x + m_XOffset;
             float targetY = m_Target.position.y + m_YOffset;
 
