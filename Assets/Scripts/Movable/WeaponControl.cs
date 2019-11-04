@@ -4,61 +4,70 @@ using UnityEngine;
 
 public class WeaponControl : MonoBehaviour
 {
-    public Camera m_MainCamera = null;
-    private bool direction = false;
+    public Camera m_MainCamera;
+    public LayerMask m_HitLayer;
+    public Transform m_LaserPoint;
+    public LineRenderer m_LineRenderer;
+    public GameObject m_Reticle;
+
+    public float m_LaserBeamLength = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
         m_MainCamera = Camera.main;
-        direction = true;
+        m_LaserPoint = transform.FindChild("Laser Point");
+        Debug.Assert(m_LaserPoint != null);
+        Debug.Assert(m_LineRenderer != null);
+        m_LineRenderer.enabled = false;
+
+        m_Reticle = Resources.Load("Prefabs/Reticle") as GameObject;
+        Instantiate(m_Reticle);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Code used is from following this tutorial: https://www.youtube.com/watch?v=47xWM1RcY3Y
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float rotation = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        // Rotation
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 5f;
-
-        Vector3 objectPos = m_MainCamera.WorldToScreenPoint(transform.position);
-
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
-
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
-        if (angle > 0f && angle < 100f || angle < 0f && angle > -90f)
+        if(Input.GetButton("Fire1"))
         {
-            if (direction == false)
-            {
-                direction = true;
-                Flip();
-            }
+            Shoot();
         }
-
-        if (angle > 100f && angle < 180f || angle < -90f && angle > -180f)
+        else
         {
-            if (direction == true)
-            {
-                direction = false;
-
-                Flip();
-            }
+            m_LineRenderer.enabled = false;
         }
     }
 
-    public void Flip()
+    public void Shoot()
     {
-        Vector3 flipScale = transform.localScale;
-        flipScale.x *= -1;
-        transform.localScale = flipScale;
+        m_LineRenderer.enabled = true;
+        // Get vectors for mouse and where the laser starts and ends
+        Vector2 mousePos = new Vector2(m_MainCamera.ScreenToWorldPoint(Input.mousePosition).x, m_MainCamera.ScreenToWorldPoint(Input.mousePosition).y);
+        Vector2 laserStartPos = new Vector2(m_LaserPoint.position.x, m_LaserPoint.position.y);
+        Vector2 laserEndPos = laserStartPos + (laserStartPos * m_LaserBeamLength);
 
-        Vector3 flipScaleParent = transform.parent.localScale;
-        flipScaleParent.x *= -1;
-        transform.parent.localScale = flipScaleParent;
+        RaycastHit2D hit = Physics2D.Raycast(laserStartPos, mousePos - laserStartPos, m_LaserBeamLength, m_HitLayer);
+        Debug.DrawLine(laserStartPos, (mousePos - laserStartPos) * 100, Color.cyan);
+        // Hit enemy, decrease health
+        if(hit != null && hit.collider != null)
+        {
+            if (hit.collider.tag == "Enemy")
+            {
+                EnemyBehavior enemy = hit.transform.GetComponent<EnemyBehavior>();
+                if (enemy != null)
+                {
+                    enemy.DecrementHealth();
+                }
+            }
+
+            laserEndPos = hit.point;
+        }
+
+        // Render line at start and end points
+        m_LineRenderer.SetPosition(0, laserStartPos);
+        m_LineRenderer.SetPosition(1, laserEndPos);
     }
 }
