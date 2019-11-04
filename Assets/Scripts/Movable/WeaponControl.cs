@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class WeaponControl : MonoBehaviour
-{
+public class WeaponControl : MonoBehaviour {
     public Camera m_MainCamera;
     public LayerMask m_HitLayer;
     public LineRenderer m_LineRenderer;
@@ -12,35 +9,29 @@ public class WeaponControl : MonoBehaviour
     public float m_LaserBeamLength = 25f;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start( ) {
         m_MainCamera = Camera.main;
         m_Reticle = GetComponentInChildren<ReticleControl>( );
         m_LineRenderer = GetComponentInChildren<LineRenderer>( );
-        Debug.Assert( m_LineRenderer != null);
-        Debug.Assert(m_LineRenderer != null);
+        Debug.Assert( m_LineRenderer != null );
+        Debug.Assert( m_LineRenderer != null );
         m_LineRenderer.useWorldSpace = true;
-        m_LineRenderer.enabled = true ;
+        m_LineRenderer.enabled = true;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetButton("Fire1"))
-        {
-            Shoot();
-        }
-        else
-        {
+    void Update( ) {
+        if( Input.GetButton( "Fire1" ) ) {
+            Shoot( );
+        } else {
             m_LineRenderer.enabled = false;
         }
     }
 
-    public void Shoot()
-    {
+    public void Shoot( ) {
         m_LineRenderer.enabled = true;
 
-        Vector2 startPoint = this.gameObject.transform.position;
+        Vector2 startPoint = gameObject.transform.position;
         Vector2 endPoint = m_Reticle.gameObject.transform.position;
         // Get vectors for mouse and where the laser starts and ends
         //Vector2 mousePos = new Vector2(m_MainCamera.ScreenToWorldPoint(Input.mousePosition).x, m_MainCamera.ScreenToWorldPoint(Input.mousePosition).y);
@@ -48,26 +39,23 @@ public class WeaponControl : MonoBehaviour
         //Vector2 laserEndPos = laserStartPos + (laserStartPos * m_LaserBeamLength);
 
         //TODO: set max shoot distance
-        RaycastHit2D hit = Physics2D.Raycast( startPoint, endPoint, m_LaserBeamLength, m_HitLayer);
-        
+        RaycastHit2D hit = Physics2D.Raycast( startPoint, endPoint, m_LaserBeamLength, m_HitLayer );
+
         // Hit enemy, decrease health
-        if(hit.collider != null)
-        {
-            if (hit.collider.gameObject.tag == "Enemy")
-            {
-                EnemyBehavior enemy = hit.transform.GetComponent<EnemyBehavior>();
-                if (enemy != null)
-                {
-                    enemy.DecrementHealth();
+        if( hit.collider != null ) {
+            if( hit.collider.gameObject.tag == "Enemy" ) {
+                EnemyBehavior enemy = hit.transform.GetComponent<EnemyBehavior>( );
+                if( enemy != null ) {
+                    enemy.DecrementHealth( );
                 }
             }
-            
+
             endPoint = hit.point;
         }
         Debug.DrawLine( startPoint, endPoint, Color.cyan );
         m_LineRenderer.SetVertexCount( 2 );
         // Render line at start and end points
-        m_LineRenderer.SetPosition(0, startPoint );
-        m_LineRenderer.SetPosition(1, endPoint );
+        m_LineRenderer.SetPosition( 0, startPoint );
+        m_LineRenderer.SetPosition( 1, endPoint );
     }
 }
