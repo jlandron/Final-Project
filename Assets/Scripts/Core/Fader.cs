@@ -6,9 +6,6 @@ public class Fader : MonoBehaviour {
 
     [SerializeField]
     private Image image;
-    private void Awake( ) {
-        DontDestroyOnLoad( image );
-    }
 
     public IEnumerator FadeOut( float time ) {
         

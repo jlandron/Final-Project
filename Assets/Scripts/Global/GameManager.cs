@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
         }
     }
     private void Start( ) {
-        Screen.SetResolution( 1600, 900, false );
+        Screen.SetResolution( 1920, 1080, false );
         _numScenes = SceneManager.sceneCount;
     }
     private void Update( ) {

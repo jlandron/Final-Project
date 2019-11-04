@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class ReticleControl : MonoBehaviour
 {
-    public Camera m_MainCamera = null;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        m_MainCamera = Camera.main;
-    }
-
-    // Update is called once per frame
+    private Vector3 mouseCoords;
+    public float MouseSensitivity = 0.1f;
     void Update()
     {
-        transform.position = m_MainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mouseCoords = Input.mousePosition;
+        mouseCoords = Camera.main.ScreenToWorldPoint( mouseCoords );
+        this.gameObject.transform.position = Vector2.Lerp( transform.position, mouseCoords, MouseSensitivity );
     }
 }
