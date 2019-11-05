@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Game.Core;
 
-namespace GAME.Ui {
+namespace Game.UI {
 
     public class ButtonHandler : MonoBehaviour {
         public void LoadLevel( ) {
-            SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1 );
+            Debug.Log( "Loading next Level" );
+            int nextScene = SceneManager.GetActiveScene( ).buildIndex + 1;
+            FindObjectOfType<LoadLevel>( ).DoLoad( nextScene );
         }
 
         public void QuitGame( ) {

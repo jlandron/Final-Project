@@ -1,53 +1,56 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Game.RandomRoom;
 
-public class PlayerHealthSystem : MonoBehaviour {
-    public Text m_HealthDisplay = null;
+    namespace Game.Movable {
+    public class PlayerHealthSystem : MonoBehaviour {
+        public Text m_HealthDisplay = null;
 
-    private int m_DefaultHealth = 3;
-    private float m_hitTime = 0;
-    private float m_timeBetweenHits = 1;
-    private int m_Health;
+        private int m_DefaultHealth = 3;
+        private float m_hitTime = 0;
+        private float m_timeBetweenHits = 1;
+        private int m_Health;
 
-    // Start is called before the first frame update
-    void Start( ) {
-        m_Health = m_DefaultHealth;
-        UpdateUI( );
-    }
-    private void Update( ) {
-        m_hitTime += Time.deltaTime;
-    }
-    public void IncrementHealth( ) {
-        if( m_Health < m_DefaultHealth ) {
-            m_Health++;
-            UpdateUI( );
-        }
-    }
-
-    public void DecrementHealth( ) {
-        if( m_Health > 1 ) {
-            m_Health--;
-            UpdateUI( );
-        } else {
-            //SceneManager.LoadScene( "RandomDungeon_Brown" );
-            //todo: add fader
-            this.gameObject.transform.position = FindObjectOfType<LevelGenerator>( ).spawnLocation;
+        // Start is called before the first frame update
+        void Start( ) {
             m_Health = m_DefaultHealth;
+            UpdateUI( );
         }
-    }
-
-    public void UpdateUI( ) {
-        if( m_HealthDisplay != null ) {
-            m_HealthDisplay.text = "Health: " + m_Health;
+        private void Update( ) {
+            m_hitTime += Time.deltaTime;
         }
-    }
+        public void IncrementHealth( ) {
+            if( m_Health < m_DefaultHealth ) {
+                m_Health++;
+                UpdateUI( );
+            }
+        }
 
-    private void OnTriggerEnter2D( Collider2D collision ) {
-        if(m_hitTime > m_timeBetweenHits ) {
-            if( collision.gameObject.tag == "Enemy" ) {
-                m_hitTime = 0;
-                DecrementHealth( );
+        public void DecrementHealth( ) {
+            if( m_Health > 1 ) {
+                m_Health--;
+                UpdateUI( );
+            } else {
+                //SceneManager.LoadScene( "RandomDungeon_Brown" );
+                //todo: add fader
+                this.gameObject.transform.position = FindObjectOfType<LevelGenerator>( ).spawnLocation;
+                m_Health = m_DefaultHealth;
+            }
+        }
+
+        public void UpdateUI( ) {
+            if( m_HealthDisplay != null ) {
+                m_HealthDisplay.text = "Health: " + m_Health;
+            }
+        }
+
+        private void OnTriggerEnter2D( Collider2D collision ) {
+            if( m_hitTime > m_timeBetweenHits ) {
+                if( collision.gameObject.tag == "Enemy" ) {
+                    m_hitTime = 0;
+                    DecrementHealth( );
+                }
             }
         }
     }

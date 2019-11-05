@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    private static GameManager _instance = null;
-
     [SerializeField]
     private int hitPoint;
     private bool _isPaused;
@@ -12,12 +10,19 @@ public class GameManager : MonoBehaviour {
     //for prototyping only!!!!!! DELETE FOR BUILD!!!
     private int _numScenes;
 
+    [SerializeField] GameObject[] peristantObjectPrefabs;
+
+    static bool hasSpawned = false;
+
     private void Awake( ) {
-        if( _instance == null ) {
-            _instance = this;
-        } else {
-            Destroy( this );
+        
+        if( hasSpawned ) {
+            return;
         }
+
+        SpawnPersistantObjects( );
+
+        hasSpawned = true;
     }
     private void Start( ) {
         Screen.SetResolution( 1920, 1080, true );
@@ -25,9 +30,9 @@ public class GameManager : MonoBehaviour {
     }
     private void Update( ) {
         if( SceneManager.GetActiveScene( ).name == ( "_preload" ) ) {
-            SceneManager.LoadScene( 1 );
+            SceneManager.LoadScene(1);
         }
-        
+
         if( Input.GetKeyDown( KeyCode.Q ) ) {
             Application.Quit( );
         }
@@ -55,5 +60,10 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
-
+    private void SpawnPersistantObjects( ) {
+        foreach( GameObject gameObject in peristantObjectPrefabs ) {
+            GameObject persistantObject = Instantiate( gameObject );
+            DontDestroyOnLoad( persistantObject );
+        }
+    }
 }
