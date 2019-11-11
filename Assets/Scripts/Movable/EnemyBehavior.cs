@@ -1,54 +1,150 @@
-﻿using UnityEngine;
-namespace Game.Movable {
-    public class EnemyBehavior : MonoBehaviour {
-        private float speed = 2.5f;
-        private float range = 7f;
+﻿using Pathfinding;
+using UnityEngine;
+
+namespace Game.Movable
+{
+    public class EnemyBehavior : MonoBehaviour
+    {
+
+        private float targetRange = 5f;
+        private float tetherDistence = 14f;
         private Transform target;
         private SpriteRenderer spriteRenderer;
 
-        private int m_DefaultHealth = 3;
+        private int m_DefaultHealth = 5;
         private int m_Health;
         //keeps the ray from hitting 3 times extreamly fast
         private float m_hitTime = 0;
-        private float m_timeBetweenHits = 1;
+        private float m_timeBetweenHits = 0.5f;
+
+        [SerializeField]
+        private GameObject hitText;
+        private bool isDead = false;
+
+        public AIPath aIPath;
+
+        private string[] hitStrings = { "Ouch!", "Beep", "Boop", "BZZZZ" };
+        private bool isChasing = false;
+
+        public float radius = 20;
+
+        private IAstarAI ai;
+        private AIDestinationSetter aIDestinationSetter;
 
         // Start is called before the first frame update
-        void Start( ) {
-            target = GameObject.FindGameObjectWithTag( "Player" ).GetComponent<Transform>( );
-            spriteRenderer = GetComponent<SpriteRenderer>( );
-            Debug.Assert( target != null );
+        void Start()
+        {
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            aIPath = GetComponent<AIPath>();
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            aIDestinationSetter = GetComponent<AIDestinationSetter>();
+            ai = GetComponent<IAstarAI>();
+            Debug.Assert(target != null);
             m_Health = m_DefaultHealth;
         }
 
         // Update is called once per frame
-        void Update( ) {
-            // Calculate distance to target
-            float distance = Vector2.Distance( transform.position, target.position );
-            // Get direction to raycast
-            Vector2 rayDirection = transform.position - target.transform.position;
-            // If within range, check for line of sight and chase
-            if( distance < range ) {
-                // Move towards target with speed
-                //TODO: add wall colision detection and avoidence
-                transform.position = Vector2.MoveTowards( transform.position, target.position, speed * Time.smoothDeltaTime );
-                // Rotate towards target
-                //Vector2 targetPostition = new Vector2(this.transform.position.x, target.position.y);
-                //transform.LookAt(targetPostition);
+        void Update()
+        {
+            if (!isDead)
+            {
+                DoChasing();
+                CheckFlipSprite();
+                m_hitTime += Time.deltaTime;
             }
-            m_hitTime += Time.deltaTime;
+            else
+            {
+                aIPath.enabled = false;
+            }
         }
 
-        public void DecrementHealth( ) {
-            if( m_hitTime > m_timeBetweenHits ) {
-                if( m_Health > 1 ) {
+        private void CheckFlipSprite()
+        {
+            if (aIPath.desiredVelocity.x >= 0.01f) //moving right
+            {
+
+                spriteRenderer.transform.localScale = new Vector3(-1f, 1f, 1f); //flip 
+            }
+            else if (aIPath.desiredVelocity.x <= -0.01f) //moving left
+            {
+                spriteRenderer.transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+        }
+
+        private void DoChasing()
+        {
+            if (Vector2.Distance(transform.position, target.position) <= targetRange && !isChasing)
+            {
+                ai.maxSpeed = 2;
+                isChasing = true;
+                aIDestinationSetter.enabled = true;
+            }
+            else if (!isChasing || Vector2.Distance(transform.position, target.position) > tetherDistence)
+            {
+                isChasing = false;
+                aIDestinationSetter.enabled = false;
+                DoWandering();
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                DecrementHealth();
+            }
+        }
+        public void DecrementHealth()
+        {
+            if (m_hitTime > m_timeBetweenHits)
+            {
+                if (m_Health > 1)
+                {
                     m_hitTime = 0;
                     m_Health--;
-                    Debug.Log( "Enemy: ouch!" );
-                } else {
-                    Destroy( gameObject );
+                    if (hitText != null)
+                    {
+                        ShowText();
+                    }
+
+                    Debug.Log("Enemy: ouch!");
+                }
+                else
+                {
+                    //Destroy(gameObject);
+                    isDead = true;
+                    GetComponent<BoxCollider2D>().isTrigger = false;
+                    gameObject.tag = "Dead";
+                    GetComponent<Rigidbody2D>().gravityScale = 0.5f;
                 }
             }
         }
-    }
 
+        private void ShowText()
+        {
+            GameObject go = Instantiate(hitText, transform.position, Quaternion.identity);
+            go.GetComponent<TextMesh>().color = Color.red;
+            int stringChoice = Random.Range(0, hitStrings.Length);
+            go.GetComponent<TextMesh>().text = hitStrings[stringChoice];
+        }
+
+        Vector3 PickRandomPoint()
+        {
+            Vector3 point = Random.insideUnitSphere * radius;
+
+            point.y = 0;
+            point += transform.position;
+            return point;
+        }
+        void DoWandering()
+        {
+            ai.maxSpeed = 1;
+            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            {
+                ai.destination = PickRandomPoint();
+                ai.SearchPath();
+            }
+        }
+
+}
 }

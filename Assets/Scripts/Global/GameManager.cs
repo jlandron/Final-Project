@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     [SerializeField]
-    private int hitPoint;
     private bool _isPaused;
 
     //for prototyping only!!!!!! DELETE FOR BUILD!!!

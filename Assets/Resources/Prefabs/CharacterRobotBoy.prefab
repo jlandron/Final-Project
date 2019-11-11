@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1642263940}
   - component: {fileID: 1642263941}
   m_Layer: 2
-  m_Name: Point Light 2D (1)
+  m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,7 @@ MonoBehaviour:
   battery: {fileID: 0}
   maxCharge: 100
   currentCharge: 0
-  light: {fileID: 6885970411951852104}
+  _light: {fileID: 1642263941}
 --- !u!114 &5615930492991112954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthDisplay: {fileID: 0}
+  deadPrefab: {fileID: 0}
 --- !u!114 &7254605259667538353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,11 +593,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6885970412118226503}
     m_Modifications:
-    - target: {fileID: 596957745764186800, guid: b78ce5d6d6bc43441bfed25430954ab9,
-        type: 3}
-      propertyPath: m_Name
-      value: Reticle
-      objectReference: {fileID: 0}
     - target: {fileID: 596957745764186831, guid: b78ce5d6d6bc43441bfed25430954ab9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -651,6 +647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 596957745764186800, guid: b78ce5d6d6bc43441bfed25430954ab9,
+        type: 3}
+      propertyPath: m_Name
+      value: Reticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b78ce5d6d6bc43441bfed25430954ab9, type: 3}

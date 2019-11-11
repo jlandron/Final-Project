@@ -12,6 +12,9 @@ using Game.RandomRoom;
         private float m_timeBetweenHits = 1;
         private int m_Health;
 
+        [SerializeField]
+        GameObject deadPrefab;
+
         // Start is called before the first frame update
         void Start( ) {
             m_Health = m_DefaultHealth;
@@ -19,21 +22,22 @@ using Game.RandomRoom;
         }
         private void Update( ) {
             m_hitTime += Time.deltaTime;
+            UpdateUI();
         }
         public void IncrementHealth( ) {
             if( m_Health < m_DefaultHealth ) {
                 m_Health++;
-                UpdateUI( );
             }
         }
 
         public void DecrementHealth( ) {
             if( m_Health > 1 ) {
                 m_Health--;
-                UpdateUI( );
             } else {
-                //SceneManager.LoadScene( "RandomDungeon_Brown" );
-                //todo: add fader
+                if(deadPrefab != null)
+                {
+                    Instantiate(deadPrefab, transform.position, Quaternion.identity);
+                }
                 this.gameObject.transform.position = FindObjectOfType<LevelGenerator>( ).spawnLocation;
                 m_Health = m_DefaultHealth;
             }

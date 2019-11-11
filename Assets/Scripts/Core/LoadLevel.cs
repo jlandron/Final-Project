@@ -12,7 +12,10 @@ namespace Game.Core {
 
         private Fader _fader;
         private void OnTriggerEnter2D( Collider2D collision ) {
-            StartCoroutine( Transition() );
+            if(collision.gameObject.tag == "Player")
+            {
+                StartCoroutine(Transition());
+            }
         }
 
         public void DoLoad( int level ) {
