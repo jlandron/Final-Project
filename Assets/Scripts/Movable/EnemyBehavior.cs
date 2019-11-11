@@ -5,31 +5,38 @@ namespace Game.Movable
 {
     public class EnemyBehavior : MonoBehaviour
     {
-
+        [SerializeField]
         private float targetRange = 5f;
+        [SerializeField]
         private float tetherDistence = 14f;
+        
         private Transform target;
         private SpriteRenderer spriteRenderer;
+        private ParticleSystem trail;
 
+        [SerializeField]
         private int m_DefaultHealth = 5;
+        [SerializeField]
         private int m_Health;
-        //keeps the ray from hitting 3 times extreamly fast
+        //keeps the laser from hitting 3 times extreamly fast
         private float m_hitTime = 0;
         private float m_timeBetweenHits = 0.5f;
 
         [SerializeField]
         private GameObject hitText;
+        [SerializeField]
         private bool isDead = false;
 
         public AIPath aIPath;
-
+        [SerializeField]
         private string[] hitStrings = { "Ouch!", "Beep", "Boop", "BZZZZ" };
         private bool isChasing = false;
-
+        [SerializeField]
         public float radius = 20;
 
         private IAstarAI ai;
         private AIDestinationSetter aIDestinationSetter;
+
 
         // Start is called before the first frame update
         void Start()
@@ -38,11 +45,12 @@ namespace Game.Movable
             aIPath = GetComponent<AIPath>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             aIDestinationSetter = GetComponent<AIDestinationSetter>();
+            trail = GetComponentInChildren<ParticleSystem>();
             ai = GetComponent<IAstarAI>();
             Debug.Assert(target != null);
             m_Health = m_DefaultHealth;
-        }
 
+        }
         // Update is called once per frame
         void Update()
         {
@@ -51,11 +59,14 @@ namespace Game.Movable
                 DoChasing();
                 CheckFlipSprite();
                 m_hitTime += Time.deltaTime;
+                //keep the enemy from rotating due to collisions
+                this.gameObject.transform.rotation = Quaternion.identity;
             }
             else
             {
                 aIPath.enabled = false;
             }
+            
         }
 
         private void CheckFlipSprite()
@@ -86,15 +97,15 @@ namespace Game.Movable
                 DoWandering();
             }
         }
-
-        private void OnTriggerEnter2D(Collider2D collision)
+ 
+        private void OnParticleCollision(GameObject other)
         {
-            if (collision.gameObject.tag == "Player")
-            {
-                DecrementHealth();
-            }
+            Debug.Log("Particle Collision");
+            DecrementHealth();
         }
-        public void DecrementHealth()
+        
+
+        private void DecrementHealth()
         {
             if (m_hitTime > m_timeBetweenHits)
             {
@@ -106,8 +117,6 @@ namespace Game.Movable
                     {
                         ShowText();
                     }
-
-                    Debug.Log("Enemy: ouch!");
                 }
                 else
                 {
@@ -116,6 +125,7 @@ namespace Game.Movable
                     GetComponent<BoxCollider2D>().isTrigger = false;
                     gameObject.tag = "Dead";
                     GetComponent<Rigidbody2D>().gravityScale = 0.5f;
+                    trail.gameObject.SetActive(false);
                 }
             }
         }
@@ -145,6 +155,5 @@ namespace Game.Movable
                 ai.SearchPath();
             }
         }
-
-}
+    }
 }

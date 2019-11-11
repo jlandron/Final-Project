@@ -1,62 +1,54 @@
-﻿using UnityEngine;
-namespace Game.Movable {
-    public class WeaponControl : MonoBehaviour {
-        public Camera m_MainCamera;
-        public LayerMask m_HitLayer;
-        public LineRenderer m_LineRenderer;
+﻿using System.Collections;
+using UnityEngine;
+namespace Game.Movable
+{
+    public class WeaponControl : MonoBehaviour
+    {
         public ReticleControl m_Reticle;
 
-        public float m_LaserBeamLength = 25f;
+        [SerializeField]
+        private ParticleSystem gun;
+        [SerializeField]
+        private float fireRate = 1;
+        private bool canfire = true;
 
         // Start is called before the first frame update
-        void Start( ) {
-            m_MainCamera = Camera.main;
-            m_Reticle = GetComponentInChildren<ReticleControl>( );
-            m_LineRenderer = GetComponentInChildren<LineRenderer>( );
-            Debug.Assert( m_LineRenderer != null );
-            Debug.Assert( m_LineRenderer != null );
-            m_LineRenderer.useWorldSpace = true;
-            m_LineRenderer.enabled = true;
+        void Start()
+        {
+            m_Reticle = GetComponentInChildren<ReticleControl>();
         }
 
         // Update is called once per frame
-        void Update( ) {
-            if( Input.GetButton( "Fire1" ) ) {
-                Shoot( );
-            } else {
-                m_LineRenderer.enabled = false;
+        void Update()
+        {
+            UpdateGunRotation();
+            
+            if (Input.GetButton("Fire1"))
+            {
+                if (canfire)
+                {
+                    StartCoroutine(HandleShoot());
+                }
             }
         }
 
-        public void Shoot( ) {
-            m_LineRenderer.enabled = true;
-
+        private void UpdateGunRotation()
+        {
             Vector2 startPoint = gameObject.transform.position;
             Vector2 endPoint = m_Reticle.gameObject.transform.position;
-            // Get vectors for mouse and where the laser starts and ends
-            //Vector2 mousePos = new Vector2(m_MainCamera.ScreenToWorldPoint(Input.mousePosition).x, m_MainCamera.ScreenToWorldPoint(Input.mousePosition).y);
-            //Vector2 laserStartPos = new Vector2(m_LaserPoint.position.x, m_LaserPoint.position.y);
-            //Vector2 laserEndPos = laserStartPos + (laserStartPos * m_LaserBeamLength);
+            Vector2 direction = (endPoint - startPoint);
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            gun.transform.rotation = rotation;
+            Debug.DrawLine(startPoint, endPoint, Color.cyan);
+        }
 
-            //TODO: set max shoot distance
-            RaycastHit2D hit = Physics2D.Raycast( startPoint, endPoint, m_LaserBeamLength, m_HitLayer );
-
-            // Hit enemy, decrease health
-            if( hit.collider != null ) {
-                if( hit.collider.gameObject.tag == "Enemy" ) {
-                    EnemyBehavior enemy = hit.transform.GetComponent<EnemyBehavior>( );
-                    if( enemy != null ) {
-                        enemy.DecrementHealth( );
-                    }
-                }
-
-                endPoint = hit.point;
-            }
-            Debug.DrawLine( startPoint, endPoint, Color.cyan );
-            m_LineRenderer.SetVertexCount( 2 );
-            // Render line at start and end points
-            m_LineRenderer.SetPosition( 0, startPoint );
-            m_LineRenderer.SetPosition( 1, endPoint );
+        private IEnumerator HandleShoot()
+        {
+            gun.Emit(1);
+            canfire = false;
+            yield return new WaitForSeconds(fireRate);
+            canfire = true;
         }
     }
 }

@@ -120,8 +120,6 @@ namespace Game.Movable
             }
         }
 
-
-
         public void SetScale(float scale)
         {
             Vector2 scaleVec = new Vector2(Mathf.Clamp(scale, startScale, endScale), Mathf.Clamp(scale, startScale, endScale));
