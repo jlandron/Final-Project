@@ -350,7 +350,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &6885970412124233607
 MonoBehaviour:
@@ -424,7 +424,7 @@ MonoBehaviour:
   battery: {fileID: 0}
   maxCharge: 100
   currentCharge: 0
-  _light: {fileID: 1642263941}
+  _light: {fileID: 6885970411951852104}
 --- !u!114 &5615930492991112954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,7 +438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthDisplay: {fileID: 0}
-  deadPrefab: {fileID: 0}
+  deadPrefab: {fileID: 5258999395686338862, guid: 01e5f36e29e42984996cf8e68396bd6a,
+    type: 3}
 --- !u!114 &7254605259667538353
 MonoBehaviour:
   m_ObjectHideFlags: 0
