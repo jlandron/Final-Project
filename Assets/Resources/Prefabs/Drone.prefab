@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 1956425639}
   - component: {fileID: 6125862428372370337}
   m_Layer: 12
-  m_Name: DroneSprite
+  m_Name: Drone
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
