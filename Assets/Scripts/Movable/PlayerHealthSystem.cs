@@ -6,6 +6,7 @@ using Game.RandomRoom;
     namespace Game.Movable {
     public class PlayerHealthSystem : MonoBehaviour {
         public Text m_HealthDisplay = null;
+        public Text m_HealthDisplayStatus = null;
 
         private int m_DefaultHealth = 3;
         private float m_hitTime = 0;
@@ -45,7 +46,21 @@ using Game.RandomRoom;
 
         public void UpdateUI( ) {
             if( m_HealthDisplay != null ) {
-                m_HealthDisplay.text = "Health: " + m_Health;
+                switch(m_Health)
+                {
+                    case 3:
+                        m_HealthDisplay.text = "STABLE";
+                        m_HealthDisplay.color = new Color(0, 255, 0);
+                        break;
+                    case 2:
+                        m_HealthDisplay.text = "DAMAGED";
+                        m_HealthDisplay.color = new Color(255, 215, 0);
+                        break;
+                    case 1:
+                        m_HealthDisplay.text = "CRITICAL";
+                        m_HealthDisplay.color = new Color(255, 0, 0);
+                        break;
+                }
             }
         }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5551716263837866038}
   m_Layer: 0
   m_Name: BrownChunk2
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1842ca05a7767af40bf3027f38cac5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPercentage: 50
 --- !u!1001 &574320978385345769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,6 +55,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9077472903370852897}
     m_Modifications:
+    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280520, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -109,11 +115,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnPoint (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280521, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}
       propertyPath: gameObjects.Array.data[0]
@@ -153,6 +154,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9077472903370852897}
     m_Modifications:
+    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280520, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -208,11 +214,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnPoint (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280521, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}
       propertyPath: gameObjects.Array.data[0]
@@ -252,6 +253,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9077472903370852897}
     m_Modifications:
+    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280520, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -307,11 +313,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnPoint (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280521, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}
       propertyPath: gameObjects.Array.data[0]
@@ -351,6 +352,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9077472903370852897}
     m_Modifications:
+    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280520, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -405,11 +411,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7682016526447280523, guid: bf567380994280a40bafca2ef6a856d7,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnPoint (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7682016526447280521, guid: bf567380994280a40bafca2ef6a856d7,
         type: 3}

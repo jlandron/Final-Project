@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 2777870735593542094}
   m_Layer: 11
   m_Name: Forest_terrain_dirt_128px_1
-  m_TagString: Untagged
+  m_TagString: Tiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
