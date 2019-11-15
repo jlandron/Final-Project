@@ -26,6 +26,7 @@ namespace Game.Movable
                 {
                     Instantiate(BombPrefab, AttachedBomb.transform.position, Quaternion.identity);
                     DecrementBombCount();
+                    Invoke("RescanPathfinding", 3);
                 }
             }
 
@@ -49,7 +50,9 @@ namespace Game.Movable
                 AttachedBomb.SetActive(false);
             }
         }
-
+        void RescanPathfinding() {
+            AstarPath.active.Scan();
+        }
         public void IncrementBombCount()
         {
             if (BombCount < BombMax)

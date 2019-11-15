@@ -3730,6 +3730,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2568044857818197631, guid: 5fd136564c100be4c852005dd765054d,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2568044857818197628, guid: 5fd136564c100be4c852005dd765054d,
         type: 3}
       propertyPath: m_Name
@@ -3795,11 +3800,6 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 2064104764}
-    - target: {fileID: 2568044857818197631, guid: 5fd136564c100be4c852005dd765054d,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd136564c100be4c852005dd765054d, type: 3}
 --- !u!102 &6810776617610533730
