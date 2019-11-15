@@ -82,3 +82,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad156e47403962641a660c60c25c8657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirtParticles: {fileID: 1385303851377487224, guid: 89bf8b752c5fb944398ddd8f06628cc9,
+    type: 3}

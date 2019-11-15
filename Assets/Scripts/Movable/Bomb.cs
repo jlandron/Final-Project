@@ -1,24 +1,26 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bomb : MonoBehaviour
+namespace Game.Movable
 {
-    private float delay = 1.5f;
-    private float timeToExplode = 0f;
-    public GameObject ExplosionRadius;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Bomb : MonoBehaviour
     {
-        timeToExplode = Time.time + delay;
-    }
+        [SerializeField]
+        private float delay = 1.5f;
+        public GameObject ExplosionRadius;
+        public ParticleSystem ExplosionParticles;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Time.time > timeToExplode)
+        // Start is called before the first frame update
+        void Start()
         {
+            Invoke("Explode", delay);
+        }
+
+        private void Explode()
+        {
+            Instantiate(ExplosionParticles, transform.position, Quaternion.identity);
             Instantiate(ExplosionRadius, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }

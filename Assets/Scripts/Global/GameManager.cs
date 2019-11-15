@@ -6,26 +6,19 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private bool _isPaused;
 
-    //for prototyping only!!!!!! DELETE FOR BUILD!!!
-    private int _numScenes;
-
     [SerializeField] GameObject[] peristantObjectPrefabs;
 
     static bool hasSpawned = false;
 
     private void Awake( ) {
         
-        if( hasSpawned ) {
-            return;
+        if( !hasSpawned ) {
+            SpawnPersistantObjects();
+            hasSpawned = true;
         }
-
-        SpawnPersistantObjects( );
-
-        hasSpawned = true;
     }
     private void Start( ) {
         Screen.SetResolution( 1920, 1080, true );
-        _numScenes = SceneManager.sceneCount;
     }
     private void Update( ) {
         if( SceneManager.GetActiveScene( ).name == ( "_preload" ) ) {

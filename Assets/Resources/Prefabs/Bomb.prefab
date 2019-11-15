@@ -136,7 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1ff83199755db47a59db8960a7396d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 1.5
   ExplosionRadius: {fileID: 201880147252833808, guid: ff3b2d9418cf2ea4782e96de374755db,
+    type: 3}
+  ExplosionParticles: {fileID: 2643573183702370603, guid: 9c12474e94c83c447a477e1b8ae9c7c1,
     type: 3}
 --- !u!58 &4568614879035883248
 CircleCollider2D:

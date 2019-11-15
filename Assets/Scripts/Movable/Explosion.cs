@@ -1,19 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Explosion : MonoBehaviour
+namespace Game.Movable
 {
-    void OnTriggerStay2D(Collider2D collision)
+    public class Explosion : MonoBehaviour
     {
-        // Collide with Tiles Layer
-        if(collision.gameObject.tag == "Tiles")
+        [SerializeField]
+        private ParticleSystem dirtParticles;
+        void OnTriggerStay2D(Collider2D collision)
         {
-            Destroy(collision.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
+            // Collide with Tiles Layer
+            if (collision.gameObject.tag == "Tiles")
+            {
+                if(dirtParticles != null)
+                {
+                    Instantiate(dirtParticles, collision.transform.position, Quaternion.identity);
+                }
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+            //TODO: Consider explosion effecting enemies/player as well
         }
     }
 }

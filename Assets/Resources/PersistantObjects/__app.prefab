@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5d67ed0ca46114e92c7816458de788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoint: 0
+  _isPaused: 0
   peristantObjectPrefabs:
   - {fileID: 5548105840598790203, guid: eb1e3364197962a48b10a2ceefd1395b, type: 3}
 --- !u!82 &1717276010126264623
@@ -58,7 +58,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2d9bf88abe6c6624ca4991328b7d5309, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 192adcd68462fb04bab401e909276da0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.542
   m_Pitch: 1
