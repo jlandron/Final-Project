@@ -39,7 +39,15 @@ using Game.RandomRoom;
                 {
                     Instantiate(deadPrefab, transform.position, Quaternion.identity);
                 }
-                this.gameObject.transform.position = FindObjectOfType<LevelGenerator>( ).spawnLocation;
+                try
+                {
+                    this.gameObject.transform.position = FindObjectOfType<LevelGenerator>().spawnLocation;
+                }
+                catch (System.Exception)
+                {
+
+                }
+                
                 m_Health = m_DefaultHealth;
             }
         }

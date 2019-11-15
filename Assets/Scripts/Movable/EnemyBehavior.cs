@@ -37,7 +37,7 @@ namespace Game.Movable
         private IAstarAI ai;
         private AIDestinationSetter aIDestinationSetter;
 
-
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -54,6 +54,10 @@ namespace Game.Movable
         // Update is called once per frame
         void Update()
         {
+            if(ai == null)
+            {
+                ai = GetComponent<IAstarAI>();
+            }
             if (!isDead)
             {
                 DoChasing();

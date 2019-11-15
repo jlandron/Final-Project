@@ -34,7 +34,7 @@ namespace Game.Movable
             {
                 if (FlareCount > 0)
                 {
-                    //Instantiate(FlarePrefab, transform.position, Quaternion.identity);
+                    Instantiate(FlarePrefab, transform.position, Quaternion.identity);
                     DecrementFlareCount();
                 }
             }
