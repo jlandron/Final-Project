@@ -4,7 +4,9 @@ namespace Game.Movable
 {
     public class WeaponControl : MonoBehaviour
     {
-        public ReticleControl reticle;
+        public GameObject reticlePrefab;
+        private GameObject currentReticle;
+        private ReticleControl reticle;
         public AudioClip laserSound;
         private AudioSource audioData;
 
@@ -17,8 +19,9 @@ namespace Game.Movable
         // Start is called before the first frame update
         void Start()
         {
-            reticle = GetComponentInChildren<ReticleControl>();
             audioData = GetComponent<AudioSource>();
+            currentReticle = Instantiate(reticlePrefab, transform.position, Quaternion.identity);
+            reticle = currentReticle.GetComponent<ReticleControl>();
         }
 
         // Update is called once per frame
