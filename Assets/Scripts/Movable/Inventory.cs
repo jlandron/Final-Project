@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Movable
 {
     public class Inventory : MonoBehaviour
     {
+        public Text FlareDisplay = null;
+
         public GameObject BombPrefab;
         public int BombCount = 1;
         public int BombMax = 1;
@@ -49,7 +52,32 @@ namespace Game.Movable
             {
                 AttachedBomb.SetActive(false);
             }
+
+            UpdateUI();
         }
+
+        public void UpdateUI()
+        {
+            if (FlareDisplay != null)
+            {
+                switch (FlareCount)
+                {
+                    case 3:
+                        FlareDisplay.text = "x3";
+                        break;
+                    case 2:
+                        FlareDisplay.text = "x2";
+                        break;
+                    case 1:
+                        FlareDisplay.text = "x1";
+                        break;
+                    case 0:
+                        FlareDisplay.text = "x0";
+                        break;
+                }
+            }
+        }
+
         void RescanPathfinding() {
             AstarPath.active.Scan();
         }

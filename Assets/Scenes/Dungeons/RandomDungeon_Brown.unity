@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: f5df4fca367348d4aa9ee420ec1743dd,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1089,6 +1089,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bffb9dbcea52cf24c8680af7a64353af, type: 3}
+--- !u!114 &461276032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7373994779114284337, guid: bffb9dbcea52cf24c8680af7a64353af,
+    type: 3}
+  m_PrefabInstance: {fileID: 461276031}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &471332426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4667744524586953111, guid: 082184f2727a2654d9f87d77bce30bc1,
@@ -1102,11 +1114,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4749574592925969088, guid: 5747476c963dd2a41941f5e4070b81af,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 2064104764}
     - target: {fileID: 6885970412118714983, guid: 5747476c963dd2a41941f5e4070b81af,
         type: 3}
       propertyPath: m_Name
@@ -1187,6 +1194,16 @@ PrefabInstance:
       propertyPath: m_MainCamera
       value: 
       objectReference: {fileID: 1172834398}
+    - target: {fileID: 7075476386591172279, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: FlareDisplay
+      value: 
+      objectReference: {fileID: 461276032}
+    - target: {fileID: 4749574592925969088, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2064104764}
     m_RemovedComponents:
     - {fileID: 2988553569313160020, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
     - {fileID: 4749574592925969088, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}

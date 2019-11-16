@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1456643555800471734}
   - component: {fileID: 1456643555800471729}
   - component: {fileID: 215566609335489669}
-  - component: {fileID: 1588292300145036699}
+  - component: {fileID: 7803503778822782015}
   m_Layer: 13
   m_Name: Flare
   m_TagString: Untagged
@@ -72,10 +72,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1601386359
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 806de9ef9d6fc044390a164d9c034fc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1456643555800471734
@@ -100,9 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.355
-  m_Color: {r: 1, g: 0.372848, b: 0, a: 1}
-  m_Intensity: 0.75
+  m_FalloffIntensity: 0.6
+  m_Color: {r: 1, g: 0.58268595, b: 0.33490568, a: 1}
+  m_Intensity: 0.5
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 000000002143511289c88ca03f843fa7
   m_LightCookieSprite: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightOuterRadius: 9
   m_PointLightDistance: 5
   m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 100
---- !u!58 &1588292300145036699
+--- !u!58 &7803503778822782015
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +174,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.7
 --- !u!1001 &1783618684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,11 +182,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1456643555800471728}
     m_Modifications:
-    - target: {fileID: 9216804422740412238, guid: 7c54c9a0942a84b4f80c5d40f9fdffe9,
-        type: 3}
-      propertyPath: m_Name
-      value: FlareParticles
-      objectReference: {fileID: 0}
     - target: {fileID: 9216804422740777838, guid: 7c54c9a0942a84b4f80c5d40f9fdffe9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -241,6 +236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216804422740412238, guid: 7c54c9a0942a84b4f80c5d40f9fdffe9,
+        type: 3}
+      propertyPath: m_Name
+      value: FlareParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c54c9a0942a84b4f80c5d40f9fdffe9, type: 3}
