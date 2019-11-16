@@ -11,6 +11,8 @@ namespace Game.Movable {
             // add change color later
             if( percentage < 0.25f ) {
                 _image.color = Color.red;
+            } else if (percentage < 0.5f) {
+                _image.color = Color.yellow;
             } else {
                 _image.color = Color.green;
             }
