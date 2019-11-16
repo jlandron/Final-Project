@@ -3699,7 +3699,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   minX: 10
-  maxX: 90
+  maxX: 110
   minY: 10
   player: {fileID: 2064104754}
   maxNumEnemies: 20
