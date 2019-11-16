@@ -7,6 +7,12 @@ namespace Game.Movable
     {
         [SerializeField]
         private ParticleSystem dirtParticles;
+        public AudioClip explosionSound;
+        void Start()
+        {
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+        }
+
         void OnTriggerStay2D(Collider2D collision)
         {
             // Collide with Tiles Layer
