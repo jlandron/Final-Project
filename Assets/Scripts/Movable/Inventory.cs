@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Game.Core;
+using Game.Saving;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game.Movable
 {
-    public class Inventory : MonoBehaviour
+    public class Inventory : MonoBehaviour, ISaveable
     {
         public Text FlareDisplay = null;
 
@@ -18,7 +18,17 @@ namespace Game.Movable
         public int FlareMax = 3;
 
         public GameObject AttachedBomb;
-
+        //savable object for inventory, any new items should be added to object and ISaveable methods updated
+        [System.Serializable]
+        internal class SerializableInventory
+        {
+            internal int flareCount, bombCount;
+            internal SerializableInventory(int flare, int bomb)
+            {
+                flareCount = flare;
+                bombCount = bomb;
+            }
+        }
         // Update is called once per frame
         void Update()
         {
@@ -60,7 +70,7 @@ namespace Game.Movable
         {
             if (collision.CompareTag("BombPickup"))
             {
-                if(BombCount < 1)
+                if (BombCount < 1)
                 {
                     BombCount++;
                     Destroy(collision.gameObject);
@@ -89,7 +99,8 @@ namespace Game.Movable
             }
         }
 
-        void RescanPathfinding() {
+        void RescanPathfinding()
+        {
             AstarPath.active.Scan();
         }
         public void IncrementBombCount()
@@ -122,6 +133,25 @@ namespace Game.Movable
             {
                 FlareCount--;
             }
+        }
+
+        public void SetAllToZero()
+        {
+            BombCount = 0;
+            FlareCount = 0;
+            FindObjectOfType<SavingWrapper>().Save();
+        }
+
+        public object CaptureState()
+        {
+            return new SerializableInventory(FlareCount, BombCount);
+        }
+
+        public void RestoreState(object state)
+        {
+            SerializableInventory inventory = (SerializableInventory)state;
+            BombCount = inventory.bombCount;
+            FlareCount = inventory.flareCount;
         }
     }
 }

@@ -48,6 +48,7 @@ MonoBehaviour:
   _isPaused: 0
   peristantObjectPrefabs:
   - {fileID: 5548105840598790203, guid: eb1e3364197962a48b10a2ceefd1395b, type: 3}
+  - {fileID: 5962997362927340908, guid: 696628a95c2bb1743bb05eac854740ed, type: 3}
   backgroundMusic:
   - {fileID: 8300000, guid: 192adcd68462fb04bab401e909276da0, type: 3}
   - {fileID: 8300000, guid: 2d9bf88abe6c6624ca4991328b7d5309, type: 3}

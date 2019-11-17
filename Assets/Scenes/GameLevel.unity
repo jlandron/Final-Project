@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: cf108d18d712db349b47b6d89d0f5efb,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1443,6 +1443,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1958527608}
     m_Modifications:
+    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
+        type: 3}
+      propertyPath: m_Name
+      value: BombInteractable
+      objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373606, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1497,11 +1502,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
-        type: 3}
-      propertyPath: m_Name
-      value: BombInteractable
       objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373607, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
@@ -3732,6 +3732,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 168199594}
     m_Modifications:
+    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
+        type: 3}
+      propertyPath: m_Name
+      value: ChargingLightSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1527981101670254191, guid: a7be727bdb907c74d98cdd82742f01a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3796,16 +3806,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9078441
-      objectReference: {fileID: 0}
-    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
-        type: 3}
-      propertyPath: m_Name
-      value: ChargingLightSource
-      objectReference: {fileID: 0}
-    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1527981101670254189, guid: a7be727bdb907c74d98cdd82742f01a4,
         type: 3}
@@ -4560,6 +4560,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1648859867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648859870}
+  - component: {fileID: 1648859869}
+  - component: {fileID: 1648859868}
+  m_Layer: 0
+  m_Name: Saving
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1648859868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648859867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f722ee13d91bd0546862c266c8533f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTime: 2
+--- !u!114 &1648859869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648859867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee6d500f3636ed48944fc67623a1d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1648859870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648859867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.433374, y: 4.3933015, z: -83.05081}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1730132824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5583,6 +5640,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1958527608}
     m_Modifications:
+    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
+        type: 3}
+      propertyPath: m_Name
+      value: StartInteractable
+      objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373606, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5637,11 +5699,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
-        type: 3}
-      propertyPath: m_Name
-      value: StartInteractable
       objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373607, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}

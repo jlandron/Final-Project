@@ -1,25 +1,35 @@
 ﻿using Game.RandomRoom;
 using UnityEngine;
 using UnityEngine.UI;
+using Game.Saving;
 
 namespace Game.Movable
 {
-    public class PlayerHealthSystem : MonoBehaviour
+    public class PlayerHealthSystem : MonoBehaviour, ISaveable
     {
         public Text m_HealthDisplay = null;
 
         private int m_DefaultHealth = 3;
         private float m_hitTime = 0;
         private float m_timeBetweenHits = 1;
-        private int m_Health;
+        private int m_Health = 3;
 
         [SerializeField]
         GameObject deadPrefab;
 
-        // Start is called before the first frame update
+        [System.Serializable]
+        internal class SerializablePlayerHealth
+        {
+            internal int currentHealth, maxHealth;
+            internal SerializablePlayerHealth(int _health, int _maxHealth)
+            {
+                currentHealth = _health;
+                maxHealth = _maxHealth;
+            }
+        }
+
         void Start()
         {
-            m_Health = m_DefaultHealth;
             UpdateUI();
         }
         private void Update()
@@ -55,8 +65,9 @@ namespace Game.Movable
                 {
 
                 }
-
                 m_Health = m_DefaultHealth;
+                //Rougelike, death means you lose everything current save is overwritten
+                GetComponent<Inventory>().SetAllToZero();
             }
         }
 
@@ -92,6 +103,18 @@ namespace Game.Movable
                     DecrementHealth();
                 }
             }
+        }
+
+        public object CaptureState()
+        {
+            return new SerializablePlayerHealth(this.m_Health, this.m_DefaultHealth);
+        }
+
+        public void RestoreState(object state)
+        {
+            SerializablePlayerHealth health = (SerializablePlayerHealth)state;
+            this.m_Health = health.currentHealth;
+            this.m_DefaultHealth = health.maxHealth;
         }
     }
 }

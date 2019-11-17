@@ -32,7 +32,7 @@ namespace Game.Movable
         {
             UpdateGunRotation();
            
-            if (recharge.BatteryCharged && Input.GetButton("Fire1"))
+            if (recharge.BatteryCharged && Input.GetMouseButtonDown(0))
             {
                 if (canfire)
                 {

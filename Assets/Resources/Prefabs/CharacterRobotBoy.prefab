@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 7254605259667538353}
   - component: {fileID: 7075476386591172279}
   - component: {fileID: 4312361454191399164}
+  - component: {fileID: 8104307869020993291}
   m_Layer: 2
   m_Name: CharacterRobotBoy
   m_TagString: Player
@@ -658,6 +659,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8104307869020993291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885970412118714983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3a1b75171792644a2311b07dfd5f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: player
 --- !u!1001 &4057301633904426984
 PrefabInstance:
   m_ObjectHideFlags: 0
