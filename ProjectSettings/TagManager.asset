@@ -16,6 +16,7 @@ TagManager:
   - BombPickup
   - FlarePickup
   - Scrap
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

@@ -1,10 +1,16 @@
-﻿using UnityEngine;
+﻿using Game.Movable;
+using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
+    public static GameManager instance;
 
     [SerializeField]
     private bool _isPaused;
+
+    private GameObject pauseMenu = null;
 
     [SerializeField] GameObject[] peristantObjectPrefabs;
     [SerializeField] AudioClip[] backgroundMusic;
@@ -13,7 +19,8 @@ public class GameManager : MonoBehaviour {
     static bool hasSpawned = false;
 
     private void Awake( ) {
-        
+
+        instance = this;
         if( !hasSpawned ) {
             SpawnPersistantObjects();
             hasSpawned = true;
@@ -22,13 +29,26 @@ public class GameManager : MonoBehaviour {
     private void Start( ) {
         Screen.SetResolution( 1920, 1080, true );
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = backgroundMusic[Random.Range(0, backgroundMusic.Length)];
+        audioSource.clip = backgroundMusic[UnityEngine.Random.Range(0, backgroundMusic.Length)];
         audioSource.Play();
         audioSource.volume = 0.4f;
         audioSource.loop = false;
     }
+
+    internal void Unpause()
+    {
+        _isPaused = false;
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+    }
+
     private void Update( ) {
-        if( SceneManager.GetActiveScene( ).name == ( "_preload" ) ) {
+        if(pauseMenu == null)
+        {
+            pauseMenu = GameObject.FindWithTag("PauseMenu");
+            pauseMenu.SetActive(false);
+        }
+        if( SceneManager.GetActiveScene( ).buildIndex == 0 ) {
             SceneManager.LoadScene(1);
         }
 
@@ -36,20 +56,22 @@ public class GameManager : MonoBehaviour {
             Application.Quit( );
         }
         if( Input.GetKeyDown( KeyCode.Escape ) ) {
-            SceneManager.LoadScene( 0 );
-        }
-        if( Input.GetKeyDown( KeyCode.P ) ) {
-            if( !_isPaused ) {
+            if (!_isPaused)
+            {
                 _isPaused = true;
                 Time.timeScale = 0;
-            } else {
-                _isPaused = false;
-                Time.timeScale = 1;
+                pauseMenu.SetActive(true);
+                //set up better upgrade menu
+                pauseMenu.GetComponent<Text>().text = "Scrap Available" + FindObjectOfType<Inventory>().scrapCount;
+            }
+            else
+            {
+                Unpause();
             }
         }
         if (!audioSource.isPlaying)
         {
-            audioSource.clip = backgroundMusic[Random.Range(0, backgroundMusic.Length)];
+            audioSource.clip = backgroundMusic[UnityEngine.Random.Range(0, backgroundMusic.Length)];
             audioSource.Play();
         }
     }

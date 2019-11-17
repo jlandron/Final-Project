@@ -16,5 +16,16 @@ namespace Game.UI {
         public void QuitGame( ) {
             Application.Quit( );
         }
+
+        public void GoToMenu()
+        {
+            FindObjectOfType<SavingWrapper>().Save();
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
+        }
+        public void ResumeGame()
+        {
+            GameManager.instance.Unpause();
+        }
     }
 }
