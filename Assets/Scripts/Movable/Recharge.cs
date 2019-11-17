@@ -12,9 +12,9 @@ namespace Game.Movable {
         [SerializeField]
         private Light2D _light;
         private bool _charging;
-        private bool batteryCharged = true;
+        private bool _batteryCharged = true;
 
-        public bool BatteryCharged { get => batteryCharged; private set => batteryCharged = value; }
+        public bool BatteryCharged { get => _batteryCharged; private set => _batteryCharged = value; }
 
         void Start( ) {
             currentCharge = maxCharge;
@@ -22,16 +22,17 @@ namespace Game.Movable {
         }
 
         void Update( ) {
-            BatteryCharged = true;
+            
             if( currentCharge > 0f && !_charging ) {
                 _light.gameObject.SetActive( true );
                 currentCharge -= .05f;
-
+                BatteryCharged = true;
             } else if( _charging ) {
                 _light.gameObject.SetActive( true );
                 if( currentCharge < maxCharge ) {
                     currentCharge += 0.5f;
                 }
+                BatteryCharged = true;
             } else {
                 BatteryCharged = false;
                 _light.gameObject.SetActive( false );
@@ -59,6 +60,5 @@ namespace Game.Movable {
                 _charging = false;
             }
         }
-
     }
 }
