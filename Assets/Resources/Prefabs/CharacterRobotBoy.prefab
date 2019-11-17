@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 7075476386591172279}
   - component: {fileID: 4312361454191399164}
   - component: {fileID: 8104307869020993291}
+  - component: {fileID: 622802985}
   m_Layer: 2
   m_Name: CharacterRobotBoy
   m_TagString: Player
@@ -524,6 +525,11 @@ MonoBehaviour:
   m_HealthDisplay: {fileID: 0}
   deadPrefab: {fileID: 5258999395686338862, guid: 01e5f36e29e42984996cf8e68396bd6a,
     type: 3}
+  scrapPieces:
+  - {fileID: 7690569187959855703, guid: 9222706942579a34686c41617decf0ad, type: 3}
+  - {fileID: 8803950221211459704, guid: 2d6ef9d061daac648861bcca12ce65ea, type: 3}
+  - {fileID: 7953063192290971795, guid: d6e89bd6ec14f7f459b5c6ff419a56c3, type: 3}
+  maxScrapDropped: 5
 --- !u!114 &7254605259667538353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlareDisplay: {fileID: 0}
+  ScrapDisplay: {fileID: 0}
   BombPrefab: {fileID: 4568614879035883255, guid: e9476fbea27b79a4aa033e2e7198004c,
     type: 3}
   BombCount: 0
@@ -562,6 +569,7 @@ MonoBehaviour:
     type: 3}
   FlareCount: 3
   FlareMax: 3
+  scrapCount: 0
   AttachedBomb: {fileID: 2297707740008401692}
 --- !u!82 &4312361454191399164
 AudioSource:
@@ -672,6 +680,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: player
+--- !u!70 &622802985
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885970412118714983}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0110141635, y: -0.07983816}
+  m_Size: {x: 0.24051726, y: 1.0391309}
+  m_Direction: 0
 --- !u!1001 &4057301633904426984
 PrefabInstance:
   m_ObjectHideFlags: 0

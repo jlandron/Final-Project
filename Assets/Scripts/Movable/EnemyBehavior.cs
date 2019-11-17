@@ -33,6 +33,10 @@ namespace Game.Movable
         private bool isChasing = false;
         [SerializeField]
         public float radius = 20;
+        [SerializeField]
+        private GameObject[] scrapPieces;
+        [SerializeField]
+        private int maxScrapDropped = 5;
 
         private IAstarAI ai;
         private AIDestinationSetter aIDestinationSetter;
@@ -125,10 +129,12 @@ namespace Game.Movable
                 else if(!isDead)
                 {
                     isDead = true;
-                    gameObject.tag = "Dead";
-                    GetComponent<Rigidbody2D>().gravityScale = 0.5f;
-                    trail.gameObject.SetActive(false);
-                    GetComponent<DeadSprite>().enabled = true;
+                    int numDropped = Random.Range(1, maxScrapDropped);
+                    for (int i = 0; i < numDropped; i++)
+                    {
+                        Instantiate(scrapPieces[Random.Range(0, scrapPieces.Length)], transform.position, Quaternion.identity);
+                    }
+                    Destroy(this.gameObject);
                 }
             }
         }

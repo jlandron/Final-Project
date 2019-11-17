@@ -237,7 +237,6 @@ GameObject:
   - component: {fileID: 1956425638}
   - component: {fileID: 1956425639}
   - component: {fileID: 6125862428372370337}
-  - component: {fileID: -3947237682380848666}
   m_Layer: 12
   m_Name: Drone
   m_TagString: Enemy
@@ -313,6 +312,11 @@ MonoBehaviour:
   - Boop
   - BZZZZ
   radius: 20
+  scrapPieces:
+  - {fileID: 474421316458457256, guid: 835de4f7ac270e3418d96722be12e542, type: 3}
+  - {fileID: 7736077009593891779, guid: 6359d494c76395743bc27363e2ac4a5f, type: 3}
+  - {fileID: 8147039999785966944, guid: 26b06dccb4bc4054d8650119cbb74b2d, type: 3}
+  maxScrapDropped: 5
 --- !u!50 &2924409708025956922
 Rigidbody2D:
   serializedVersion: 4
@@ -412,19 +416,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &-3947237682380848666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880285340586514514}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6ed98a9f2c2b0419970f9486438032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 5
 --- !u!1001 &7478645169220024654
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 167315938546638110}
   - component: {fileID: 167315938546638111}
-  - component: {fileID: 167315938546638096}
   m_Layer: 0
   m_Name: SpawnPlayerItems
   m_TagString: Untagged
@@ -46,16 +45,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjects:
   - {fileID: 1835458848621095561, guid: af6492c0d84f0b04bbffa18c4ebf174c, type: 3}
---- !u!114 &167315938546638096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167315938546638097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1842ca05a7767af40bf3027f38cac5a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPercentage: 50
+  - {fileID: 1694307533913136946, guid: a87fca1ba9acf014589f42770f7f7b66, type: 3}
+  - {fileID: 1694307533913136946, guid: a87fca1ba9acf014589f42770f7f7b66, type: 3}
+  - {fileID: 474421316458457256, guid: 835de4f7ac270e3418d96722be12e542, type: 3}
+  - {fileID: 7736077009593891779, guid: 6359d494c76395743bc27363e2ac4a5f, type: 3}
+  - {fileID: 8147039999785966944, guid: 26b06dccb4bc4054d8650119cbb74b2d, type: 3}
+  - {fileID: 7690569187959855703, guid: 9222706942579a34686c41617decf0ad, type: 3}
+  - {fileID: 8803950221211459704, guid: 2d6ef9d061daac648861bcca12ce65ea, type: 3}
+  - {fileID: 7953063192290971795, guid: d6e89bd6ec14f7f459b5c6ff419a56c3, type: 3}
+  - {fileID: 1694307533913136946, guid: a87fca1ba9acf014589f42770f7f7b66, type: 3}
+  - {fileID: 1835458848621095561, guid: af6492c0d84f0b04bbffa18c4ebf174c, type: 3}

@@ -14,7 +14,7 @@ namespace Game.Core
         {
             Fader fader = FindObjectOfType<Fader>();
             fader.FadeOutImmeduate();
-            yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
+            //yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
             yield return fader.FadeIn(fadeInTime);
         }
 #if UNITY_EDITOR

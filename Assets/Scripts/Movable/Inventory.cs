@@ -8,6 +8,7 @@ namespace Game.Movable
     public class Inventory : MonoBehaviour, ISaveable
     {
         public Text FlareDisplay = null;
+        public Text ScrapDisplay = null;
 
         public GameObject BombPrefab;
         public int BombCount = 1;
@@ -17,16 +18,19 @@ namespace Game.Movable
         public int FlareCount = 3;
         public int FlareMax = 3;
 
+        public int scrapCount = 0;
+
         public GameObject AttachedBomb;
         //savable object for inventory, any new items should be added to object and ISaveable methods updated
         [System.Serializable]
         internal class SerializableInventory
         {
-            internal int flareCount, bombCount;
-            internal SerializableInventory(int flare, int bomb)
+            internal int flareCount, bombCount, scrapCount;
+            internal SerializableInventory(int flare, int bomb, int scrap)
             {
                 flareCount = flare;
                 bombCount = bomb;
+                scrapCount = scrap;
             }
         }
         // Update is called once per frame
@@ -70,32 +74,33 @@ namespace Game.Movable
         {
             if (collision.CompareTag("BombPickup"))
             {
-                if (BombCount < 1)
+                if (IncrementBombCount())
                 {
-                    BombCount++;
                     Destroy(collision.gameObject);
                 }
+            }
+            if (collision.CompareTag("FlarePickup"))
+            {
+                if (IncrementFlareCount())
+                {
+                    Destroy(collision.gameObject);
+                }
+            }
+            if (collision.CompareTag("Scrap"))
+            {
+                scrapCount++;
+                Destroy(collision.gameObject);
             }
         }
         public void UpdateUI()
         {
             if (FlareDisplay != null)
             {
-                switch (FlareCount)
-                {
-                    case 3:
-                        FlareDisplay.text = "x3";
-                        break;
-                    case 2:
-                        FlareDisplay.text = "x2";
-                        break;
-                    case 1:
-                        FlareDisplay.text = "x1";
-                        break;
-                    case 0:
-                        FlareDisplay.text = "x0";
-                        break;
-                }
+                FlareDisplay.text = "x" + FlareCount;
+            }
+            if (ScrapDisplay != null)
+            {
+                ScrapDisplay.text = "x" + scrapCount;
             }
         }
 
@@ -103,48 +108,64 @@ namespace Game.Movable
         {
             AstarPath.active.Scan();
         }
-        public void IncrementBombCount()
+        public bool IncrementBombCount()
         {
             if (BombCount < BombMax)
             {
                 BombCount++;
+                return true;
             }
+            return false;
         }
 
-        public void DecrementBombCount()
+        public bool DecrementBombCount()
         {
             if (BombCount > 0)
             {
                 BombCount--;
+                return true;
             }
+            return false;
         }
 
-        public void IncrementFlareCount()
+        public bool IncrementFlareCount()
         {
             if (FlareCount < FlareMax)
             {
                 FlareCount++;
+                return true;
             }
+            return false;
         }
 
-        public void DecrementFlareCount()
+        public bool DecrementFlareCount()
         {
             if (FlareCount > 0)
             {
                 FlareCount--;
+                return true;
             }
+            return false;
         }
 
         public void SetAllToZero()
         {
             BombCount = 0;
             FlareCount = 0;
+            if (scrapCount > 5)
+            {
+                scrapCount -= 5;
+            }
+            else
+            {
+                scrapCount = 0;
+            }
             FindObjectOfType<SavingWrapper>().Save();
         }
 
         public object CaptureState()
         {
-            return new SerializableInventory(FlareCount, BombCount);
+            return new SerializableInventory(FlareCount, BombCount, scrapCount);
         }
 
         public void RestoreState(object state)
@@ -152,6 +173,7 @@ namespace Game.Movable
             SerializableInventory inventory = (SerializableInventory)state;
             BombCount = inventory.bombCount;
             FlareCount = inventory.flareCount;
+            scrapCount = inventory.scrapCount;
         }
     }
 }

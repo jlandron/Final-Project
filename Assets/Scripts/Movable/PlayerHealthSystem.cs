@@ -17,6 +17,11 @@ namespace Game.Movable
         [SerializeField]
         GameObject deadPrefab;
 
+        [SerializeField]
+        private GameObject[] scrapPieces;
+        [SerializeField]
+        private int maxScrapDropped = 5;
+
         [System.Serializable]
         internal class SerializablePlayerHealth
         {
@@ -53,9 +58,10 @@ namespace Game.Movable
             }
             else
             {
-                if (deadPrefab != null)
+                int numDropped = Random.Range(1, maxScrapDropped);
+                for (int i = 0; i < numDropped; i++)
                 {
-                    Instantiate(deadPrefab, transform.position, Quaternion.identity);
+                    Instantiate(scrapPieces[Random.Range(0, scrapPieces.Length)], transform.position, Quaternion.identity);
                 }
                 try
                 {
