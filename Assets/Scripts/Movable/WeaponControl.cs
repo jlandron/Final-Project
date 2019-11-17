@@ -14,7 +14,9 @@ namespace Game.Movable
         private ParticleSystem gun;
         [SerializeField]
         private float fireRate = 1;
+
         private bool canfire = true;
+        private Recharge recharge;
 
         // Start is called before the first frame update
         void Start()
@@ -22,20 +24,22 @@ namespace Game.Movable
             audioData = GetComponent<AudioSource>();
             currentReticle = Instantiate(reticlePrefab, transform.position, Quaternion.identity);
             reticle = currentReticle.GetComponent<ReticleControl>();
+            recharge = GetComponent<Recharge>();
         }
 
         // Update is called once per frame
         void Update()
         {
             UpdateGunRotation();
-            
-            if (Input.GetButton("Fire1"))
+           
+            if (recharge.BatteryCharged && Input.GetButton("Fire1"))
             {
                 if (canfire)
                 {
                     StartCoroutine(HandleShoot());
                 }
             }
+
         }
 
         private void UpdateGunRotation()

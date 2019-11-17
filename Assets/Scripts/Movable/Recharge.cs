@@ -12,6 +12,9 @@ namespace Game.Movable {
         [SerializeField]
         private Light2D _light;
         private bool _charging;
+        private bool batteryCharged = true;
+
+        public bool BatteryCharged { get => batteryCharged; private set => batteryCharged = value; }
 
         void Start( ) {
             currentCharge = maxCharge;
@@ -29,6 +32,7 @@ namespace Game.Movable {
                     currentCharge += 0.5f;
                 }
             } else {
+                BatteryCharged = false;
                 _light.gameObject.SetActive( false );
             }
             battery.SetLevel( currentCharge / maxCharge );

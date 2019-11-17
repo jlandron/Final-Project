@@ -40,17 +40,6 @@ public class GameManager : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
-
-        if( Debug.isDebugBuild ) {
-            if( Input.GetKeyDown( KeyCode.Minus ) ) {
-                int prevScene = SceneManager.GetActiveScene( ).buildIndex - 1;
-                SceneManager.LoadScene( prevScene );
-            }
-            if( Input.GetKeyDown( KeyCode.Equals ) ) {
-                int nextScene = SceneManager.GetActiveScene( ).buildIndex + 1;
-                SceneManager.LoadScene( nextScene );
-            }
-        }
     }
     private void SpawnPersistantObjects( ) {
         foreach( GameObject gameObject in peristantObjectPrefabs ) {

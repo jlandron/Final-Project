@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Game.Core;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 namespace Game.Movable
 {
@@ -11,7 +13,12 @@ namespace Game.Movable
         private Text wantToShow = null;
         [SerializeField]
         private bool _inRange = false;
-        private bool showSignal = false;
+        [SerializeField]
+        private float timeToShowText = 2.5f;
+        [SerializeField]
+        private string textToShow = "BLANK TEXT";
+        [SerializeField]
+        private bool isLevelEnd = false;
 
         private MeshRenderer signalMeshRenderer;
 
@@ -30,7 +37,6 @@ namespace Game.Movable
         private void Start()
         {
             signalMeshRenderer = signal.GetComponent<MeshRenderer>();
-            //signal.gameObject.SetActive( false );
             SetScale(0);
             wantToShow.gameObject.SetActive(false);
         }
@@ -40,7 +46,6 @@ namespace Game.Movable
             if (collision.gameObject.tag == "Player")
             {
                 _inRange = true;
-                //signal.gameObject.SetActive( true );
                 FadeIn();
             }
         }
@@ -49,7 +54,6 @@ namespace Game.Movable
             if (collision.gameObject.tag == "Player")
             {
                 _inRange = false;
-                //signal.gameObject.SetActive( false );
                 FadeOut();
             }
         }
@@ -59,16 +63,19 @@ namespace Game.Movable
             {
                 Debug.Log("Showing Text");
                 wantToShow.gameObject.SetActive(true);
-                Invoke("DisableText", 5);
+                wantToShow.text = textToShow;
+                Invoke("DoNextSteps", timeToShowText);
             }
-            if (showSignal)
-            {
-
-            }
+            
         }
 
-        void DisableText()
+        void DoNextSteps()
         {
+            if (isLevelEnd)
+            {
+                int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+                FindObjectOfType<LoadLevel>().DoLoad(nextScene);
+            }
             Debug.Log("Disabling Text");
             wantToShow.gameObject.SetActive(false);
         }

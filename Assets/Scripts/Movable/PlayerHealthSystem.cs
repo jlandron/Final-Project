@@ -1,12 +1,12 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using Game.RandomRoom;
+using UnityEngine;
 using UnityEngine.UI;
-using Game.RandomRoom;
 
-    namespace Game.Movable {
-    public class PlayerHealthSystem : MonoBehaviour {
+namespace Game.Movable
+{
+    public class PlayerHealthSystem : MonoBehaviour
+    {
         public Text m_HealthDisplay = null;
-        public Text m_HealthDisplayStatus = null;
 
         private int m_DefaultHealth = 3;
         private float m_hitTime = 0;
@@ -17,44 +17,54 @@ using Game.RandomRoom;
         GameObject deadPrefab;
 
         // Start is called before the first frame update
-        void Start( ) {
+        void Start()
+        {
             m_Health = m_DefaultHealth;
-            UpdateUI( );
+            UpdateUI();
         }
-        private void Update( ) {
+        private void Update()
+        {
             m_hitTime += Time.deltaTime;
             UpdateUI();
         }
-        public void IncrementHealth( ) {
-            if( m_Health < m_DefaultHealth ) {
+        public void IncrementHealth()
+        {
+            if (m_Health < m_DefaultHealth)
+            {
                 m_Health++;
             }
         }
 
-        public void DecrementHealth( ) {
-            if( m_Health > 1 ) {
+        public void DecrementHealth()
+        {
+            if (m_Health > 1)
+            {
                 m_Health--;
-            } else {
-                if(deadPrefab != null)
+            }
+            else
+            {
+                if (deadPrefab != null)
                 {
                     Instantiate(deadPrefab, transform.position, Quaternion.identity);
                 }
                 try
                 {
-                    this.gameObject.transform.position = FindObjectOfType<LevelGenerator>().spawnLocation;
+                    gameObject.transform.position = FindObjectOfType<LevelGenerator>().spawnLocation;
                 }
                 catch (System.Exception)
                 {
 
                 }
-                
+
                 m_Health = m_DefaultHealth;
             }
         }
 
-        public void UpdateUI( ) {
-            if( m_HealthDisplay != null ) {
-                switch(m_Health)
+        public void UpdateUI()
+        {
+            if (m_HealthDisplay != null)
+            {
+                switch (m_Health)
                 {
                     case 3:
                         m_HealthDisplay.text = "STABLE";
@@ -72,11 +82,14 @@ using Game.RandomRoom;
             }
         }
 
-        private void OnTriggerEnter2D( Collider2D collision ) {
-            if( m_hitTime > m_timeBetweenHits ) {
-                if( collision.gameObject.tag == "Enemy" ) {
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (m_hitTime > m_timeBetweenHits)
+            {
+                if (collision.gameObject.tag == "Enemy")
+                {
                     m_hitTime = 0;
-                    DecrementHealth( );
+                    DecrementHealth();
                 }
             }
         }

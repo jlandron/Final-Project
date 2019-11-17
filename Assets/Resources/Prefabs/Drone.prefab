@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 1956425638}
   - component: {fileID: 1956425639}
   - component: {fileID: 6125862428372370337}
+  - component: {fileID: -3947237682380848666}
   m_Layer: 12
   m_Name: Drone
   m_TagString: Enemy
@@ -411,6 +412,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &-3947237682380848666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2880285340586514514}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb6ed98a9f2c2b0419970f9486438032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 5
 --- !u!1001 &7478645169220024654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,11 +432,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1234628588}
     m_Modifications:
-    - target: {fileID: 7984498181915416765, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
-        type: 3}
-      propertyPath: m_Name
-      value: Afterburner
-      objectReference: {fileID: 0}
     - target: {fileID: 7984498181915640989, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,6 +511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 7.0350003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984498181915416765, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
+        type: 3}
+      propertyPath: m_Name
+      value: Afterburner
       objectReference: {fileID: 0}
     - target: {fileID: 7984498181935038937, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
         type: 3}

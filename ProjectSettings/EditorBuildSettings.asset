@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeons/RandomDungeon_Brown.unity
     guid: e48b3984083dedd48a0424d7e3ed9300
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/RandomDungeon_Blue.unity
+    guid: e0f1073405d282b41a6524e5753c7f46
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/RandomDungeon_Rock.unity
+    guid: e27bbcae704fcdc42a125dae89aac2ea
   m_configObjects: {}

@@ -161,7 +161,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5258999395686763790}
   - component: {fileID: 5258999395682950348}
-  - component: {fileID: 5258999395686338863}
+  - component: {fileID: 310808762884796603}
+  - component: {fileID: 6268797703909838041}
   m_Layer: 2
   m_Name: DeadRobot
   m_TagString: Dead
@@ -206,8 +207,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &5258999395686338863
-PolygonCollider2D:
+--- !u!114 &310808762884796603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258999395686338862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb6ed98a9f2c2b0419970f9486438032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &6268797703909838041
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -219,60 +232,6 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.0525, y: -0.4325}
-      - {x: 0.0175, y: -0.3425}
-      - {x: 0.037499998, y: -0.3275}
-      - {x: 0.0475, y: -0.26749998}
-      - {x: 0.0725, y: -0.1775}
-      - {x: 0.057499997, y: -0.0175}
-      - {x: 0.0475, y: 0.0525}
-      - {x: 0.1025, y: 0.0275}
-      - {x: 0.1325, y: 0.0325}
-      - {x: 0.1625, y: 0.0525}
-      - {x: 0.1925, y: 0.1325}
-      - {x: 0.22749999, y: 0.1325}
-      - {x: 0.2375, y: 0.1375}
-      - {x: 0.2575, y: 0.1775}
-      - {x: 0.2575, y: 0.2375}
-      - {x: 0.2525, y: 0.2575}
-      - {x: 0.2175, y: 0.2625}
-      - {x: 0.22749999, y: 0.3825}
-      - {x: 0.1625, y: 0.45749998}
-      - {x: 0.067499995, y: 0.4775}
-      - {x: -0.1025, y: 0.4775}
-      - {x: -0.1475, y: 0.42249998}
-      - {x: -0.18249999, y: 0.3825}
-      - {x: -0.1875, y: 0.30249998}
-      - {x: -0.1875, y: 0.1725}
-      - {x: -0.1625, y: 0.1575}
-      - {x: -0.1025, y: 0.1275}
-      - {x: -0.1725, y: 0.0625}
-      - {x: -0.1875, y: 0.0025}
-      - {x: -0.1875, y: -0.1175}
-      - {x: -0.1425, y: -0.22749999}
-      - {x: -0.1575, y: -0.2825}
-      - {x: -0.1575, y: -0.3725}
-      - {x: -0.1275, y: -0.39249998}
-      - {x: -0.0775, y: -0.4175}
-      - {x: -0.0625, y: -0.4175}
-      - {x: -0.0525, y: -0.4075}
-      - {x: -0.057499997, y: -0.4175}
-      - {x: -0.1125, y: -0.53749996}
-      - {x: -0.122499995, y: -0.60749996}
-      - {x: -0.1125, y: -0.6325}
-      - {x: 0.1175, y: -0.6325}
-      - {x: 0.1425, y: -0.6275}
-      - {x: 0.0975, y: -0.5475}
-      - {x: -0.012499999, y: -0.49249998}
+  m_Offset: {x: -0.06, y: 0}
+  m_Size: {x: 1.12, y: 0.37}
+  m_Direction: 1

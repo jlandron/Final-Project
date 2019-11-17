@@ -109,27 +109,26 @@ namespace Game.Movable
         }
         
 
-        private void DecrementHealth()
+        public void DecrementHealth(int amount = 1)
         {
             if (m_hitTime > m_timeBetweenHits)
             {
                 if (m_Health > 1)
                 {
                     m_hitTime = 0;
-                    m_Health--;
+                    m_Health -= amount;
                     if (hitText != null)
                     {
                         ShowText();
                     }
                 }
-                else
+                else if(!isDead)
                 {
-                    //Destroy(gameObject);
                     isDead = true;
-                    GetComponent<BoxCollider2D>().isTrigger = false;
                     gameObject.tag = "Dead";
                     GetComponent<Rigidbody2D>().gravityScale = 0.5f;
                     trail.gameObject.SetActive(false);
+                    GetComponent<DeadSprite>().enabled = true;
                 }
             }
         }

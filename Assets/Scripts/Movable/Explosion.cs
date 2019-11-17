@@ -16,13 +16,16 @@ namespace Game.Movable
         void OnTriggerStay2D(Collider2D collision)
         {
             // Collide with Tiles Layer
-            if (collision.gameObject.tag == "Tiles")
+            if (collision.gameObject.CompareTag("Tiles"))
             {
                 if(dirtParticles != null)
                 {
                     Instantiate(dirtParticles, collision.transform.position, Quaternion.identity);
                 }
                 Destroy(collision.gameObject);
+            }else if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.GetComponent<EnemyBehavior>().DecrementHealth(3);
             }
             else
             {

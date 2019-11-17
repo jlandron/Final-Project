@@ -553,6 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a10cfd5bd9ebd943a8796e457ad40a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlareDisplay: {fileID: 0}
   BombPrefab: {fileID: 4568614879035883255, guid: e9476fbea27b79a4aa033e2e7198004c,
     type: 3}
   BombCount: 1
