@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     private bool _isPaused;
 
     [SerializeField] GameObject[] peristantObjectPrefabs;
+    [SerializeField] AudioClip[] backgroundMusic;
+    [SerializeField] AudioSource audioSource;
 
     static bool hasSpawned = false;
 
@@ -19,6 +21,11 @@ public class GameManager : MonoBehaviour {
     }
     private void Start( ) {
         Screen.SetResolution( 1920, 1080, true );
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = backgroundMusic[Random.Range(0, backgroundMusic.Length)];
+        audioSource.Play();
+        audioSource.volume = 0.4f;
+        audioSource.loop = false;
     }
     private void Update( ) {
         if( SceneManager.GetActiveScene( ).name == ( "_preload" ) ) {
@@ -39,6 +46,11 @@ public class GameManager : MonoBehaviour {
                 _isPaused = false;
                 Time.timeScale = 1;
             }
+        }
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = backgroundMusic[Random.Range(0, backgroundMusic.Length)];
+            audioSource.Play();
         }
     }
     private void SpawnPersistantObjects( ) {

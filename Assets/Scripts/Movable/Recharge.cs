@@ -22,6 +22,7 @@ namespace Game.Movable {
         }
 
         void Update( ) {
+            BatteryCharged = true;
             if( currentCharge > 0f && !_charging ) {
                 _light.gameObject.SetActive( true );
                 currentCharge -= .05f;

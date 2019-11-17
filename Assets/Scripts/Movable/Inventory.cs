@@ -56,6 +56,17 @@ namespace Game.Movable
             UpdateUI();
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("BombPickup"))
+            {
+                if(BombCount < 1)
+                {
+                    BombCount++;
+                    Destroy(collision.gameObject);
+                }
+            }
+        }
         public void UpdateUI()
         {
             if (FlareDisplay != null)

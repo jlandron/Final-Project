@@ -2,26 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeadSprite : MonoBehaviour
+namespace Game.Movable
 {
-    public float delay = 5f;
-    private float timePassed = 0f;
+    public class DeadSprite : MonoBehaviour
+    {
+        public float delay = 5f;
+        private float timePassed = 0f;
 
-    private void Update()
-    {
-        if(timePassed < delay)
+        private void Update()
         {
-            timePassed += Time.deltaTime;
+            if (timePassed < delay)
+            {
+                timePassed += Time.deltaTime;
+            }
+            else if (timePassed >= delay)
+            {
+                GetComponent<Rigidbody2D>().gravityScale = 0f;
+                GetComponent<Collider2D>().isTrigger = true;
+                Invoke("DestroySprite", 5);
+            }
         }
-        else if(timePassed >= delay)
+        void DestroySprite()
         {
-            GetComponent<Rigidbody2D>().gravityScale = 0f;
-            GetComponent<Collider2D>().isTrigger = true;
-            Invoke("DestroySprite", 5);
+            Destroy(this.gameObject);
         }
-    }
-    void DestroySprite()
-    {
-        Destroy(this.gameObject);
     }
 }
+

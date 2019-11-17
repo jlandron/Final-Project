@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombPickup : MonoBehaviour
+namespace Game.Movable
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BombPickup : MonoBehaviour
     {
-        
-    }
+        private Inventory inventory;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            inventory = GetComponent<Inventory>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+
+            }
+        }
     }
 }
+

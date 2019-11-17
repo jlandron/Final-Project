@@ -521,7 +521,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthDisplay: {fileID: 0}
-  m_HealthDisplayStatus: {fileID: 0}
   deadPrefab: {fileID: 5258999395686338862, guid: 01e5f36e29e42984996cf8e68396bd6a,
     type: 3}
 --- !u!114 &7254605259667538353
@@ -556,7 +555,7 @@ MonoBehaviour:
   FlareDisplay: {fileID: 0}
   BombPrefab: {fileID: 4568614879035883255, guid: e9476fbea27b79a4aa033e2e7198004c,
     type: 3}
-  BombCount: 1
+  BombCount: 0
   BombMax: 1
   FlarePrefab: {fileID: 1456643555800471733, guid: 5eb7385fdbfbb254cbfcb7e788d8c89a,
     type: 3}
