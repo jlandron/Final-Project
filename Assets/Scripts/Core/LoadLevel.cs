@@ -57,6 +57,7 @@ namespace Game.Core
             _saver.Save();
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
             _saver.Load();
+            _saver.Save();
 
             yield return new WaitForSeconds(fadeInTime);
             yield return _fader.FadeIn(fadeInTime);

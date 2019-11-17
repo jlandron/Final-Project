@@ -14,8 +14,6 @@ namespace Game.Movable
         private float m_timeBetweenHits = 1;
         private int m_Health = 3;
 
-        [SerializeField]
-        GameObject deadPrefab;
 
         [SerializeField]
         private GameObject[] scrapPieces;
@@ -58,11 +56,8 @@ namespace Game.Movable
             }
             else
             {
-                int numDropped = Random.Range(1, maxScrapDropped);
-                for (int i = 0; i < numDropped; i++)
-                {
-                    Instantiate(scrapPieces[Random.Range(0, scrapPieces.Length)], transform.position, Quaternion.identity);
-                }
+                Vector2 deathPos = new Vector2(transform.position.x, transform.position.y);
+                
                 try
                 {
                     gameObject.transform.position = FindObjectOfType<LevelGenerator>().spawnLocation;
@@ -71,9 +66,19 @@ namespace Game.Movable
                 {
 
                 }
+                DropScrapOnDeath(deathPos);
                 m_Health = m_DefaultHealth;
                 //Rougelike, death means you lose everything current save is overwritten
                 GetComponent<Inventory>().SetAllToZero();
+            }
+        }
+
+        private void DropScrapOnDeath(Vector2 deathPos)
+        {
+            int numDropped = Random.Range(1, maxScrapDropped);
+            for (int i = 0; i < numDropped; i++)
+            {
+                Instantiate(scrapPieces[Random.Range(0, scrapPieces.Length)], deathPos, Quaternion.identity);
             }
         }
 

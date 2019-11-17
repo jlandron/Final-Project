@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-    public static GameManager instance;
+    public static GameManager instance = null;
 
     [SerializeField]
     private bool _isPaused;
@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour {
     static bool hasSpawned = false;
 
     private void Awake( ) {
-
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+        }
         if( !hasSpawned ) {
             SpawnPersistantObjects();
             hasSpawned = true;
@@ -42,15 +44,26 @@ public class GameManager : MonoBehaviour {
         pauseMenu.SetActive(false);
     }
 
-    private void Update( ) {
+    private void FixedUpdate( ) {
         if(pauseMenu == null)
         {
             pauseMenu = GameObject.FindWithTag("PauseMenu");
-            pauseMenu.SetActive(false);
+            if(pauseMenu != null)
+            {
+                pauseMenu.SetActive(false);
+            }
         }
-        if( SceneManager.GetActiveScene( ).buildIndex == 0 ) {
-            SceneManager.LoadScene(1);
+        int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        switch (buildIndex)
+        {
+            case 0:
+                SceneManager.LoadScene(1);
+                break;
+            default:
+                break;
         }
+        
+        
 
         if( Input.GetKeyDown( KeyCode.Q ) ) {
             Application.Quit( );

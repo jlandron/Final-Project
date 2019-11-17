@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Saving;
+using UnityEngine.SceneManagement;
 
 namespace Game.Core
 {
@@ -9,13 +10,21 @@ namespace Game.Core
     {
         const string defaultSaveFile = "save";
         [SerializeField] float fadeInTime = 2f;
+        
+        private bool wasDeleted = false;
+        public bool WasDeleted { get => wasDeleted; private set => wasDeleted = value; }
 
-        private IEnumerator Start()
+        public void LoadScene()
         {
-            Fader fader = FindObjectOfType<Fader>();
-            fader.FadeOutImmeduate();
-            //yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
-            yield return fader.FadeIn(fadeInTime);
+            {
+                wasDeleted = false;
+                Fader fader = FindObjectOfType<Fader>();
+                fader.FadeOutImmeduate();
+                int sceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+                SceneManager.LoadScene(sceneToLoad);
+                Save();
+                StartCoroutine(FindObjectOfType<Fader>().FadeIn(fadeInTime));
+            }
         }
 #if UNITY_EDITOR
         void Update()
@@ -34,11 +43,18 @@ namespace Game.Core
         public void Save()
         {
             GetComponent<SavingSystem>().Save(defaultSaveFile);
+            wasDeleted = false;
         }
 
         public void Load()
         {
             GetComponent<SavingSystem>().Load(defaultSaveFile);
+        }
+
+        public void Delete()
+        {
+            GetComponent<SavingSystem>().Delete(defaultSaveFile);
+            WasDeleted = true;
         }
     }
 }

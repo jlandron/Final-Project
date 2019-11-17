@@ -9,8 +9,7 @@ namespace Game.UI {
     public class ButtonHandler : MonoBehaviour {
         public void LoadLevel( ) {
             Debug.Log( "Loading next Level" );
-            int nextScene = SceneManager.GetActiveScene( ).buildIndex + 1;
-            FindObjectOfType<LoadLevel>( ).DoLoad( nextScene );
+            FindObjectOfType<SavingWrapper>().LoadScene();
         }
 
         public void QuitGame( ) {
@@ -26,6 +25,11 @@ namespace Game.UI {
         public void ResumeGame()
         {
             GameManager.instance.Unpause();
+        }
+        public void DeleteSaveFile()
+        {
+            Debug.Log("Save file deleted");
+            FindObjectOfType<SavingWrapper>().Delete(); ;
         }
     }
 }

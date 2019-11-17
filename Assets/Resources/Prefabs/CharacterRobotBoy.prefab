@@ -693,8 +693,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0110141635, y: -0.07983816}
-  m_Size: {x: 0.24051726, y: 1.0391309}
+  m_Offset: {x: -0.036913157, y: -0.23062956}
+  m_Size: {x: 0.18871927, y: 0.7375481}
   m_Direction: 0
 --- !u!1001 &4057301633904426984
 PrefabInstance:
@@ -703,6 +703,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6885970412118226503}
     m_Modifications:
+    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: m_Name
+      value: laser
+      objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472222, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -757,11 +762,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
-        type: 3}
-      propertyPath: m_Name
-      value: laser
       objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}

@@ -2950,6 +2950,11 @@ PrefabInstance:
       propertyPath: FlareDisplay
       value: 
       objectReference: {fileID: 1707616437}
+    - target: {fileID: 7075476386591172279, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: ScrapDisplay
+      value: 
+      objectReference: {fileID: 1707616439}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
 --- !u!1001 &497632603
@@ -9140,15 +9145,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
-        type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 250670872026989979, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
+        type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 250670872026989983, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
@@ -9255,15 +9260,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 250670870912637283, guid: 029ca662f171ea640a63af0f9e424e26,
-        type: 3}
-      propertyPath: m_Text
-      value: Text2
-      objectReference: {fileID: 0}
     - target: {fileID: 250670871258252703, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
       propertyPath: m_Name
       value: Text1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377627149214187719, guid: 029ca662f171ea640a63af0f9e424e26,
+        type: 3}
+      propertyPath: m_Name
+      value: ScrapDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 250670870912637283, guid: 029ca662f171ea640a63af0f9e424e26,
+        type: 3}
+      propertyPath: m_Text
+      value: Text2
       objectReference: {fileID: 0}
     - target: {fileID: 250670870912637277, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
@@ -9311,6 +9321,18 @@ MonoBehaviour:
 --- !u!114 &1707616438 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
+    type: 3}
+  m_PrefabInstance: {fileID: 1707616434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1707616439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1091714772918838085, guid: 029ca662f171ea640a63af0f9e424e26,
     type: 3}
   m_PrefabInstance: {fileID: 1707616434}
   m_PrefabAsset: {fileID: 0}
