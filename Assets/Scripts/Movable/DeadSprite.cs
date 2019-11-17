@@ -7,15 +7,15 @@ namespace Game.Movable
     public class DeadSprite : MonoBehaviour
     {
         public float delay = 5f;
-        private float timePassed = 0f;
+        private float _timePassed = 0f;
 
         private void Update()
         {
-            if (timePassed < delay)
+            if (_timePassed < delay)
             {
-                timePassed += Time.deltaTime;
+                _timePassed += Time.deltaTime;
             }
-            else if (timePassed >= delay)
+            else if (_timePassed >= delay)
             {
                 GetComponent<Rigidbody2D>().gravityScale = 0f;
                 GetComponent<Collider2D>().isTrigger = true;

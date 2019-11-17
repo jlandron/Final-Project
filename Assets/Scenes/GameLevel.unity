@@ -2256,6 +2256,11 @@ PrefabInstance:
       propertyPath: m_HealthDisplay
       value: 
       objectReference: {fileID: 1075470350}
+    - target: {fileID: 5615930492991112954, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: HealthDisplay
+      value: 
+      objectReference: {fileID: 1075470350}
     - target: {fileID: 7075476386591172279, guid: 5747476c963dd2a41941f5e4070b81af,
         type: 3}
       propertyPath: FlareDisplay
@@ -5395,6 +5400,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 250670872026989979, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
       propertyPath: m_Name
@@ -5504,11 +5514,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
-        type: 3}
-      propertyPath: m_Text
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 250670870912637283, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
