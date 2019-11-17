@@ -4263,7 +4263,7 @@ MonoBehaviour:
     m_Bits: 256
   minX: 10
   maxX: 90
-  minY: 10
+  minY: -30
   player: {fileID: 2064104754}
   maxNumEnemies: 20
 --- !u!4 &1967279452

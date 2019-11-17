@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 3570287478888259469, guid: 3553ec8f12d3c354c936dd79cf0c8b6a,
         type: 3}
       propertyPath: m_Name
-      value: HealthBar
+      value: Battery
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3553ec8f12d3c354c936dd79cf0c8b6a, type: 3}
@@ -574,11 +574,6 @@ PrefabInstance:
     - target: {fileID: 6531123505473629068, guid: 9712e3882cab2644c82b3b272c7aaad2,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6531123505473629068, guid: 9712e3882cab2644c82b3b272c7aaad2,
-        type: 3}
-      propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6531123505473629068, guid: 9712e3882cab2644c82b3b272c7aaad2,
