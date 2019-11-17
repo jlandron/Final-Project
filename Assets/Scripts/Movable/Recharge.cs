@@ -12,9 +12,9 @@ namespace Game.Movable {
         [SerializeField]
         private Light2D _light;
         private bool _charging;
-        private bool _batteryCharged = true;
+        private bool batteryCharged = true;
 
-        public bool BatteryCharged { get => _batteryCharged; private set => _batteryCharged = value; }
+        public bool BatteryCharged { get => batteryCharged; private set => batteryCharged = value; }
 
         void Start( ) {
             currentCharge = maxCharge;

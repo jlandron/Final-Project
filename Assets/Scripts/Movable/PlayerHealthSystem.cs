@@ -6,12 +6,12 @@ namespace Game.Movable
 {
     public class PlayerHealthSystem : MonoBehaviour
     {
-        public Text HealthDisplay = null;
+        public Text m_HealthDisplay = null;
 
-        private int _defaultHealth = 3;
-        private float _hitTime = 0;
-        private float _timeBetweenHits = 1;
-        private int _health;
+        private int m_DefaultHealth = 3;
+        private float m_hitTime = 0;
+        private float m_timeBetweenHits = 1;
+        private int m_Health;
 
         [SerializeField]
         GameObject deadPrefab;
@@ -19,27 +19,27 @@ namespace Game.Movable
         // Start is called before the first frame update
         void Start()
         {
-            _health = _defaultHealth;
+            m_Health = m_DefaultHealth;
             UpdateUI();
         }
         private void Update()
         {
-            _hitTime += Time.deltaTime;
+            m_hitTime += Time.deltaTime;
             UpdateUI();
         }
         public void IncrementHealth()
         {
-            if (_health < _defaultHealth)
+            if (m_Health < m_DefaultHealth)
             {
-                _health++;
+                m_Health++;
             }
         }
 
         public void DecrementHealth()
         {
-            if (_health > 1)
+            if (m_Health > 1)
             {
-                _health--;
+                m_Health--;
             }
             else
             {
@@ -56,27 +56,27 @@ namespace Game.Movable
 
                 }
 
-                _health = _defaultHealth;
+                m_Health = m_DefaultHealth;
             }
         }
 
         public void UpdateUI()
         {
-            if (HealthDisplay != null)
+            if (m_HealthDisplay != null)
             {
-                switch (_health)
+                switch (m_Health)
                 {
                     case 3:
-                        HealthDisplay.text = "STABLE";
-                        HealthDisplay.color = new Color(0, 255, 0);
+                        m_HealthDisplay.text = "STABLE";
+                        m_HealthDisplay.color = new Color(0, 255, 0);
                         break;
                     case 2:
-                        HealthDisplay.text = "DAMAGED";
-                        HealthDisplay.color = new Color(255, 215, 0);
+                        m_HealthDisplay.text = "DAMAGED";
+                        m_HealthDisplay.color = new Color(255, 215, 0);
                         break;
                     case 1:
-                        HealthDisplay.text = "CRITICAL";
-                        HealthDisplay.color = new Color(255, 0, 0);
+                        m_HealthDisplay.text = "CRITICAL";
+                        m_HealthDisplay.color = new Color(255, 0, 0);
                         break;
                 }
             }
@@ -84,11 +84,11 @@ namespace Game.Movable
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (_hitTime > _timeBetweenHits)
+            if (m_hitTime > m_timeBetweenHits)
             {
                 if (collision.gameObject.tag == "Enemy")
                 {
-                    _hitTime = 0;
+                    m_hitTime = 0;
                     DecrementHealth();
                 }
             }
