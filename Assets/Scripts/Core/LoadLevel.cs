@@ -19,6 +19,7 @@ namespace Game.Core {
         }
 
         public void DoLoad( int level ) {
+            
             sceneToLoad = level;
             StartCoroutine( Transition( ) );
         }
@@ -27,7 +28,11 @@ namespace Game.Core {
                 Debug.Log( "Scene to load not set" );
                 yield break;
             }
-
+            if (sceneToLoad >= SceneManager.sceneCount)
+            {
+                Debug.Log("Scene does not exist");
+                yield break;
+            }
             DontDestroyOnLoad( gameObject );
             _fader = FindObjectOfType<Fader>( );
             if( !_fader ) {
@@ -39,9 +44,6 @@ namespace Game.Core {
             yield return SceneManager.LoadSceneAsync( sceneToLoad );
             //_saver.Load( );
 
-            //Portal otherPortal = GetOtherPortal( );
-            //UpdatePlayer( otherPortal );
-            //save again as a checkpoint after initial loading
             //_saver.Save( );
 
             yield return new WaitForSeconds( fadeInTime );
