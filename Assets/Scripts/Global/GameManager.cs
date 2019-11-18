@@ -1,10 +1,10 @@
 ﻿using Game.Movable;
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
     public static GameManager instance = null;
 
     [SerializeField]
@@ -18,18 +18,30 @@ public class GameManager : MonoBehaviour {
 
     static bool hasSpawned = false;
 
-    private void Awake( ) {
-        if(instance == null)
+    private void Awake()
+    {
+        if (instance == null)
         {
             instance = this;
         }
-        if( !hasSpawned ) {
+        if (!hasSpawned)
+        {
             SpawnPersistantObjects();
             hasSpawned = true;
         }
     }
-    private void Start( ) {
-        Screen.SetResolution( 1920, 1080, true );
+
+    private void OnLevelWasLoaded(int level)
+    {
+        pauseMenu = GameObject.FindWithTag("PauseMenu");
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+    }
+    private void Start()
+    {
+        Screen.SetResolution(1920, 1080, true);
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = backgroundMusic[UnityEngine.Random.Range(0, backgroundMusic.Length)];
         audioSource.Play();
@@ -41,14 +53,19 @@ public class GameManager : MonoBehaviour {
     {
         _isPaused = false;
         Time.timeScale = 1;
-        pauseMenu.SetActive(false);
+        if(pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+        
     }
 
-    private void FixedUpdate( ) {
-        if(pauseMenu == null)
+    private void FixedUpdate()
+    {
+        if (pauseMenu == null)
         {
             pauseMenu = GameObject.FindWithTag("PauseMenu");
-            if(pauseMenu != null)
+            if (pauseMenu != null)
             {
                 pauseMenu.SetActive(false);
             }
@@ -62,20 +79,26 @@ public class GameManager : MonoBehaviour {
             default:
                 break;
         }
-        
-        
 
-        if( Input.GetKeyDown( KeyCode.Q ) ) {
-            Application.Quit( );
+
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
         }
-        if( Input.GetKeyDown( KeyCode.Escape ) ) {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
             if (!_isPaused)
             {
                 _isPaused = true;
                 Time.timeScale = 0;
-                pauseMenu.SetActive(true);
+
                 //set up better upgrade menu
-                pauseMenu.GetComponent<Text>().text = "Scrap Available" + FindObjectOfType<Inventory>().scrapCount;
+                if (pauseMenu != null)
+                {
+                    pauseMenu.SetActive(true);
+                    pauseMenu.GetComponent<Text>().text = "Scrap Available" + FindObjectOfType<Inventory>().scrapCount;
+                }
             }
             else
             {
@@ -88,10 +111,12 @@ public class GameManager : MonoBehaviour {
             audioSource.Play();
         }
     }
-    private void SpawnPersistantObjects( ) {
-        foreach( GameObject gameObject in peristantObjectPrefabs ) {
-            GameObject persistantObject = Instantiate( gameObject );
-            DontDestroyOnLoad( persistantObject );
+    private void SpawnPersistantObjects()
+    {
+        foreach (GameObject gameObject in peristantObjectPrefabs)
+        {
+            GameObject persistantObject = Instantiate(gameObject);
+            DontDestroyOnLoad(persistantObject);
         }
     }
 }

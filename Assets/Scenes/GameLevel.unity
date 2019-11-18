@@ -1125,9 +1125,9 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000002143511289c88ca03f843fa7
+  m_ApplyToSortingLayers: 21435112
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -5767,6 +5767,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A*
       objectReference: {fileID: 0}
+    - target: {fileID: 817205766179876161, guid: 9cf088616845fcd41a0881bbc66da0e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 817205766179876163, guid: 9cf088616845fcd41a0881bbc66da0e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6055,6 +6060,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697342060340108360, guid: 8ffe685d9b7b1c046807ee6f4b7afc78,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.1443998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697342060340108360, guid: 8ffe685d9b7b1c046807ee6f4b7afc78,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.2887995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ffe685d9b7b1c046807ee6f4b7afc78, type: 3}

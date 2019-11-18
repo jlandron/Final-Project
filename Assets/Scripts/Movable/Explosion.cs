@@ -31,7 +31,6 @@ namespace Game.Movable
             {
                 Destroy(this.gameObject);
             }
-            //TODO: Consider explosion effecting enemies/player as well
         }
     }
 }

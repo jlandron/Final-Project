@@ -423,6 +423,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1234628588}
     m_Modifications:
+    - target: {fileID: 7984498181915416765, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
+        type: 3}
+      propertyPath: m_Name
+      value: Afterburner
+      objectReference: {fileID: 0}
     - target: {fileID: 7984498181915640989, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,11 +507,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 7.0350003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984498181915416765, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
-        type: 3}
-      propertyPath: m_Name
-      value: Afterburner
       objectReference: {fileID: 0}
     - target: {fileID: 7984498181935038937, guid: d46fe2c783cfa7b4e8d20bcf51d40f45,
         type: 3}

@@ -1212,6 +1212,11 @@ PrefabInstance:
       propertyPath: m_HealthDisplayStatus
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7254605259667538353, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_MainCamera
+      value: 
+      objectReference: {fileID: 1172834398}
     - target: {fileID: 7075476386591172279, guid: 5747476c963dd2a41941f5e4070b81af,
         type: 3}
       propertyPath: FlareDisplay
@@ -1235,11 +1240,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.70451015
       objectReference: {fileID: 0}
-    - target: {fileID: 7254605259667538353, guid: 5747476c963dd2a41941f5e4070b81af,
-        type: 3}
-      propertyPath: m_MainCamera
-      value: 
-      objectReference: {fileID: 1172834398}
     - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 1
@@ -3401,9 +3401,9 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.4
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000002143511289c88ca03f843fa7
+  m_ApplyToSortingLayers: 21435112
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -3964,11 +3964,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
-        type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 250670872026989983, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4078,6 +4073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScrapDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
+        type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 029ca662f171ea640a63af0f9e424e26, type: 3}

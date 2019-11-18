@@ -2,6 +2,7 @@
 using Game.Saving;
 using UnityEngine;
 using UnityEngine.UI;
+using Pathfinding;
 
 namespace Game.Movable
 {
@@ -106,7 +107,17 @@ namespace Game.Movable
 
         void RescanPathfinding()
         {
-            AstarPath.active.Scan();
+            AIPath[] pathfinders = GameObject.FindObjectsOfType<AIPath>();
+            foreach (var finder in pathfinders)
+            {
+                finder.enabled = false;
+            }
+            var graphToScan = AstarPath.active.data.gridGraph;
+            AstarPath.active.Scan(graphToScan);
+            foreach (var finder in pathfinders)
+            {
+                finder.enabled = true;
+            }
         }
         public bool IncrementBombCount()
         {

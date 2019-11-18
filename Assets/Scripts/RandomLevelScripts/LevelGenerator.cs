@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using Game.Movable;
 using System.Collections.Generic;
+using Pathfinding;
 
 namespace Game.RandomRoom
 {
@@ -173,7 +174,16 @@ namespace Game.RandomRoom
         }
         private void FinishGeneration()
         {
+            AIPath[] pathfinders = GameObject.FindObjectsOfType<AIPath>();
+            foreach (var finder in pathfinders)
+            {
+                finder.enabled = false;
+            }
             AstarPath.active.Scan(); //level is built, scan graph
+            foreach (var finder in pathfinders)
+            {
+                finder.enabled = true;
+            }
             //scan for the number of enamies and delete over the max
             //List<EnemyBehavior> enemies = new List<EnemyBehavior>(FindObjectsOfType<EnemyBehavior>());
             //while(enemies.Count > maxNumEnemies)
