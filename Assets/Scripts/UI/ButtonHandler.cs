@@ -24,7 +24,7 @@ namespace Game.UI {
         }
         public void ResumeGame()
         {
-            GameManager.instance.Unpause();
+            FindObjectOfType<PauseMenu>().ActivateObjects(false);
         }
         public void DeleteSaveFile()
         {

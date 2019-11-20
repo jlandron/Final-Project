@@ -1507,11 +1507,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1958527608}
     m_Modifications:
-    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
-        type: 3}
-      propertyPath: m_Name
-      value: BombInteractable
-      objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373606, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1566,6 +1561,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
+        type: 3}
+      propertyPath: m_Name
+      value: BombInteractable
       objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373607, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
@@ -2368,11 +2368,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2051959083}
     m_Modifications:
-    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
-        type: 3}
-      propertyPath: m_Name
-      value: DirtTile4 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 313842454712533982, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2428,6 +2423,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
+        type: 3}
+      propertyPath: m_Name
+      value: DirtTile4 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee7107f12ab1bc49b1f10d1255cdba9, type: 3}
 --- !u!1 &645132215
@@ -2467,11 +2467,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2051959083}
     m_Modifications:
-    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
-        type: 3}
-      propertyPath: m_Name
-      value: DirtTile4
-      objectReference: {fileID: 0}
     - target: {fileID: 313842454712533982, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2526,6 +2521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
+        type: 3}
+      propertyPath: m_Name
+      value: DirtTile4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee7107f12ab1bc49b1f10d1255cdba9, type: 3}
@@ -3618,11 +3618,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2051959083}
     m_Modifications:
-    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
-        type: 3}
-      propertyPath: m_Name
-      value: DirtTile4 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 313842454712533982, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3677,6 +3672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
+        type: 3}
+      propertyPath: m_Name
+      value: DirtTile4 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee7107f12ab1bc49b1f10d1255cdba9, type: 3}
@@ -3836,16 +3836,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 168199594}
     m_Modifications:
-    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
-        type: 3}
-      propertyPath: m_Name
-      value: ChargingLightSource
-      objectReference: {fileID: 0}
-    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1527981101670254191, guid: a7be727bdb907c74d98cdd82742f01a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3910,6 +3900,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9078441
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
+        type: 3}
+      propertyPath: m_Name
+      value: ChargingLightSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1527981101670254189, guid: a7be727bdb907c74d98cdd82742f01a4,
         type: 3}
@@ -4147,11 +4147,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2051959083}
     m_Modifications:
-    - target: {fileID: 5876350268993140161, guid: 2162561f51a37fc4f97de0f3dcda2363,
-        type: 3}
-      propertyPath: m_Name
-      value: DirtTile3
-      objectReference: {fileID: 0}
     - target: {fileID: 5876350268993140163, guid: 2162561f51a37fc4f97de0f3dcda2363,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4207,6 +4202,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5876350268993140161, guid: 2162561f51a37fc4f97de0f3dcda2363,
+        type: 3}
+      propertyPath: m_Name
+      value: DirtTile3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2162561f51a37fc4f97de0f3dcda2363, type: 3}
 --- !u!1001 &1480630758
@@ -4216,11 +4216,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2051959083}
     m_Modifications:
-    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
-        type: 3}
-      propertyPath: m_Name
-      value: DirtTile4 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 313842454712533982, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4275,6 +4270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313842454712533980, guid: 6ee7107f12ab1bc49b1f10d1255cdba9,
+        type: 3}
+      propertyPath: m_Name
+      value: DirtTile4 (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee7107f12ab1bc49b1f10d1255cdba9, type: 3}
@@ -4844,11 +4844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2051959083}
     m_Modifications:
-    - target: {fileID: 7112938008836403550, guid: 7cd033cdb33099f4f8dbeae54e91a6ae,
-        type: 3}
-      propertyPath: m_Name
-      value: DirtTile1
-      objectReference: {fileID: 0}
     - target: {fileID: 7112938008836403548, guid: 7cd033cdb33099f4f8dbeae54e91a6ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4903,6 +4898,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112938008836403550, guid: 7cd033cdb33099f4f8dbeae54e91a6ae,
+        type: 3}
+      propertyPath: m_Name
+      value: DirtTile1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd033cdb33099f4f8dbeae54e91a6ae, type: 3}
@@ -5836,11 +5836,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1958527608}
     m_Modifications:
-    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
-        type: 3}
-      propertyPath: m_Name
-      value: StartInteractable
-      objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373606, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5895,6 +5890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
+        type: 3}
+      propertyPath: m_Name
+      value: StartInteractable
       objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373607, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}

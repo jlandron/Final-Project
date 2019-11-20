@@ -33,6 +33,7 @@ namespace Game.Movable
         float changeRate = 0;
         float timeSoFar = 0;
         bool fading = false;
+        bool loading = false;
 
         private void Start()
         {
@@ -66,23 +67,26 @@ namespace Game.Movable
                 wantToShow.text = textToShow;
                 Invoke("DoNextSteps", timeToShowText);
             }
-            
+
         }
 
         void DoNextSteps()
         {
-            if (isLevelEnd)
+            if (isLevelEnd && !loading)
             {
                 int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
                 FindObjectOfType<LoadLevel>().DoLoad(nextScene);
+                loading = true;
             }
             Debug.Log("Disabling Text");
-            wantToShow.gameObject.SetActive(false);
+            if (wantToShow != null)
+            {
+                wantToShow.gameObject.SetActive(false);
+            }
         }
 
         public void FadeIn()
         {
-
             _startScale = startScale;
             _endScale = endScale;
 
@@ -93,8 +97,6 @@ namespace Game.Movable
 
         public void FadeOut()
         {
-
-
             _startScale = endScale;
             _endScale = startScale;
 
