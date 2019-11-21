@@ -1,35 +1,64 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Game.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Game.Core;
 
-namespace Game.UI {
+namespace Game.UI
+{
 
-    public class ButtonHandler : MonoBehaviour {
-        public void LoadLevel( ) {
-            Debug.Log( "Loading next Level" );
-            FindObjectOfType<SavingWrapper>().LoadScene();
+    public class ButtonHandler : MonoBehaviour
+    {
+
+        private float minTimeBetweenPresses = 1f;
+        private float timeSinceClick = 0f;
+        public void LoadLevel()
+        {
+            if (timeSinceClick > minTimeBetweenPresses)
+            {
+                Debug.Log("Loading next Level");
+                FindObjectOfType<SavingWrapper>().LoadScene();
+                timeSinceClick = 0;
+            }
         }
 
-        public void QuitGame( ) {
-            Application.Quit( );
+        public void QuitGame()
+        {
+            if (timeSinceClick > minTimeBetweenPresses)
+            {
+                Application.Quit();
+                timeSinceClick = 0;
+            }
         }
 
         public void GoToMenu()
         {
-            FindObjectOfType<SavingWrapper>().Save();
-            Time.timeScale = 1;
-            SceneManager.LoadScene(0);
+            if (timeSinceClick > minTimeBetweenPresses)
+            {
+                FindObjectOfType<SavingWrapper>().Save();
+                Time.timeScale = 1;
+                SceneManager.LoadScene(0);
+                timeSinceClick = 0;
+            }
         }
         public void ResumeGame()
         {
-            FindObjectOfType<PauseMenu>().ActivateObjects(false);
+            if (timeSinceClick > minTimeBetweenPresses)
+            {
+                FindObjectOfType<PauseMenu>().ActivateObjects(false);
+                timeSinceClick = 0;
+            }
         }
         public void DeleteSaveFile()
         {
-            Debug.Log("Save file deleted");
-            FindObjectOfType<SavingWrapper>().Delete(); ;
+            if (timeSinceClick > minTimeBetweenPresses)
+            {
+                Debug.Log("Save file deleted");
+                FindObjectOfType<SavingWrapper>().Delete();
+                timeSinceClick = 0;
+            }
+        }
+        private void Update()
+        {
+            timeSinceClick += Time.deltaTime;
         }
     }
 }
