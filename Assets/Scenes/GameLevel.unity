@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.15
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000002143511289c88ca03f843fa7
   m_LightCookieSprite: {fileID: 0}
@@ -5461,11 +5461,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1958527608}
     m_Modifications:
-    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
-        type: 3}
-      propertyPath: m_Name
-      value: StartInteractable
-      objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373606, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5520,6 +5515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022276532251373602, guid: 6f1b4e21ffcbef149b90848da1170be3,
+        type: 3}
+      propertyPath: m_Name
+      value: StartInteractable
       objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373607, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
