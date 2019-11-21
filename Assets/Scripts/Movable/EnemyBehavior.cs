@@ -9,7 +9,7 @@ namespace Game.Movable
         private float targetRange = 5f;
         [SerializeField]
         private float tetherDistence = 14f;
-        
+
         private Transform target;
         private SpriteRenderer spriteRenderer;
         private ParticleSystem trail;
@@ -33,6 +33,10 @@ namespace Game.Movable
         private bool isChasing = false;
         [SerializeField]
         public float radius = 20;
+        [SerializeField]
+        private GameObject[] scrapPieces;
+        [SerializeField]
+        private int maxScrapDropped = 5;
 
         private IAstarAI ai;
         private AIDestinationSetter aIDestinationSetter;
@@ -46,7 +50,6 @@ namespace Game.Movable
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             aIDestinationSetter = GetComponent<AIDestinationSetter>();
             trail = GetComponentInChildren<ParticleSystem>();
-            ai = GetComponent<IAstarAI>();
             Debug.Assert(target != null);
             m_Health = m_DefaultHealth;
 
@@ -54,19 +57,30 @@ namespace Game.Movable
         // Update is called once per frame
         void Update()
         {
+            if (ai == null)
+            {
+                ai = GetComponent<IAstarAI>();
+            }
             if (!isDead)
             {
-                DoChasing();
+                if (ai != null)
+                {
+                    DoChasing();
+                }
+
                 CheckFlipSprite();
                 m_hitTime += Time.deltaTime;
                 //keep the enemy from rotating due to collisions
-                this.gameObject.transform.rotation = Quaternion.identity;
+                gameObject.transform.rotation = Quaternion.identity;
             }
             else
             {
-                aIPath.enabled = false;
+                if (aIPath != null)
+                {
+                    aIPath.enabled = false;
+                }
             }
-            
+
         }
 
         private void CheckFlipSprite()
@@ -88,44 +102,52 @@ namespace Game.Movable
             {
                 ai.maxSpeed = 2;
                 isChasing = true;
-                aIDestinationSetter.enabled = true;
+                if (aIDestinationSetter != null)
+                {
+                    aIDestinationSetter.enabled = true;
+                }
             }
             else if (!isChasing || Vector2.Distance(transform.position, target.position) > tetherDistence)
             {
                 isChasing = false;
-                aIDestinationSetter.enabled = false;
+                if (aIDestinationSetter != null)
+                {
+                    aIDestinationSetter.enabled = false;
+                }
+
                 DoWandering();
             }
         }
- 
+
         private void OnParticleCollision(GameObject other)
         {
             Debug.Log("Particle Collision");
             DecrementHealth();
         }
-        
 
-        private void DecrementHealth()
+
+        public void DecrementHealth(int amount = 1)
         {
             if (m_hitTime > m_timeBetweenHits)
             {
                 if (m_Health > 1)
                 {
                     m_hitTime = 0;
-                    m_Health--;
+                    m_Health -= amount;
                     if (hitText != null)
                     {
                         ShowText();
                     }
                 }
-                else
+                else if (!isDead)
                 {
-                    //Destroy(gameObject);
                     isDead = true;
-                    GetComponent<BoxCollider2D>().isTrigger = false;
-                    gameObject.tag = "Dead";
-                    GetComponent<Rigidbody2D>().gravityScale = 0.5f;
-                    trail.gameObject.SetActive(false);
+                    int numDropped = Random.Range(1, maxScrapDropped);
+                    for (int i = 0; i < numDropped; i++)
+                    {
+                        Instantiate(scrapPieces[Random.Range(0, scrapPieces.Length)], transform.position, Quaternion.identity);
+                    }
+                    Destroy(gameObject);
                 }
             }
         }
@@ -148,11 +170,14 @@ namespace Game.Movable
         }
         void DoWandering()
         {
-            ai.maxSpeed = 1;
-            if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+            if (ai != null)
             {
-                ai.destination = PickRandomPoint();
-                ai.SearchPath();
+                ai.maxSpeed = 1;
+                if (!ai.pathPending && (ai.reachedEndOfPath || !ai.hasPath))
+                {
+                    ai.destination = PickRandomPoint();
+                    ai.SearchPath();
+                }
             }
         }
     }

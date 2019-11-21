@@ -12,6 +12,11 @@ TagManager:
   - Fire
   - End
   - Dead
+  - Tiles
+  - BombPickup
+  - FlarePickup
+  - Scrap
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
@@ -26,7 +31,7 @@ TagManager:
   - DontTouch
   - Tiles
   - Enemy
-  - 
+  - Droppable Items
   - 
   - 
   - 

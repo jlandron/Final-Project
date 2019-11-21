@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.Movable {
     public class ReticleControl : MonoBehaviour {
         private Vector3 mouseCoords;
-        public float MouseSensitivity = 0.5f;
+        public float MouseSensitivity = 0.2f;
         private Camera _camera;
 
         private void Start( ) {

@@ -4,38 +4,48 @@ namespace Game.Movable
 {
     public class WeaponControl : MonoBehaviour
     {
-        public ReticleControl m_Reticle;
+        public GameObject reticlePrefab;
+        private GameObject currentReticle;
+        private ReticleControl reticle;
+        public AudioClip laserSound;
+        private AudioSource audioData;
 
         [SerializeField]
         private ParticleSystem gun;
         [SerializeField]
         private float fireRate = 1;
+
         private bool canfire = true;
+        private Recharge recharge;
 
         // Start is called before the first frame update
         void Start()
         {
-            m_Reticle = GetComponentInChildren<ReticleControl>();
+            audioData = GetComponent<AudioSource>();
+            currentReticle = Instantiate(reticlePrefab, transform.position, Quaternion.identity);
+            reticle = currentReticle.GetComponent<ReticleControl>();
+            recharge = GetComponent<Recharge>();
         }
 
         // Update is called once per frame
         void Update()
         {
             UpdateGunRotation();
-            
-            if (Input.GetButton("Fire1"))
+           
+            if (recharge.BatteryCharged && Input.GetMouseButtonDown(0))
             {
                 if (canfire)
                 {
                     StartCoroutine(HandleShoot());
                 }
             }
+
         }
 
         private void UpdateGunRotation()
         {
             Vector2 startPoint = gameObject.transform.position;
-            Vector2 endPoint = m_Reticle.gameObject.transform.position;
+            Vector2 endPoint = reticle.gameObject.transform.position;
             Vector2 direction = (endPoint - startPoint);
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -45,6 +55,8 @@ namespace Game.Movable
 
         private IEnumerator HandleShoot()
         {
+            audioData.clip = laserSound;
+            audioData.Play();
             gun.Emit(1);
             canfire = false;
             yield return new WaitForSeconds(fireRate);

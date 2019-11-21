@@ -9,12 +9,27 @@ EditorBuildSettings:
     path: Assets/Scenes/_preload.unity
     guid: 5c193f0594e36824086bd411fd6d3d0a
   - enabled: 1
-    path: Assets/Scenes/EnterMenu.unity
+    path: Assets/Scenes/GameMenu.unity
+    guid: 6da88699134328245b35969a590bba0f
+  - enabled: 1
+    path: Assets/Scenes/GameExplain.unity
     guid: 60a0fb3a40b944c4097cb5e5d7f64609
   - enabled: 1
     path: Assets/Scenes/GameLevel.unity
     guid: 7805b84d818fad946b5b005a17bcf8b7
   - enabled: 1
-    path: Assets/Scenes/RandomDungeon_Brown.unity
+    path: Assets/Scenes/Dungeons/RandomDungeon_Brown.unity
     guid: e48b3984083dedd48a0424d7e3ed9300
+  - enabled: 1
+    path: Assets/Scenes/DungeonTransition1.unity
+    guid: 7d88eb46a3cfa8f42b61bec1a1f35d39
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/RandomDungeon_Blue.unity
+    guid: e0f1073405d282b41a6524e5753c7f46
+  - enabled: 1
+    path: Assets/Scenes/DungeonTransition2.unity
+    guid: 7977971fb3d5b574aaecebdec0594daf
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/RandomDungeon_Rock.unity
+    guid: e27bbcae704fcdc42a125dae89aac2ea
   m_configObjects: {}
