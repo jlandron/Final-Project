@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Game.Saving;
+using Game.Core;
+using GAME.Movable;
 
 namespace Game.Movable
 {
@@ -57,7 +59,7 @@ namespace Game.Movable
             else
             {
                 Vector2 deathPos = new Vector2(transform.position.x, transform.position.y);
-                
+                FindObjectOfType<Fader>().FadeOutImmeduate();
                 try
                 {
                     gameObject.transform.position = FindObjectOfType<LevelGenerator>().spawnLocation;
@@ -70,6 +72,7 @@ namespace Game.Movable
                 m_Health = m_DefaultHealth;
                 //Rougelike, death means you lose everything current save is overwritten
                 GetComponent<Inventory>().SetAllToZero();
+                StartCoroutine(FindObjectOfType<Fader>().FadeIn(2));
             }
         }
 
@@ -108,7 +111,19 @@ namespace Game.Movable
         {
             if (m_hitTime > m_timeBetweenHits)
             {
-                if (collision.gameObject.tag == "Enemy")
+                if (collision.CompareTag("Enemy"))
+                {
+                    m_hitTime = 0;
+                    Camera.main.GetComponent<Shaker>().StartShaking(new Vector2(0.5f, 0.5f), 0.75f);
+                    DecrementHealth();
+                }
+            }
+        }
+        private void OnParticleCollision(GameObject other)
+        {
+            if (m_hitTime > m_timeBetweenHits)
+            {
+                if (other.CompareTag("EnemyGun"))
                 {
                     m_hitTime = 0;
                     DecrementHealth();

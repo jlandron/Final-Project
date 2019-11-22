@@ -303,7 +303,6 @@ GameObject:
   - component: {fileID: 7075476386591172279}
   - component: {fileID: 4312361454191399164}
   - component: {fileID: 8104307869020993291}
-  - component: {fileID: 622802985}
   m_Layer: 2
   m_Name: CharacterRobotBoy
   m_TagString: Player
@@ -523,8 +522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthDisplay: {fileID: 0}
-  deadPrefab: {fileID: 5258999395686338862, guid: 01e5f36e29e42984996cf8e68396bd6a,
-    type: 3}
   scrapPieces:
   - {fileID: 7690569187959855703, guid: 9222706942579a34686c41617decf0ad, type: 3}
   - {fileID: 8803950221211459704, guid: 2d6ef9d061daac648861bcca12ce65ea, type: 3}
@@ -542,8 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4608bce5add934e864893f57c0bd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reticlePrefab: {fileID: 596957745764186800, guid: b78ce5d6d6bc43441bfed25430954ab9,
-    type: 3}
   laserSound: {fileID: 8300000, guid: dd8a66399318cd643b16f9d0ce6c0846, type: 3}
   gun: {fileID: 3870162963905489527}
   fireRate: 1
@@ -680,22 +675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: player
---- !u!70 &622802985
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885970412118714983}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.036913157, y: -0.23062956}
-  m_Size: {x: 0.18871927, y: 0.7375481}
-  m_Direction: 0
 --- !u!1001 &4057301633904426984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -703,11 +682,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6885970412118226503}
     m_Modifications:
-    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
-        type: 3}
-      propertyPath: m_Name
-      value: laser
-      objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472222, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -762,6 +736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: m_Name
+      value: laser
       objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}

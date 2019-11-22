@@ -17,6 +17,8 @@ TagManager:
   - FlarePickup
   - Scrap
   - PauseMenu
+  - PlayerGun
+  - EnemyGun
   layers:
   - Default
   - TransparentFX

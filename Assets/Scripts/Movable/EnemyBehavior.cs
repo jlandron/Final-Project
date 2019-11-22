@@ -1,4 +1,5 @@
 ﻿using Pathfinding;
+using System.Collections;
 using UnityEngine;
 
 namespace Game.Movable
@@ -9,10 +10,15 @@ namespace Game.Movable
         private float targetRange = 5f;
         [SerializeField]
         private float tetherDistence = 14f;
+        [SerializeField]
+        private ParticleSystem gun;
+        [SerializeField]
+        private float fireRate = 2;
+        private bool canfire = true;
 
         private Transform target;
         private SpriteRenderer spriteRenderer;
-        private ParticleSystem trail;
+
 
         [SerializeField]
         private int m_DefaultHealth = 5;
@@ -49,7 +55,6 @@ namespace Game.Movable
             aIPath = GetComponent<AIPath>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             aIDestinationSetter = GetComponent<AIDestinationSetter>();
-            trail = GetComponentInChildren<ParticleSystem>();
             Debug.Assert(target != null);
             m_Health = m_DefaultHealth;
 
@@ -79,7 +84,17 @@ namespace Game.Movable
                 {
                     aIPath.enabled = false;
                 }
+                else
+                {
+                    aIPath = GetComponent<AIPath>();
+                }
             }
+            //work on making player detect particle collisions
+            //UpdateGunRotation();
+            //if (canfire && isChasing)
+            //{
+            //    StartCoroutine(HandleShoot());
+            //}
 
         }
 
@@ -87,7 +102,6 @@ namespace Game.Movable
         {
             if (aIPath.desiredVelocity.x >= 0.01f) //moving right
             {
-
                 spriteRenderer.transform.localScale = new Vector3(-1f, 1f, 1f); //flip 
             }
             else if (aIPath.desiredVelocity.x <= -0.01f) //moving left
@@ -98,6 +112,7 @@ namespace Game.Movable
 
         private void DoChasing()
         {
+            //wander
             if (Vector2.Distance(transform.position, target.position) <= targetRange && !isChasing)
             {
                 ai.maxSpeed = 2;
@@ -107,6 +122,7 @@ namespace Game.Movable
                     aIDestinationSetter.enabled = true;
                 }
             }
+            //chase player
             else if (!isChasing || Vector2.Distance(transform.position, target.position) > tetherDistence)
             {
                 isChasing = false;
@@ -114,15 +130,17 @@ namespace Game.Movable
                 {
                     aIDestinationSetter.enabled = false;
                 }
-
                 DoWandering();
             }
         }
 
         private void OnParticleCollision(GameObject other)
         {
-            Debug.Log("Particle Collision");
-            DecrementHealth();
+            if (other.CompareTag("PlayerGun"))
+            {
+                Debug.Log("Particle Collision");
+                DecrementHealth();
+            }
         }
 
 
@@ -179,6 +197,26 @@ namespace Game.Movable
                     ai.SearchPath();
                 }
             }
+        }
+        private void UpdateGunRotation()
+        {
+            Vector2 startPoint = gameObject.transform.position;
+            Vector2 endPoint = target.position;
+            Vector2 direction = (endPoint - startPoint);
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            gun.transform.rotation = rotation;
+            Debug.DrawLine(startPoint, endPoint, Color.cyan);
+        }
+
+        private IEnumerator HandleShoot()
+        {
+            //audioData.clip = laserSound;
+            //audioData.Play();
+            gun.Emit(1);
+            canfire = false;
+            yield return new WaitForSeconds(fireRate);
+            canfire = true;
         }
     }
 }
