@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Team Awesome
   productName: Dusk
-  defaultCursor: {fileID: 2800000, guid: 2dbb6d6aa04917d4b952556ee6966c83, type: 3}
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.41176474, g: 0.41960788, b: 0.4156863, a: 1}
   m_ShowUnitySplashScreen: 1

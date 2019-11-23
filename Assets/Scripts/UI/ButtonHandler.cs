@@ -73,8 +73,6 @@ namespace Game.UI
                 activeScreenResIndex = i;
                 float aspectRatio = 16 / 9f;
                 Screen.SetResolution(screenWidths[i], (int)(screenWidths[i] / aspectRatio), false);
-                PlayerPrefs.SetInt("screen res index", activeScreenResIndex);
-                PlayerPrefs.Save();
             }
         }
 
