@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] AudioClip[] backgroundMusic;
     [SerializeField] AudioSource audioSource;
 
+    public bool isFullscreen = false;
+
     static bool hasSpawned = false;
 
     private void Awake()
@@ -24,14 +26,17 @@ public class GameManager : MonoBehaviour
             SpawnPersistantObjects();
             hasSpawned = true;
         }
+        isFullscreen = (PlayerPrefs.GetInt("fullscreen") == 1) ? true : false;
     }
 
 
     private void Start()
     {
-        Screen.SetResolution(1920, 1080, true);
+        
+        Screen.SetResolution(1920, 1080, isFullscreen);
+        
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = backgroundMusic[UnityEngine.Random.Range(0, backgroundMusic.Length)];
+        audioSource.clip = backgroundMusic[Random.Range(0, backgroundMusic.Length)];
         audioSource.Play();
         audioSource.volume = 0.4f;
         audioSource.loop = false;
@@ -71,4 +76,5 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(persistantObject);
         }
     }
+
 }

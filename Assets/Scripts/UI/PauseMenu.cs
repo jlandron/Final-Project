@@ -20,6 +20,7 @@ namespace Game.UI
 
         void Update()
         {
+
             if (Input.GetKeyDown(KeyCode.P))
             {
                 if (!_isPaused)
@@ -46,5 +47,7 @@ namespace Game.UI
             _isPaused = active;
             Time.timeScale = active ? 0 : 1;
         }
+
+
     }
 }

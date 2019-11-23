@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -1221,6 +1221,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4008,6 +4010,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 168199594}
     m_Modifications:
+    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
+        type: 3}
+      propertyPath: m_Name
+      value: ChargingLightSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1527981101670254191, guid: a7be727bdb907c74d98cdd82742f01a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4072,16 +4084,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9078441
-      objectReference: {fileID: 0}
-    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
-        type: 3}
-      propertyPath: m_Name
-      value: ChargingLightSource
-      objectReference: {fileID: 0}
-    - target: {fileID: 1527981101670254184, guid: a7be727bdb907c74d98cdd82742f01a4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1527981101670254189, guid: a7be727bdb907c74d98cdd82742f01a4,
         type: 3}
@@ -5739,6 +5741,26 @@ PrefabInstance:
     - target: {fileID: 250670872026989983, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874181063, guid: 029ca662f171ea640a63af0f9e424e26, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874181063, guid: 029ca662f171ea640a63af0f9e424e26, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342156782, guid: 029ca662f171ea640a63af0f9e424e26, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342156782, guid: 029ca662f171ea640a63af0f9e424e26, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342156782, guid: 029ca662f171ea640a63af0f9e424e26, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

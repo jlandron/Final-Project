@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5d67ed0ca46114e92c7816458de788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isPaused: 0
   peristantObjectPrefabs:
   - {fileID: 5548105840598790203, guid: eb1e3364197962a48b10a2ceefd1395b, type: 3}
   - {fileID: 5962997362927340908, guid: 696628a95c2bb1743bb05eac854740ed, type: 3}
@@ -53,6 +52,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 192adcd68462fb04bab401e909276da0, type: 3}
   - {fileID: 8300000, guid: 2d9bf88abe6c6624ca4991328b7d5309, type: 3}
   audioSource: {fileID: 1717276010126264623}
+  isFullscreen: 0
 --- !u!82 &1717276010126264623
 AudioSource:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 192adcd68462fb04bab401e909276da0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
