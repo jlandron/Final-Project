@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8403066503383535912}
   - component: {fileID: 8403066503383535914}
   m_Layer: 11
-  m_Name: Forest_terrain_blue_128px_3
+  m_Name: IceTile4
   m_TagString: Tiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005168557, y: -0.0025846958}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,5 +106,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1}
+  m_Size: {x: 1.0516853, y: 0.9914385}
   m_EdgeRadius: 0

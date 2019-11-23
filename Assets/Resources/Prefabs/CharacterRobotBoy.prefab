@@ -161,6 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6885970411951852105}
   - component: {fileID: 6885970411951852104}
+  - component: {fileID: 1188806801}
   m_Layer: 2
   m_Name: HeadLamp
   m_TagString: Untagged
@@ -221,6 +222,18 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1188806801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885970411951852106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b41150f77c5a564b9d6c37816309cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6885970412118714977
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +754,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: ShapeModule.m_Rotation.z
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}

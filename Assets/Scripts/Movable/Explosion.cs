@@ -8,6 +8,11 @@ namespace Game.Movable
         [SerializeField]
         private ParticleSystem dirtParticles;
         public AudioClip explosionSound;
+        [SerializeField]
+        private float areaOfEffect;
+        [SerializeField]
+        private LayerMask whatIsDestructable;
+
         void Start()
         {
             AudioSource.PlayClipAtPoint(explosionSound, transform.position);
@@ -15,22 +20,26 @@ namespace Game.Movable
 
         void OnTriggerStay2D(Collider2D collision)
         {
-            // Collide with Tiles Layer
-            if (collision.gameObject.CompareTag("Tiles"))
+            Collider2D[] objectsToDamage = Physics2D.OverlapCircleAll(transform.position, areaOfEffect, whatIsDestructable);
+            for (int i = 0; i < objectsToDamage.Length; i++)
             {
-                if(dirtParticles != null)
+                switch (objectsToDamage[i].tag)
                 {
-                    Instantiate(dirtParticles, collision.transform.position, Quaternion.identity);
+                    case "Tiles":
+                        if (dirtParticles != null)
+                        {
+                            Instantiate(dirtParticles, objectsToDamage[i].transform.position, Quaternion.identity);
+                        }
+                        Destroy(objectsToDamage[i].gameObject);
+                        break;
+                    case "Enemy":
+                        objectsToDamage[i].GetComponent<EnemyBehavior>().DecrementHealth(3);
+                        break;
+                    default:
+                        break;
                 }
-                Destroy(collision.gameObject);
-            }else if (collision.gameObject.CompareTag("Enemy"))
-            {
-                collision.GetComponent<EnemyBehavior>().DecrementHealth(3);
             }
-            else
-            {
-                Destroy(this.gameObject);
-            }
+            Destroy(this.gameObject);
         }
     }
 }

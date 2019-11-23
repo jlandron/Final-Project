@@ -12,7 +12,7 @@ namespace Game.Core
         private bool wasDeleted = false;
         public bool WasDeleted { get => wasDeleted; private set => wasDeleted = value; }
 
-        public void LoadScene()
+        public void LoadNextScene()
         {
             wasDeleted = false;
             Fader fader = FindObjectOfType<Fader>();

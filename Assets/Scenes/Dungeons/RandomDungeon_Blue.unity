@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: f5df4fca367348d4aa9ee420ec1743dd,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2444,7 +2444,7 @@ PrefabInstance:
     - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
         type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAACAn+ut9vqNfgIAACMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFy2jAQ/RVG58LYYGK7t9YhpAdCJrSTiy+yLGMNsuSR5ADJ8O9dyQK7lAvy27erfW/X/kJM6JYSI9VasXIjS4q+T5A9o2+TIfhMT3gvxY590ivnnZWmtiTsOG/YMAl4aNO0bKhRjPwQe27JAYCdYJVUzarc00xqowGuMNcUQkoamy0A+pqgE/xNU5tyhtM8tqdPOKXB5AJHQoWhaqAu01kaLMLI85fBLAwW0TwKfVoySxfpcrmaBonL7wThuGlpacUMZcIw8RXSeJban2MLUOuJtiCRnDPtW0Xm3DorMtzqDoQCoWQYpLv+gtkSgJqyfW2skHH6tqo0Nd4Zhc+PTIGHfV30U/bGNlgf+gY/MO/sTfMg6kX0VTf/EaahC1dKNs/Xi8PAXmJqRg5v+EywNiPrx/Dj0HvojDpifsAFp+81FS9yrWQnSgga1dnUTtP54/B405bVlBwGvG/1DuzawfnrpMNZnCThIn1YwKxiPz0r6OK8OGWcNYXzNeqBHZfOf7crVMGkfkH3bpO0rwuobemPpr/xfrxyPvDElDYQ8pKF7bWQnbJUtHIGWmmdyaQS1MFeQUsF5ub8CmXM/UDvYqNr7yJP2L5c/nIfu74zdykOHvhBcBd6lcfb5HQtjxuq621nOBN0aNoGXsCnTArR79vYk2varlMVJqO0fcfKf/cMVQmJ0nheJEUcFcuHYpqGZEGCsnioojAtYozcIjIBOjF/7Rv19sDUxFBcwNJdvzmTtcKt2/1S4eOafTZyZDkTldwRRanY9hVujVMFl8BbWq5KBgbtqDFMuHmjrxxxSQ60zG+Fcqd0dTIK50OVHLXsQxqL5ChzH5kcXdDlL1BLAwQUAAAICAAAgJ/r3n+DlGwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Kz0FFQSi9KLMgoBgoYgjilmSkgdrRSmkWyiaW5UZJFkrlJkqlZkq6lYbJxskFKklmaiaFlknmiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+ut9vqNfgIAACMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+vef4OUbAAAAHcAAAAJACQAAAAAAAAAAAAAAMsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAggMAAAAA
+      value: UEsDBBQAAAgIAACAn+tVcu2+bwIAABYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtymzAU/RWP1rUHCH7QXUscp4s8pm4nGzYCLkZjWWL0iO1k/O+9EmCIywZxn+ece8UnYUI3UBipNoqVT7IE8n1C3Jl8mwzORzjRnRRb9gF9zBsrTe2CqI/5TQ2TaA9dmpYHMIoVP8SOu+AAjVawSqrDutxBKrXRaK4o14AuJY3LFmj6nJATvqaJSznjKVq60weekmBywWMBwoAaQufJLHHPIuoy5sEscM/dqkucLmZRvIyjYD5fT8PIV7Gi4PTQQOkoDcXCcNVVSVY+TiDbLiSYzV17yTnTHVhizo0XI6WNtkgVA0pGkbxH6LSoge1q44iMk1+qSoPplFH0fM8UathWJT9lK+yB6n0L7Z1y6/pEQdzCaqs+/RcwDb27UvLw2DcOA9fE1KzY/6bngmozkn5svv+K3Ioj5Xuac3irQTzLjZJWlOg0yrpUqyG6Hz6v3NIaiv1gb6HeGG0zaN5Pup+z43Dx9E8pZ4fcSx+3hi2XXnC/HqBwOL8QsF8e3ZVAq0PxV8MfuhtvWed4YEobdHUshYOXS6tcKFl7zRwba1KpBHhzB7oBQbk5v2IZczvDG9+o7Y3ngbr71DXvfP01uUnx5iE+CG5cr/J4HZau5fEJdP1iDWcCBtDO8Yw6pVKIdsXGmvRpW6sqWozSdpaVX1eLVKsiTpZRvsqXcT5f5NMkLO6KoMwXVRwm+ZISv3tMIE/KX1ugnTw4NTEUF7hn/W9mslG08eteKnrcsI+DHEnORCW3hQIQL22FK3BQ2AQvZrkuGQq0BWOY8PMmnxnhsthDmV0LZZ7p+mQUzYYqGWnYuzTOkpHU/1cyciGXf1BLAwQUAAAICAAAgJ/r3n+DlGwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Kz0FFQSi9KLMgoBgoYgjilmSkgdrRSmkWyiaW5UZJFkrlJkqlZkq6lYbJxskFKklmaiaFlknmiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+tVcu2+bwIAABYFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+vef4OUbAAAAHcAAAAJACQAAAAAAAAAAAAAALwCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcwMAAAAA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf088616845fcd41a0881bbc66da0e7, type: 3}
@@ -9145,6 +9145,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 250670872026989979, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
       propertyPath: m_Name
@@ -9264,11 +9269,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScrapDisplay
-      objectReference: {fileID: 0}
-    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
-        type: 3}
-      propertyPath: m_Text
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 250670870912637283, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}

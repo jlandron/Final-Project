@@ -1,4 +1,5 @@
 ﻿using Game.Core;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,37 +16,36 @@ namespace Game.UI
             if (timeSinceClick > minTimeBetweenPresses)
             {
                 Debug.Log("Loading next Level");
-                FindObjectOfType<SavingWrapper>().LoadScene();
                 timeSinceClick = 0;
+                FindObjectOfType<SavingWrapper>().Save();
+                FindObjectOfType<SavingWrapper>().LoadNextScene();
+                FindObjectOfType<SavingWrapper>().Load();
             }
         }
 
         public void QuitGame()
         {
-            if (timeSinceClick > minTimeBetweenPresses)
-            {
+
+            timeSinceClick = 0;
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#else
                 Application.Quit();
-                timeSinceClick = 0;
-            }
+#endif
+
         }
 
         public void GoToMenu()
         {
-            if (timeSinceClick > minTimeBetweenPresses)
-            {
-                FindObjectOfType<SavingWrapper>().Save();
-                Time.timeScale = 1;
-                SceneManager.LoadScene(0);
-                timeSinceClick = 0;
-            }
+            FindObjectOfType<SavingWrapper>().Save();
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
         }
         public void ResumeGame()
         {
-            if (timeSinceClick > minTimeBetweenPresses)
-            {
-                FindObjectOfType<PauseMenu>().ActivateObjects(false);
-                timeSinceClick = 0;
-            }
+
+            FindObjectOfType<PauseMenu>().ActivateObjects(false);
+
         }
         public void DeleteSaveFile()
         {

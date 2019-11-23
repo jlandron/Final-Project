@@ -8,6 +8,7 @@ namespace Game.RandomRoom
     {
         public GameObject[] gameObjects;
         public int maxSpawnNum = 10;
+
         void Start()
         {
             int rand = Random.Range(5, maxSpawnNum);

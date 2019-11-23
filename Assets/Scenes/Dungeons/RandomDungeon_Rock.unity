@@ -1031,7 +1031,7 @@ PrefabInstance:
     - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
         type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAACAn+u80yKtdAIAABkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMmSmzAQ/RWXzrELvAG5JbbHk8MsNU5qLlyEaIzKQqIkMbZnyv+elsCGOFwQr7fXr1t8ES5NDcwqvdU8f1I5kO8j4s7k26g3PsKJ7pXc8U+4+rzz3JbOiXqfN2q5Qjx0YUZVYDVnP+ReOOcAwUbyQulqk+9hpYw1CBdUGECTVtZFS4S+RuSEr3HiQs54mkbu9ImnJBhd8MhAWtC96+LmmUwWAT6zuAsYzyaLaDmNF5txsPSxjWSCVjXkrpE+RRJ3KcJZ4v0k9ti5uH6YEoKbjiCx59oLsKtL0OAUyDnFfj2pYLJAoAS+L63jNIx+KQoDtpND0/OaaxSuTUt+qlbNippDy+yDisYVmgbz2LNqsz795zAOvbnQqnq8Fg4DV8SWnB3e6JlRYwd6D+F1zz30Ch2pONBMwHsJ8llttWpkjkarGxfaGJiu+89bb6sS2KHHW6p3YFP3kl+HFk6iOEbZlzMcUnQdHDZ08VqcVoJXmdd13gI7obz8fkFA46B+IXu/PqbLi6ij9MfAb7of7llneODaWDR1LUvHNVONdq5k4wV0rTV2pbQED3cd1CCpsOdXTGPvB3pnG5S9szxQd6O64p3telHuQjzc+wfBnelVHW+TM6U6PoEpXxoruISetDM8o04rJWW7b0NNrmG7RheUDcL2Dc//3TNSxGyeRNMszqJ5tlhm4yRkMxbk2bKYh0kWUeIXkUvsk4rXlmgnD05N9sklLt31RzPaalr73c81PW75Z6WGBLks1I5pAPnSprgxB41V8Jbmm5yjQjuwlks/cPKVEqHYAfL0VjP1rW5OVtO0z5KSmn8o65CUrPyvJSUXcvkLUEsDBBQAAAgIAACAn+vef4OUbAAAAHcAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0rPQUVBKL0osyCgGChiCOKWZKSB2tFKaRbKJpblRkkWSuUmSqVmSrqVhsnGyQUqSWZqJoWWSeaJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAICf67zTIq10AgAAGQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAICf695/g5RsAAAAdwAAAAkAJAAAAAAAAAAAAAAAwQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
+      value: UEsDBBQAAAgIAACAn+t5tzaKZwIAAAoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjgxNwby0Q0gMhE9LJxRdZWmMNsuTRR4Bk+O+VZBs71BfLb7/evl35CzGhayBGqrVidCMpoJ8j5M/ox6g3PsEJ76XYsU/ofN4ZNaV3wsHnFRsmHR77MC0rMIqRX2LPvXPkQCtYIVW1ontYSG20gwvMNTiTksZHCwd9jdDJvcapDzm702TmT5/ulEajizsSEAZU73rfeU6ju8g/cdoGzO+SNJlPpqtxPA2hVhCOqxqo76PPkM7bDPF0HvyEa7F1ie7ufU3JOdMtQ2TOdVBgV5egwEtAGXYNB1a+/xLYvjSe/DB2WxQaTKuGwuclU063Jin6LRsxK6wPDbMPzK0vM4mShlWTdfOfwzgO5kLJ6qkrHEe+iCkZObziM8HaDOQewsvvzK04Yn7AOYf3EsSzXCtpBXVGo6wPtRomy/7z2tuiBHLo8YbqDWjrXvJuZt1sfQ+X0P5pwVmVB+WTBthxGfQOKwHKzeaPIxwWRrcpHOpZ/NXwhvfDzWoNj0xp40xtl8LTy6VV3hWtgma+G2sWUgkIcEu6BoG5Ob+4NOZ2hje2QdkbyyP2d6gt3tq6q3ETEuDeP4puTC/yeB2WLuVxA7rcWsOZgJ60Nzw7nRZSiGbFhpp0YTurCkwGYXvL6PfVQsWcJOlsks/zWZLfP+TjNCZTEtH8oUjiNJ9hFHaPCdcn5i8N0VYeNzXRJxduz7pfy2itcB3WnSp8XLPPSg4kZ6KQO6IAxLbJcCUOyhVx95KuKHMC7cAYJsK80VeGuCQHoNk1URY6XZ2MwlmfJUM1+5DGIxlahH9Jhi7o8g9QSwMEFAAACAgAAICf695/g5RsAAAAdwAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSs9BRUEovSizIKAYKGII4pZkpIHa0UppFsomluVGSRZK5SZKpWZKupWGycbJBSpJZmomhZZJ5olIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAgJ/rebc2imcCAAAKBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAgJ/r3n+DlGwAAAB3AAAACQAkAAAAAAAAAAAAAAC0AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGsDAAAAAA==
       objectReference: {fileID: 0}
     - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
         type: 3}
@@ -1212,11 +1212,6 @@ PrefabInstance:
       propertyPath: m_HealthDisplayStatus
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7254605259667538353, guid: 5747476c963dd2a41941f5e4070b81af,
-        type: 3}
-      propertyPath: m_MainCamera
-      value: 
-      objectReference: {fileID: 1172834398}
     - target: {fileID: 7075476386591172279, guid: 5747476c963dd2a41941f5e4070b81af,
         type: 3}
       propertyPath: FlareDisplay
@@ -1227,11 +1222,6 @@ PrefabInstance:
       propertyPath: ScrapDisplay
       value: 
       objectReference: {fileID: 1949970821}
-    - target: {fileID: 6885970411951852104, guid: 5747476c963dd2a41941f5e4070b81af,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0.276
-      objectReference: {fileID: 0}
     - target: {fileID: 1642263940, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.7096939
@@ -1240,6 +1230,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.70451015
       objectReference: {fileID: 0}
+    - target: {fileID: 7254605259667538353, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_MainCamera
+      value: 
+      objectReference: {fileID: 1172834398}
     - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 1
@@ -1263,6 +1258,11 @@ PrefabInstance:
     - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 1.1130296
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852104, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.276
       objectReference: {fileID: 0}
     - target: {fileID: 4749574592925969088, guid: 5747476c963dd2a41941f5e4070b81af,
         type: 3}
@@ -3959,6 +3959,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 250670872026989979, guid: 029ca662f171ea640a63af0f9e424e26,
         type: 3}
       propertyPath: m_Name
@@ -4073,11 +4078,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScrapDisplay
-      objectReference: {fileID: 0}
-    - target: {fileID: 250670871258252701, guid: 029ca662f171ea640a63af0f9e424e26,
-        type: 3}
-      propertyPath: m_Text
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 029ca662f171ea640a63af0f9e424e26, type: 3}
@@ -4712,6 +4712,11 @@ PrefabInstance:
       propertyPath: wantToShow
       value: 
       objectReference: {fileID: 1949970820}
+    - target: {fileID: 3647797800682242556, guid: 96fb7161641ed324c87b4b95ecf814f3,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96fb7161641ed324c87b4b95ecf814f3, type: 3}
 --- !u!1001 &5250200285458813023

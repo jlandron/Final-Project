@@ -87,6 +87,10 @@ MonoBehaviour:
   dirtParticles: {fileID: 1385303851377487224, guid: 89bf8b752c5fb944398ddd8f06628cc9,
     type: 3}
   explosionSound: {fileID: 8300000, guid: f06a033f9cad4764d9daf3fc3cef1226, type: 3}
+  areaOfEffect: 3
+  whatIsDestructable:
+    serializedVersion: 2
+    m_Bits: 6144
 --- !u!114 &7056486237045411086
 MonoBehaviour:
   m_ObjectHideFlags: 0

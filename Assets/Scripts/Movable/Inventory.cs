@@ -73,24 +73,26 @@ namespace Game.Movable
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("BombPickup"))
+            switch (collision.tag)
             {
-                if (IncrementBombCount())
-                {
+                case "BombPickup":
+                    if (IncrementBombCount())
+                    {
+                        Destroy(collision.gameObject);
+                    }
+                    break;
+                case "FlarePickup":
+                    if (IncrementFlareCount())
+                    {
+                        Destroy(collision.gameObject);
+                    }
+                    break;
+                case "Scrap":
+                    scrapCount++;
                     Destroy(collision.gameObject);
-                }
-            }
-            if (collision.CompareTag("FlarePickup"))
-            {
-                if (IncrementFlareCount())
-                {
-                    Destroy(collision.gameObject);
-                }
-            }
-            if (collision.CompareTag("Scrap"))
-            {
-                scrapCount++;
-                Destroy(collision.gameObject);
+                    break;
+                default:
+                    break;
             }
         }
         public void UpdateUI()

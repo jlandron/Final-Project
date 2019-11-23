@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6266732465128573033}
   - component: {fileID: 6266732465128573039}
   m_Layer: 11
-  m_Name: Forest_terrain_gray_128px_1
+  m_Name: RockTile2
   m_TagString: Tiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005168557, y: -0.0025846958}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,5 +106,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1}
+  m_Size: {x: 1.0516853, y: 0.9914385}
   m_EdgeRadius: 0

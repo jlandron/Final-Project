@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4264d4494244d4f98be04168e480fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer: Character
+  layer: foreground
 --- !u!95 &2087965433
 Animator:
   serializedVersion: 3

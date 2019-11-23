@@ -39,13 +39,13 @@ namespace Game.Movable
 
         private void UpdateGunRotation()
         {
-            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            //Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            difference.Normalize();
-            difference.Set(difference.x, difference.y, 0);
-            float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            Vector2 startPoint = gameObject.transform.position;
+            Vector2 endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (endPoint - startPoint);
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             gun.transform.rotation = rotation;
+            Debug.DrawLine(startPoint, endPoint, Color.cyan);
         }
 
         private IEnumerator HandleShoot()
