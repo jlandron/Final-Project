@@ -1,0 +1,1303 @@
+fileFormatVersion: 2
+guid: 93dbaff12a58ace4888018bbd9e4fcd8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1929879668150241234
+    second: onscreen-keyboard_0
+  - first:
+      213: 6834760797822955830
+    second: onscreen-keyboard_1
+  - first:
+      213: -3940115053242978980
+    second: onscreen-keyboard_2
+  - first:
+      213: -1374358135744642640
+    second: onscreen-keyboard_3
+  - first:
+      213: -7095320448374944339
+    second: onscreen-keyboard_4
+  - first:
+      213: -4609519309579682944
+    second: onscreen-keyboard_5
+  - first:
+      213: -6563066595025590947
+    second: onscreen-keyboard_6
+  - first:
+      213: -8414284280506660047
+    second: onscreen-keyboard_7
+  - first:
+      213: -2824915814066103241
+    second: onscreen-keyboard_8
+  - first:
+      213: 8141318729027592117
+    second: onscreen-keyboard_9
+  - first:
+      213: 4478437098986760267
+    second: onscreen-keyboard_10
+  - first:
+      213: -5213468235589906025
+    second: onscreen-keyboard_11
+  - first:
+      213: -4232534325436244264
+    second: onscreen-keyboard_12
+  - first:
+      213: 892229645360130744
+    second: onscreen-keyboard_13
+  - first:
+      213: -3258783164669838945
+    second: onscreen-keyboard_14
+  - first:
+      213: 329234759069884088
+    second: onscreen-keyboard_15
+  - first:
+      213: -1912422034138562426
+    second: onscreen-keyboard_16
+  - first:
+      213: -8375318413362132445
+    second: onscreen-keyboard_17
+  - first:
+      213: -5336534280287476239
+    second: onscreen-keyboard_18
+  - first:
+      213: -5516712267178002182
+    second: onscreen-keyboard_19
+  - first:
+      213: 9188661601171567233
+    second: onscreen-keyboard_20
+  - first:
+      213: -4465592823648787679
+    second: onscreen-keyboard_21
+  - first:
+      213: -3513447011930375238
+    second: onscreen-keyboard_22
+  - first:
+      213: 7956056896613542295
+    second: onscreen-keyboard_23
+  - first:
+      213: 8611463832595653918
+    second: onscreen-keyboard_24
+  - first:
+      213: 3289009525372117121
+    second: onscreen-keyboard_25
+  - first:
+      213: -5391170675319491950
+    second: onscreen-keyboard_26
+  - first:
+      213: 5139374139489056235
+    second: onscreen-keyboard_27
+  - first:
+      213: -3518365701714586870
+    second: onscreen-keyboard_28
+  - first:
+      213: 6302771086794064529
+    second: onscreen-keyboard_29
+  - first:
+      213: 7956416879014378467
+    second: onscreen-keyboard_30
+  - first:
+      213: -311989797322427870
+    second: onscreen-keyboard_31
+  - first:
+      213: 1312506512251648609
+    second: onscreen-keyboard_32
+  - first:
+      213: -7695204052573209600
+    second: onscreen-keyboard_33
+  - first:
+      213: 5902141252564275766
+    second: onscreen-keyboard_34
+  - first:
+      213: 8565405845691986608
+    second: onscreen-keyboard_35
+  - first:
+      213: 8250021106182370492
+    second: onscreen-keyboard_36
+  - first:
+      213: -7159883142093678284
+    second: onscreen-keyboard_37
+  - first:
+      213: -6919061555698120479
+    second: onscreen-keyboard_38
+  - first:
+      213: 5928324318156942672
+    second: onscreen-keyboard_39
+  - first:
+      213: 1823749253145971010
+    second: onscreen-keyboard_40
+  - first:
+      213: -3091363483359187340
+    second: onscreen-keyboard_41
+  - first:
+      213: 2714721331328716135
+    second: onscreen-keyboard_42
+  - first:
+      213: -3382368991272758293
+    second: onscreen-keyboard_43
+  - first:
+      213: 2318136729050573461
+    second: onscreen-keyboard_44
+  - first:
+      213: -4269857291813006785
+    second: onscreen-keyboard_45
+  - first:
+      213: -8815836979215143629
+    second: onscreen-keyboard_46
+  - first:
+      213: 1717852611551419258
+    second: onscreen-keyboard_47
+  - first:
+      213: 9089411034588367959
+    second: onscreen-keyboard_48
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 2
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: onscreen-keyboard_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdabe0f1854b870439db6d745b215516
+      internalID: 1929879668150241234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7982d5f4b322e4a469260b7650f8a7ac
+      internalID: 6834760797822955830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4acec73d5218043abe9344e7fa4337
+      internalID: -3940115053242978980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 129
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5d1840cc241354d85c4ffcf0b7699f
+      internalID: -1374358135744642640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19ec0bc8f5825c448e7f871ec2044de
+      internalID: -7095320448374944339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a965ad0d32ed442ac30ec7571feebc
+      internalID: -4609519309579682944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_6
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e286c004c6dda641bf617ae70a760b3
+      internalID: -6563066595025590947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_7
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3ca46bc50533c468181865ea0a462c
+      internalID: -8414284280506660047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dffe20f2af7d78448791970d1c504c7
+      internalID: -2824915814066103241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e652c6c72262aa24a947e0f06cd45fbb
+      internalID: 8141318729027592117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b70715cecf7e4d4984653bfdfbc2677
+      internalID: 4478437098986760267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_11
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 130
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbbf98ab76221c48bf3259827fbf06d
+      internalID: -5213468235589906025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_12
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 130
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef43f22083ce5d14fbf5152351ce6c67
+      internalID: -4232534325436244264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2243b822e26f9fd428e21fae6240d75b
+      internalID: 892229645360130744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_14
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8494f2d79581134eacf90b1b4441d25
+      internalID: -3258783164669838945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d711fb1e28e194491f5d2484d6ecc5
+      internalID: 329234759069884088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_16
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882c3164d5d97b9458f2d174567d5436
+      internalID: -1912422034138562426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_17
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ab0bf2f5057c84aad1be2417a62831
+      internalID: -8375318413362132445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_18
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e54c99d65eafa14abad6de7853266af
+      internalID: -5336534280287476239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_19
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ec169c30479524cbdf861305170424
+      internalID: -5516712267178002182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_20
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58a02d5901de24488749c1a9be046ba
+      internalID: 9188661601171567233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_21
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8ee77dc5f28cd4cb6f8145deb75b76
+      internalID: -4465592823648787679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_22
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec56d18bc1724ad4a9360d68a98cbd24
+      internalID: -3513447011930375238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_23
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f445d48d266291241a5b9bca8c157e84
+      internalID: 7956056896613542295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_24
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d089d0c5189e8e14fb3c112c0f04f561
+      internalID: 8611463832595653918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_25
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 100
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcf5fbfd76d00d488da2d61bef32c81
+      internalID: 3289009525372117121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 70
+        width: 78
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1093de8d377b140a9eddb707ff3cd3
+      internalID: -5391170675319491950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_27
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf470e8425298b4fa102e7cbce3f71c
+      internalID: 5139374139489056235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_28
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22508300d6b175a4f89192bcda170006
+      internalID: -3518365701714586870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_29
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62a90864002fe84292cb1e0b422eaf5
+      internalID: 6302771086794064529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfed9282e3465747b6bea12c4c14627
+      internalID: 7956416879014378467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_31
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f8b610a70e46340b55133e7dfe34c1
+      internalID: -311989797322427870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_32
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775046e8270b76645be87d46d560aa3f
+      internalID: 1312506512251648609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_33
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c9c97320915ae46b79f14ec938df69
+      internalID: -7695204052573209600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_34
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7d6dc3853f8c849a766bf73d3606b0
+      internalID: 5902141252564275766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_35
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaece4c15c7d60a429dc88ea22200d92
+      internalID: 8565405845691986608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_36
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c88e7c3d8289eb40aff26f5bc122472
+      internalID: 8250021106182370492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_37
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1aa2835f6ae4d48b7bf755eeda3865
+      internalID: -7159883142093678284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_38
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc221502a8a4578449fa7a6c8c37c308
+      internalID: -6919061555698120479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_39
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b69d60f027ff764c9f2c7f133bbb052
+      internalID: 5928324318156942672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_40
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d556d679f346346abb576877ebda20
+      internalID: 1823749253145971010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_41
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2921e6ec76ab2734a9df324fc157f5f5
+      internalID: -3091363483359187340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204f4081fe4b78a46bb8be747d716b61
+      internalID: 2714721331328716135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_43
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 70
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3320551605d9d5849978769ffda9105f
+      internalID: -3382368991272758293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_44
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73dd95fe2a337c348864d563587c4f03
+      internalID: 2318136729050573461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_45
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0926d7c9fa341864f9cd02fcd126261b
+      internalID: -4269857291813006785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_46
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 40
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677c53ffcecbdc84abe6c566f384d4e4
+      internalID: -8815836979215143629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_47
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 10
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e031b79b1b82ad4b82420de7353845d
+      internalID: 1717852611551419258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onscreen-keyboard_48
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 10
+        width: 240
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a3934b32459b14295c08b28b4c0bd3
+      internalID: 9089411034588367959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e7ddf4f53b30a224c9f3632446ae8818
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
