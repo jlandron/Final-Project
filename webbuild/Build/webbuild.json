@@ -1,7 +1,7 @@
 {
 "companyName": "Team Awesome",
 "productName": "Dusk",
-"productVersion": "0.6",
+"productVersion": "0.1b",
 "dataUrl": "webbuild.data.unityweb",
 "wasmCodeUrl": "webbuild.wasm.code.unityweb",
 "wasmFrameworkUrl": "webbuild.wasm.framework.unityweb",
@@ -10,7 +10,7 @@
 "splashScreenStyle": "Dark",
 "backgroundColor": "#696B6A",
 "cacheControl": {"default": "must-revalidate"},
-"developmentBuild": false,
+"developmentBuild": true,
 "multithreading": false,
 "unityVersion": "2019.3.0b12"
 }

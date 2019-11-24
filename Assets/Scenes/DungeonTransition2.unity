@@ -2423,6 +2423,34 @@ PrefabInstance:
       propertyPath: ScrapDisplay
       value: 
       objectReference: {fileID: 435962209}
+    - target: {fileID: 6885970411951852105, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642263941, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2.605575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852104, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 45.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852104, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 118.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852104, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 622802985, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
       propertyPath: m_Offset.x
       value: -0.041584074
@@ -5472,6 +5500,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2568044857818197630, guid: 5fd136564c100be4c852005dd765054d, type: 3}
+    - {fileID: 1124849791, guid: 5fd136564c100be4c852005dd765054d, type: 3}
+    - {fileID: 272192364, guid: 5fd136564c100be4c852005dd765054d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5fd136564c100be4c852005dd765054d, type: 3}
 --- !u!1 &1785598767
 GameObject:
