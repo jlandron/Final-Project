@@ -77,27 +77,30 @@ namespace Game.Movable
                     {
                         wantToShow.text = alternateTextToShow;
                     }
+                    Invoke("LoadNextLevel", timeToShowText);
                 }
                 else
                 {
                     wantToShow.text = textToShow;
+                    Invoke("DeactivateText", timeToShowText);
                 }
-                Invoke("DoNextSteps", timeToShowText);
+                
             }
 
         }
-
-        void DoNextSteps()
+        void LoadNextLevel()
         {
-
-            if (isLevelEnd && !loading && player.HasLevelKey)
+            if (isLevelEnd && !loading)
             {
-                int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-                FindObjectOfType<LoadLevel>().DoLoad(nextScene);
+                FindObjectOfType<SavingWrapper>().LoadNextScene();
                 loading = true;
             }
-            
-            else if (wantToShow != null)
+        }
+
+        void DeactivateText()
+        {
+
+            if (wantToShow != null)
             {
                 Debug.Log("Disabling Text");
                 wantToShow.gameObject.SetActive(false);

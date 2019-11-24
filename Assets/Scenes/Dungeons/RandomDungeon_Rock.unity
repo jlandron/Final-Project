@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: f5df4fca367348d4aa9ee420ec1743dd,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1634,6 +1634,21 @@ PrefabInstance:
         type: 3}
       propertyPath: data.dataString
       value: UEsDBBQAAAgIAACAn+uiYIXnZgIAAAwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1zmzAQ/SsenesMEMcfvbXEcXrIx9Tt5MJFSIvRWEiMJGI7Gf/3rgQY6k5PlnffW+17u+KTCGVrYE6bjRH8SXMgXyfEn8mXyZB8hCPdabUVH9Bj3gR3pQfRgPlJndAYjz3N6gqcEeyb2kkPjjDYKFFoU635DlJtncVwQaUFTBntPFth6HNCjvgzXXnKCU/Jwp8+8LSKJmc8MlAOzAC965G3PXCa3MyXSRItkvU0mgdSo5ikVQ3cKxi4q8XNXceOb/EcsAoFdrAopJmWUtiuP+JOddCf0to2qA4BXFDUG5pqGSWIXel892P6S1FYcJ0dhp7uhUHj2rrku27drKjdtw2+U9n4m5JotgyNtVWf/gFM45AujK4e+4vjyF/iSsH2P+mJUetGfo/D90PvcTDqQOWe5hLeSlDPemN0ozgmnWk8tbGQ3A9/L9rSEth+iLetXgWbenC+H9plZqjhHOQfUymqPFg5awNbqYPlYSfA4Hh+YMNhY2xXAqO+i98WftHdeLW6xIMw1mGqU6l8e7lujIeSdfDMq2lcqo0CM65Qg6LSnV6xjrse4lXu/6wH6l9Rd3uX6x/HFSWEB3wUXaVe9eEyLVvqwxPY8qVxUigYrPaJZzQq1Uq1OzaW1NO2jSkoG9F2jeB/7xYplmy2WiT5Ml/M8rt5Pl3F7JZFPJ8Xs3iVLygJyycU6qTytW20swfHpobiChet/7hMNobWYd+5oYeN+Ki0HZBCFXrLDIB6aStcGgeDl+Db5Gsu0KAtOCdUGDj5zIjUbA88uxTKgtL10RmaDVUyUot37XwkI2n4mmTkTM5/AFBLAwQUAAAICAAAgJ/r3n+DlGwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Kz0FFQSi9KLMgoBgoYgjilmSkgdrRSmkWyiaW5UZJFkrlJkqlZkq6lYbJxskFKklmaiaFlknmiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+uiYIXnZgIAAAwFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+vef4OUbAAAAHcAAAAJACQAAAAAAAAAAAAAALMCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAagMAAAAA
+      objectReference: {fileID: 0}
+    - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
+        type: 3}
+      propertyPath: scanOnStartup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
+        type: 3}
+      propertyPath: logPathResults
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
+        type: 3}
+      propertyPath: showSearchTree
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf088616845fcd41a0881bbc66da0e7, type: 3}
@@ -4834,16 +4849,6 @@ PrefabInstance:
       propertyPath: wantToShow
       value: 
       objectReference: {fileID: 1949970820}
-    - target: {fileID: 2712030195533503958, guid: 96fb7161641ed324c87b4b95ecf814f3,
-        type: 3}
-      propertyPath: m_LightType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3647797800682242556, guid: 96fb7161641ed324c87b4b95ecf814f3,
-        type: 3}
-      propertyPath: sceneToLoad
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96fb7161641ed324c87b4b95ecf814f3, type: 3}
 --- !u!1001 &5250200285458813023
@@ -4912,16 +4917,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2568044857818197630, guid: 5fd136564c100be4c852005dd765054d,
-        type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 2064104764}
-    - target: {fileID: 2568044857818197631, guid: 5fd136564c100be4c852005dd765054d,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1124849791, guid: 5fd136564c100be4c852005dd765054d, type: 3}
       propertyPath: target

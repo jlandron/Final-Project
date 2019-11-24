@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -2717,6 +2717,31 @@ PrefabInstance:
       propertyPath: ScrapDisplay
       value: 
       objectReference: {fileID: 1636935696}
+    - target: {fileID: 6885970411951852105, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852105, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852105, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852105, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970411951852105, guid: 5747476c963dd2a41941f5e4070b81af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 270
+      objectReference: {fileID: 0}
     - target: {fileID: 7254605259667538353, guid: 5747476c963dd2a41941f5e4070b81af,
         type: 3}
       propertyPath: m_MainCamera
@@ -6541,11 +6566,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
-        type: 3}
-      propertyPath: data.dataString
-      value: UEsDBBQAAAgIAACAn+tMv4WzYwIAAAkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1zmzAQ/SsenesMUH/RW4sdp4d8TNxOLlyEWIzGQmIkEdvJ+L93JcBQd3qyvPveat/bFZ+ES1MDs0pvNc8fVQ7k24S4M/kyGZIPcKJ7JXf8A3rMG89t6UDUY16p5QrjoaMZVYHVnH2Xe+HAAQYbyQulq02+h0QZazBcUGEAU1pZx5YY+pyQE/5MY0c54ylautMHnuJgcsEjA2lBD9B5j5z3wOhusYrCaDVfbabB0pMayQStasidgoEbL+/mHTteeaBEdR0m8DmmhOCma47Yc+3FJ7Q2DUpDQM4pivUdtYwS+L60ro8x/bkoDNjOC03Pa67RtbYu+aFaKytqDm1371Q07qYomLWNtVUf/wFMQ58utKoe+ovDwF1iS84Or/TMqLEjs8fh9dB76F06UnGgmYC3EuST2mrVyByTVjeO2hiI1sPfq7akBHYY4m2rN8GmHmzvJ9YPzGm4ePmnRPAq81bO2sBOKG+5XwjQOJ6f2LBfF9OVwKjr4reBX3Q/3qsucc+1sZjqVErXXqYa7aBk4z1zahqbKC1BjyvUIKmw5xesY2+HeJP7P+ueuifU3d7l+pdxQ/HhAR8EN6kXdbxOy5Tq+AimfG6s4BIGq13iCY1KlJTtjo0l9bRdowvKRrR9w/O/d4sUKzaLl1G2ypazbL7IpnHIvrIgzxbFLIyzJSV++bhEnVS8tI129uDY5FBc4qL1X5bJVtPa73uu6XHLPyplBiSXhdoxDSCf2wrXxkHjJfg2803O0aAdWMulHzj5TIlQ7AB5ei2UeqWbk9U0HaqkpObvyrpIShL/KUnJhVz+AFBLAwQUAAAICAAAgJ/r3n+DlGwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Kz0FFQSi9KLMgoBgoYgjilmSkgdrRSmkWyiaW5UZJFkrlJkqlZkq6lYbJxskFKklmaiaFlknmiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+tMv4WzYwIAAAkFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+vef4OUbAAAAHcAAAAJACQAAAAAAAAAAAAAALACAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf088616845fcd41a0881bbc66da0e7, type: 3}

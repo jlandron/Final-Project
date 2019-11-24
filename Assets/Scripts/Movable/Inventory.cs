@@ -21,7 +21,7 @@ namespace Game.Movable
 
         public int scrapCount = 0;
 
-        private bool hasLevelKey = false;
+        private bool hasLevelKey = true;
 
         public GameObject AttachedBomb;
 

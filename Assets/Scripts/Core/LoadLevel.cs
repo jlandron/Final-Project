@@ -35,6 +35,7 @@ namespace Game.Core
         }
         private IEnumerator Transition()
         {
+            GetComponent<Collider2D>().enabled = false;
             if (sceneToLoad < 0)
             {
                 Debug.Log("Scene to load not set");
@@ -54,7 +55,7 @@ namespace Game.Core
             yield return _fader.FadeOut(fadeOutTime);
 
             _saver.Save();
-            SceneManager.LoadScene(sceneToLoad);
+            yield return SceneManager.LoadSceneAsync(sceneToLoad);
             _saver.Load();
             _saver.Save();
 

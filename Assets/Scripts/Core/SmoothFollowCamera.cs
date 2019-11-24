@@ -5,7 +5,7 @@ namespace Game.Core
     {
 
 
-        public Transform target;
+        public Transform target = null;
         public float damping = 1;
         public float lookAheadFactor = 3;
         public float lookAheadReturnSpeed = 0.5f;
@@ -19,15 +19,33 @@ namespace Game.Core
         // Use this for initialization
         private void Start()
         {
-            m_LastTargetPosition = target.position;
-            m_OffsetZ = (transform.position - target.position).z;
+            if (target == null)
+            {
+                GameObject go = GameObject.FindGameObjectWithTag("Player");
+                if (go)
+                {
+                    target = go.GetComponent<Transform>();
+                }
+            }
+            if (target != null)
+            {
+                m_LastTargetPosition = target.position;
+                m_OffsetZ = (transform.position - target.position).z;
+            }
+
+
             transform.parent = null;
+
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+            if (target == null)
+            {
+                return;
+            }
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - m_LastTargetPosition).x;
 
