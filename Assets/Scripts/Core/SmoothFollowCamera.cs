@@ -1,35 +1,54 @@
 ﻿using UnityEngine;
-using System.Collections;
-namespace Game.Core {
-    public class SmoothFollowCamera : MonoBehaviour {
+namespace Game.Core
+{
+    public class SmoothFollowCamera : MonoBehaviour
+    {
 
-        //offset from the viewport center to fix damping
-        public float m_DampTime = 10f;
-        public Transform m_Target;
-        public float m_XOffset = 0;
-        public float m_YOffset = 0;
 
-        private float margin = 0.1f;
+        public Transform target;
+        public float damping = 1;
+        public float lookAheadFactor = 3;
+        public float lookAheadReturnSpeed = 0.5f;
+        public float lookAheadMoveThreshold = 0.1f;
 
-        void Start( ) {
-            if( m_Target == null ) {
-                m_Target = GameObject.FindGameObjectWithTag( "Player" ).transform;
-            }
+        private float m_OffsetZ;
+        private Vector3 m_LastTargetPosition;
+        private Vector3 m_CurrentVelocity;
+        private Vector3 m_LookAheadPos;
+
+        // Use this for initialization
+        private void Start()
+        {
+            m_LastTargetPosition = target.position;
+            m_OffsetZ = (transform.position - target.position).z;
+            transform.parent = null;
         }
 
-        void Update( ) {
-            if( m_Target != null ) {
-                float targetX = m_Target.position.x + m_XOffset;
-                float targetY = m_Target.position.y + m_YOffset;
 
-                if( Mathf.Abs( transform.position.x - targetX ) > margin )
-                    targetX = Mathf.Lerp( transform.position.x, targetX, m_DampTime * Time.deltaTime );
+        // Update is called once per frame
+        private void Update()
+        {
+            // only update lookahead pos if accelerating or changed direction
+            float xMoveDelta = (target.position - m_LastTargetPosition).x;
 
-                if( Mathf.Abs( transform.position.y - targetY ) > margin )
-                    targetY = Mathf.Lerp( transform.position.y, targetY, m_DampTime * Time.deltaTime );
+            bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
 
-                transform.position = new Vector3( targetX, targetY, transform.position.z );
+            if (updateLookAheadTarget)
+            {
+                m_LookAheadPos = lookAheadFactor * Vector3.right * Mathf.Sign(xMoveDelta);
             }
+            else
+            {
+                m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime * lookAheadReturnSpeed);
+            }
+
+            Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward * m_OffsetZ;
+            Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
+
+            transform.position = newPos;
+
+            m_LastTargetPosition = target.position;
         }
+
     }
 }

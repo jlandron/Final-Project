@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityStandardAssets._2D;
 
 namespace Game.Core
 {
@@ -55,7 +54,7 @@ namespace Game.Core
             yield return _fader.FadeOut(fadeOutTime);
 
             _saver.Save();
-            yield return SceneManager.LoadSceneAsync(sceneToLoad);
+            SceneManager.LoadScene(sceneToLoad);
             _saver.Load();
             _saver.Save();
 

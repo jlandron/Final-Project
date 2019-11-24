@@ -21,14 +21,6 @@ namespace Game.Movable
 
 
         [SerializeField]
-        private int m_DefaultHealth = 5;
-        [SerializeField]
-        private int m_Health;
-        //keeps the laser from hitting 3 times extreamly fast
-        private float m_hitTime = 0;
-        private float m_timeBetweenHits = 0.5f;
-
-        [SerializeField]
         private GameObject hitText;
         [SerializeField]
         private bool isDead = false;
@@ -39,10 +31,7 @@ namespace Game.Movable
         private bool isChasing = false;
         [SerializeField]
         public float radius = 20;
-        [SerializeField]
-        private GameObject[] scrapPieces;
-        [SerializeField]
-        private int maxScrapDropped = 5;
+
 
         private IAstarAI ai;
         private AIDestinationSetter aIDestinationSetter;
@@ -56,7 +45,6 @@ namespace Game.Movable
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             aIDestinationSetter = GetComponent<AIDestinationSetter>();
             Debug.Assert(target != null);
-            m_Health = m_DefaultHealth;
 
         }
         // Update is called once per frame
@@ -74,7 +62,6 @@ namespace Game.Movable
                 }
 
                 CheckFlipSprite();
-                m_hitTime += Time.deltaTime;
                 //keep the enemy from rotating due to collisions
                 gameObject.transform.rotation = Quaternion.identity;
             }
@@ -134,48 +121,15 @@ namespace Game.Movable
             }
         }
 
-        private void OnParticleCollision(GameObject other)
+        internal void ShowText()
         {
-            if (other.CompareTag("PlayerGun"))
+            if (hitText != null)
             {
-                Debug.Log("Particle Collision");
-                DecrementHealth();
+                GameObject go = Instantiate(hitText, transform.position, Quaternion.identity);
+                go.GetComponent<TextMesh>().color = Color.red;
+                int stringChoice = Random.Range(0, hitStrings.Length);
+                go.GetComponent<TextMesh>().text = hitStrings[stringChoice];
             }
-        }
-
-
-        public void DecrementHealth(int amount = 1)
-        {
-            if (m_hitTime > m_timeBetweenHits)
-            {
-                if (m_Health > 1)
-                {
-                    m_hitTime = 0;
-                    m_Health -= amount;
-                    if (hitText != null)
-                    {
-                        ShowText();
-                    }
-                }
-                else if (!isDead)
-                {
-                    isDead = true;
-                    int numDropped = Random.Range(1, maxScrapDropped);
-                    for (int i = 0; i < numDropped; i++)
-                    {
-                        Instantiate(scrapPieces[Random.Range(0, scrapPieces.Length)], transform.position, Quaternion.identity);
-                    }
-                    Destroy(gameObject);
-                }
-            }
-        }
-
-        private void ShowText()
-        {
-            GameObject go = Instantiate(hitText, transform.position, Quaternion.identity);
-            go.GetComponent<TextMesh>().color = Color.red;
-            int stringChoice = Random.Range(0, hitStrings.Length);
-            go.GetComponent<TextMesh>().text = hitStrings[stringChoice];
         }
 
         Vector3 PickRandomPoint()

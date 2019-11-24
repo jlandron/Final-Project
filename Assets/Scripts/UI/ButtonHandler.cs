@@ -19,7 +19,10 @@ namespace Game.UI
         private float timeSinceClick = 0f;
         private void Start()
         {
-            fullscreenToggle.isOn = GameManager.instance.isFullscreen;
+            if (fullscreenToggle)
+            {
+                fullscreenToggle.isOn = GameManager.instance.isFullscreen;
+            }
         }
         public void LoadLevel()
         {

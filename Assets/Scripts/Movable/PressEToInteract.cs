@@ -34,17 +34,20 @@ namespace Game.Movable
         float timeSoFar = 0;
         bool fading = false;
         bool loading = false;
+        private Inventory player;
+        private string alternateTextToShow = "You must find the key to move on";
 
         private void Start()
         {
             signalMeshRenderer = signal.GetComponent<MeshRenderer>();
+            player = FindObjectOfType<Inventory>();
             SetScale(0);
             wantToShow.gameObject.SetActive(false);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.CompareTag("Player"))
             {
                 _inRange = true;
                 FadeIn();
@@ -52,7 +55,7 @@ namespace Game.Movable
         }
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.CompareTag("Player"))
             {
                 _inRange = false;
                 FadeOut();
@@ -64,7 +67,21 @@ namespace Game.Movable
             {
                 Debug.Log("Showing Text");
                 wantToShow.gameObject.SetActive(true);
-                wantToShow.text = textToShow;
+                if (isLevelEnd)
+                {
+                    if (player.HasLevelKey)
+                    {
+                        wantToShow.text = textToShow;
+                    }
+                    else
+                    {
+                        wantToShow.text = alternateTextToShow;
+                    }
+                }
+                else
+                {
+                    wantToShow.text = textToShow;
+                }
                 Invoke("DoNextSteps", timeToShowText);
             }
 
@@ -72,15 +89,17 @@ namespace Game.Movable
 
         void DoNextSteps()
         {
-            if (isLevelEnd && !loading)
+
+            if (isLevelEnd && !loading && player.HasLevelKey)
             {
                 int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
                 FindObjectOfType<LoadLevel>().DoLoad(nextScene);
                 loading = true;
             }
-            Debug.Log("Disabling Text");
-            if (wantToShow != null)
+            
+            else if (wantToShow != null)
             {
+                Debug.Log("Disabling Text");
                 wantToShow.gameObject.SetActive(false);
             }
         }

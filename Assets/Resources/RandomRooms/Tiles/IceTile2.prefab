@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5649806085831174503}
   - component: {fileID: 5649806085831174502}
   - component: {fileID: 5649806085831174500}
+  - component: {fileID: 1344254253721035439}
   m_Layer: 11
   m_Name: IceTile2
   m_TagString: Tiles
@@ -108,3 +109,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0516853, y: 0.9914385}
   m_EdgeRadius: 0
+--- !u!114 &1344254253721035439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649806085831174489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d89b866fafe72847b88a5758572bc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartHealth: 3
+  deathParticlesEffects: {fileID: 3649681661878889828, guid: f2c4ed0d64fa4dd44a60c40d06a1e57c,
+    type: 3}
+  scrapPieces: []
+  maxScrapDropped: 5

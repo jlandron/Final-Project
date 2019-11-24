@@ -54,6 +54,8 @@ MonoBehaviour:
   m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 1
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -206,6 +208,8 @@ MonoBehaviour:
   m_UseNormalMap: 1
   m_LightOrder: 1
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 27.91
   m_PointLightOuterAngle: 122.94
   m_PointLightInnerRadius: 0
@@ -387,7 +391,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.375, y: 1.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -498,7 +502,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.375, y: 1.375}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.375, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -755,6 +759,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: laser
       objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472220, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c10b1630d5621ec48a17223c3c102023, type: 2}
+    - target: {fileID: 1007674794596472220, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f3080141f1f64197825663e067f94f8, type: 2}
     - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}
       propertyPath: ShapeModule.m_Rotation.z
@@ -764,6 +778,36 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472223, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eef67802e062cb4d96825726da00cda, type: 3}

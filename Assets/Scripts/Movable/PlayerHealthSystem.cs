@@ -1,9 +1,9 @@
-﻿using Game.RandomRoom;
+﻿using Game.Core;
+using Game.RandomRoom;
+using Game.Saving;
+using GAME.Movable;
 using UnityEngine;
 using UnityEngine.UI;
-using Game.Saving;
-using Game.Core;
-using GAME.Movable;
 
 namespace Game.Movable
 {
@@ -11,10 +11,10 @@ namespace Game.Movable
     {
         public Text m_HealthDisplay = null;
 
-        private int m_DefaultHealth = 3;
+        private int _defaultHealth = 3;
         private float m_hitTime = 0;
         private float m_timeBetweenHits = 1;
-        private int m_Health = 3;
+        private int _health = 3;
 
 
         [SerializeField]
@@ -42,24 +42,26 @@ namespace Game.Movable
             m_hitTime += Time.deltaTime;
             UpdateUI();
         }
+
         public void IncrementHealth()
         {
-            if (m_Health < m_DefaultHealth)
+            if (_health < _defaultHealth)
             {
-                m_Health++;
+                _health++;
             }
         }
 
         public void DecrementHealth()
         {
-            if (m_Health > 1)
+            if (_health > 1)
             {
-                m_Health--;
+                _health--;
             }
             else
             {
                 Vector2 deathPos = new Vector2(transform.position.x, transform.position.y);
                 FindObjectOfType<Fader>().FadeOutImmeduate();
+                
                 try
                 {
                     gameObject.transform.position = FindObjectOfType<LevelGenerator>().spawnLocation;
@@ -69,7 +71,7 @@ namespace Game.Movable
 
                 }
                 DropScrapOnDeath(deathPos);
-                m_Health = m_DefaultHealth;
+                _health = _defaultHealth;
                 //Rougelike, death means you lose everything current save is overwritten
                 GetComponent<Inventory>().SetAllToZero();
                 StartCoroutine(FindObjectOfType<Fader>().FadeIn(2));
@@ -89,7 +91,7 @@ namespace Game.Movable
         {
             if (m_HealthDisplay != null)
             {
-                switch (m_Health)
+                switch (_health)
                 {
                     case 3:
                         m_HealthDisplay.text = "STABLE";
@@ -114,7 +116,7 @@ namespace Game.Movable
                 if (collision.CompareTag("Enemy"))
                 {
                     m_hitTime = 0;
-                    Camera.main.GetComponent<Shaker>().StartShaking(new Vector2(0.5f, 0.5f), 0.75f);
+                    Camera.main.GetComponent<Shaker>().StartShaking(new Vector2(0.25f, 0.25f), 0.25f);
                     DecrementHealth();
                 }
             }
@@ -133,14 +135,14 @@ namespace Game.Movable
 
         public object CaptureState()
         {
-            return new SerializablePlayerHealth(this.m_Health, this.m_DefaultHealth);
+            return new SerializablePlayerHealth(_health, _defaultHealth);
         }
 
         public void RestoreState(object state)
         {
             SerializablePlayerHealth health = (SerializablePlayerHealth)state;
-            this.m_Health = health.currentHealth;
-            this.m_DefaultHealth = health.maxHealth;
+            _health = health.currentHealth;
+            _defaultHealth = health.maxHealth;
         }
     }
 }

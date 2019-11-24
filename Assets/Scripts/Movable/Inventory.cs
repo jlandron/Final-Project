@@ -21,7 +21,12 @@ namespace Game.Movable
 
         public int scrapCount = 0;
 
+        private bool hasLevelKey = false;
+
         public GameObject AttachedBomb;
+
+        public bool HasLevelKey { get => hasLevelKey; private set => hasLevelKey = value; }
+
         //savable object for inventory, any new items should be added to object and ISaveable methods updated
         [System.Serializable]
         internal class SerializableInventory
@@ -86,6 +91,9 @@ namespace Game.Movable
                     {
                         Destroy(collision.gameObject);
                     }
+                    break;
+                case "LevelKey":
+                    HasLevelKey = true;
                     break;
                 case "Scrap":
                     scrapCount++;

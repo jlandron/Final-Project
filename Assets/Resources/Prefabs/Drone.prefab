@@ -136,6 +136,8 @@ MonoBehaviour:
   m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 1
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.17294313
@@ -206,6 +208,8 @@ MonoBehaviour:
   m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 1
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.17294313
@@ -237,6 +241,7 @@ GameObject:
   - component: {fileID: 1956425638}
   - component: {fileID: 1956425639}
   - component: {fileID: 6125862428372370337}
+  - component: {fileID: 6576744224496657085}
   m_Layer: 12
   m_Name: Drone
   m_TagString: Enemy
@@ -304,8 +309,6 @@ MonoBehaviour:
   tetherDistence: 14
   gun: {fileID: 7136811669825183336}
   fireRate: 2
-  m_DefaultHealth: 5
-  m_Health: 0
   hitText: {fileID: 915256174109656348, guid: 0e619df85908fb24c9d66bd0d643765b, type: 3}
   isDead: 0
   aIPath: {fileID: 0}
@@ -315,11 +318,6 @@ MonoBehaviour:
   - Boop
   - BZZZZ
   radius: 20
-  scrapPieces:
-  - {fileID: 474421316458457256, guid: 835de4f7ac270e3418d96722be12e542, type: 3}
-  - {fileID: 7736077009593891779, guid: 6359d494c76395743bc27363e2ac4a5f, type: 3}
-  - {fileID: 8147039999785966944, guid: 26b06dccb4bc4054d8650119cbb74b2d, type: 3}
-  maxScrapDropped: 5
 --- !u!50 &2924409708025956922
 Rigidbody2D:
   serializedVersion: 4
@@ -419,6 +417,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &6576744224496657085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2880285340586514514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d89b866fafe72847b88a5758572bc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartHealth: 4
+  _currentHealth: 0
+  deathParticlesEffects: {fileID: 2643573183702370597, guid: 2cf92db877d7ce9418df5e34a22edf8f,
+    type: 3}
+  scrapPieces:
+  - {fileID: 474421316458457256, guid: 835de4f7ac270e3418d96722be12e542, type: 3}
+  - {fileID: 7736077009593891779, guid: 6359d494c76395743bc27363e2ac4a5f, type: 3}
+  - {fileID: 8147039999785966944, guid: 26b06dccb4bc4054d8650119cbb74b2d, type: 3}
+  maxScrapDropped: 5
 --- !u!1001 &7478645169220024654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,11 +675,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2880285340586514515}
     m_Modifications:
-    - target: {fileID: 1007674794596472221, guid: be847ad1a7769cc4aa3108a1a4e3118f,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemylaser
-      objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472222, guid: be847ad1a7769cc4aa3108a1a4e3118f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -715,6 +729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472221, guid: be847ad1a7769cc4aa3108a1a4e3118f,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemylaser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be847ad1a7769cc4aa3108a1a4e3118f, type: 3}

@@ -5,8 +5,6 @@ namespace Game.Movable
 {
     public class Explosion : MonoBehaviour
     {
-        [SerializeField]
-        private ParticleSystem dirtParticles;
         public AudioClip explosionSound;
         [SerializeField]
         private float areaOfEffect;
@@ -26,14 +24,10 @@ namespace Game.Movable
                 switch (objectsToDamage[i].tag)
                 {
                     case "Tiles":
-                        if (dirtParticles != null)
-                        {
-                            Instantiate(dirtParticles, objectsToDamage[i].transform.position, Quaternion.identity);
-                        }
-                        Destroy(objectsToDamage[i].gameObject);
+                        objectsToDamage[i].GetComponent<HealthBehavior>().DecrementHealth(3);
                         break;
                     case "Enemy":
-                        objectsToDamage[i].GetComponent<EnemyBehavior>().DecrementHealth(3);
+                        objectsToDamage[i].GetComponent<HealthBehavior>().DecrementHealth(3);
                         break;
                     default:
                         break;

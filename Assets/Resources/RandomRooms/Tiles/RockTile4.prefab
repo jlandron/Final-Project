@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6091394240818927853}
   - component: {fileID: 6091394240818927842}
   - component: {fileID: 6091394240818927852}
+  - component: {fileID: 2778345966736537096}
   m_Layer: 11
   m_Name: RockTile4
   m_TagString: Tiles
@@ -108,3 +109,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0516853, y: 0.9914385}
   m_EdgeRadius: 0
+--- !u!114 &2778345966736537096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091394240818927843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d89b866fafe72847b88a5758572bc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartHealth: 3
+  deathParticlesEffects: {fileID: 6644030737375578570, guid: 9735ceacd360e5440aff7c6f61bef3a8,
+    type: 3}
+  scrapPieces: []
+  maxScrapDropped: 5
