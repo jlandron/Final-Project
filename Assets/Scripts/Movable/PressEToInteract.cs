@@ -42,7 +42,7 @@ namespace Game.Movable
             signalMeshRenderer = signal.GetComponent<MeshRenderer>();
             player = FindObjectOfType<Inventory>();
             SetScale(0);
-            wantToShow.gameObject.SetActive(false);
+            wantToShow.text = "";
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -59,6 +59,7 @@ namespace Game.Movable
             {
                 _inRange = false;
                 FadeOut();
+                DeactivateText();
             }
         }
         private void Update()
@@ -66,7 +67,7 @@ namespace Game.Movable
             if (_inRange && Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Showing Text");
-                wantToShow.gameObject.SetActive(true);
+                wantToShow.text = textToShow;
                 if (isLevelEnd)
                 {
                     if (player.HasLevelKey)
@@ -79,12 +80,6 @@ namespace Game.Movable
                     }
                     Invoke("LoadNextLevel", timeToShowText);
                 }
-                else
-                {
-                    wantToShow.text = textToShow;
-                    Invoke("DeactivateText", timeToShowText);
-                }
-                
             }
 
         }
@@ -103,7 +98,7 @@ namespace Game.Movable
             if (wantToShow != null)
             {
                 Debug.Log("Disabling Text");
-                wantToShow.gameObject.SetActive(false);
+                wantToShow.text = "";
             }
         }
 

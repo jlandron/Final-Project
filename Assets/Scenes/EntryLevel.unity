@@ -972,6 +972,11 @@ PrefabInstance:
       propertyPath: data.dataString
       value: UEsDBBQAAAgIAACAn+tFKByZfAIAACYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzoWxDdi4t9YhpId8TEgnF19keY01CMkjyQGS4b93JRtM6fSE2Pf2afftyl+ES9MAs0qvNC8fVQnk+4i4M/k2GsAHONCNkmv+CWfOOy9t7UjUc16p5QrjoUszagdWc/ZDboQjBxhsJa+U3i3LDWTKWIPhigoDCGllXbbE0NeIHPBnnLqUI56ixJ0+8ZQGoxMeGUgLeqBGwSSZx0kY9QnJJJoFUbxIwj5vOgmjNJqm83Q5DhKv0Uom6K6B0jU0SM3iybxXCWNPlNhszwk8xpQQ3PS1EntsvBcZbUyLnSKh5BR79wV2GTXwTW1dodfpz1VlwPbWaHq84xpN7HTJT9U5u6Nm21X3QUXrbormcedCp/r4D2EcerjSavdwvjgM3CW25mz7So+MGnvl/XX4bqg99C7tqdjSQsB7DfJJrbRqZYmg1a1LbQ1Ed8PfS29ZDWw7xLtSb4JtM9h+HnU4SRaLcJrGUzeofnquoZP34pAJviu8r7MusBbK+++XBTTO6hdW71fJ9LoYdSX9NvBGN9c71wP3XBuLUN+ydLUWqtWOSpbeQNdaazOlJehrhQYkFfb4gjr2dqI32P+z7ql7Xv3tPXZ+NTcpPjzwg+AGelH7y+hMrfaPYOrn1gour8Uc8oROZUrKbuPMDery1q2uKINhXpuWl39vGqkWbJYmUbEoklkxj4txGrIpC8oirmZhWiSU+FXkEhul4qWrtPcH5yYHcYlrd/7sjFaaNn77S033K/65U2ZgclmpNdMA8rlTuBQOGi/Bl1ouS44OrcFaLv3EyVdOhGJbKPOLUO47XR6spvmgkpOGfyjrIjnJ/HcmJydy+gNQSwMEFAAACAgAAICf695/g5RsAAAAdwAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSs9BRUEovSizIKAYKGII4pZkpIHa0UppFsomluVGSRZK5SZKpWZKupWGycbJBSpJZmomhZZJ5olIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAgJ/rRSgcmXwCAAAmBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAgJ/r3n+DlGwAAAB3AAAACQAkAAAAAAAAAAAAAADJAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAIADAAAAAA==
       objectReference: {fileID: 0}
+    - target: {fileID: 817205766179876162, guid: 9cf088616845fcd41a0881bbc66da0e7,
+        type: 3}
+      propertyPath: scanOnStartup
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf088616845fcd41a0881bbc66da0e7, type: 3}
 --- !u!114 &268576705 stripped
@@ -5299,6 +5304,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 622802983}
+    - target: {fileID: 1124849791, guid: 5fd136564c100be4c852005dd765054d, type: 3}
+      propertyPath: lookAheadFactor
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd136564c100be4c852005dd765054d, type: 3}
 --- !u!4 &1749165428 stripped
