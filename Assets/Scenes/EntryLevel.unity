@@ -5306,7 +5306,7 @@ PrefabInstance:
       objectReference: {fileID: 622802983}
     - target: {fileID: 1124849791, guid: 5fd136564c100be4c852005dd765054d, type: 3}
       propertyPath: lookAheadFactor
-      value: 1.5
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd136564c100be4c852005dd765054d, type: 3}
