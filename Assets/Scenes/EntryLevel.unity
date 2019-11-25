@@ -4605,7 +4605,7 @@ PrefabInstance:
     - target: {fileID: 3022276532251373607, guid: 6f1b4e21ffcbef149b90848da1170be3,
         type: 3}
       propertyPath: textToShow
-      value: DU-5K were built to destroy DR-0n3 bots that opeprate the mines that
+      value: DU-5K were built to destroy DR-0n3 bots that operate the mines that
         are destroying the world.
       objectReference: {fileID: 0}
     - target: {fileID: 3022276532251373607, guid: 6f1b4e21ffcbef149b90848da1170be3,
