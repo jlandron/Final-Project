@@ -8,6 +8,11 @@ namespace Game.Movable
 {
     public class Inventory : MonoBehaviour, ISaveable
     {
+        public AudioClip flareSound;
+        public AudioClip scrapSound;
+        public AudioClip itemSound;
+        private AudioSource audioData;
+
         public Text FlareDisplay = null;
         public Text ScrapDisplay = null;
 
@@ -39,6 +44,12 @@ namespace Game.Movable
                 scrapCount = scrap;
             }
         }
+
+        void Start()
+        {
+            audioData = GetComponent<AudioSource>();
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -59,6 +70,8 @@ namespace Game.Movable
                 if (FlareCount > 0)
                 {
                     Instantiate(FlarePrefab, transform.position, Quaternion.identity);
+                    audioData.clip = flareSound;
+                    audioData.Play();
                     DecrementFlareCount();
                 }
             }
@@ -83,12 +96,16 @@ namespace Game.Movable
                 case "BombPickup":
                     if (IncrementBombCount())
                     {
+                        audioData.clip = itemSound;
+                        audioData.Play();
                         Destroy(collision.gameObject);
                     }
                     break;
                 case "FlarePickup":
                     if (IncrementFlareCount())
                     {
+                        audioData.clip = itemSound;
+                        audioData.Play();
                         Destroy(collision.gameObject);
                     }
                     break;
@@ -98,6 +115,8 @@ namespace Game.Movable
                 case "Scrap":
                     scrapCount++;
                     Destroy(collision.gameObject);
+                    audioData.clip = scrapSound;
+                    audioData.Play();
                     break;
                 default:
                     break;
