@@ -13,6 +13,7 @@ namespace Game.Movable {
         private Light2D _light;
         private bool _charging;
         private bool _batteryCharged = true;
+        private bool lightIsActive = true;
 
         public bool BatteryCharged { get => _batteryCharged; private set => _batteryCharged = value; }
 
@@ -22,23 +23,41 @@ namespace Game.Movable {
         }
 
         void Update( ) {
-            
-            if( currentCharge > 0f && !_charging ) {
-                _light.gameObject.SetActive( true );
-                currentCharge -= .05f;
-                BatteryCharged = true;
-            } else if( _charging ) {
-                _light.gameObject.SetActive( true );
-                if( currentCharge < maxCharge ) {
-                    currentCharge += 0.5f;
-                }
-                BatteryCharged = true;
-            } else {
-                BatteryCharged = false;
-                _light.gameObject.SetActive( false );
+
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                lightIsActive = !lightIsActive;
             }
-            battery.SetLevel( currentCharge / maxCharge );
-            SetIntensity( );
+            if (!lightIsActive)
+            {
+                _light.enabled = false;
+            }
+            else
+            {
+                _light.enabled = true;
+                if (currentCharge > 0f && !_charging)
+                {
+                    _light.gameObject.SetActive(true);
+                    currentCharge -= .05f;
+                    BatteryCharged = true;
+                }
+                else if (_charging)
+                {
+                    _light.gameObject.SetActive(true);
+                    if (currentCharge < maxCharge)
+                    {
+                        currentCharge += 0.5f;
+                    }
+                    BatteryCharged = true;
+                }
+                else
+                {
+                    BatteryCharged = false;
+                    _light.gameObject.SetActive(false);
+                }
+                battery.SetLevel(currentCharge / maxCharge);
+                SetIntensity();
+            }
         }
 
         private void SetIntensity( ) {
