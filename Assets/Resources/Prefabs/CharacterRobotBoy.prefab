@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4608bce5add934e864893f57c0bd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserSound: {fileID: 8300000, guid: dd8a66399318cd643b16f9d0ce6c0846, type: 3}
+  laserSound: {fileID: 8300000, guid: a0f5ef9bc22e0c94eb46e739bd52f50e, type: 3}
   gun: {fileID: 3870162963905489527}
   fireRate: 1
 --- !u!114 &7075476386591172279
@@ -777,6 +777,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6885970412118226503}
     m_Modifications:
+    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: m_Name
+      value: laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472222, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,16 +841,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
-        type: 3}
-      propertyPath: m_Name
-      value: laser
-      objectReference: {fileID: 0}
-    - target: {fileID: 1007674794596472221, guid: 0eef67802e062cb4d96825726da00cda,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1007674794596472220, guid: 0eef67802e062cb4d96825726da00cda,
         type: 3}
