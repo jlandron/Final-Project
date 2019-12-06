@@ -37,8 +37,11 @@ namespace Game.Movable
         private Inventory player;
         private string alternateTextToShow = "You must find the key to move on";
 
+        private AudioSource audioData;
+
         private void Start()
         {
+            audioData = GetComponent<AudioSource>();
             signalMeshRenderer = signal.GetComponent<MeshRenderer>();
             player = FindObjectOfType<Inventory>();
             SetScale(0);
@@ -66,6 +69,7 @@ namespace Game.Movable
         {
             if (_inRange && Input.GetKeyDown(KeyCode.E))
             {
+                audioData.Play();
                 Debug.Log("Showing Text");
                 wantToShow.text = textToShow;
                 if (isLevelEnd)
