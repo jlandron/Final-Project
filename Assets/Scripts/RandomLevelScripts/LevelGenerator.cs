@@ -12,7 +12,6 @@ namespace Game.RandomRoom
         public Transform[] startingPositions;
         public GameObject[] rooms; // index 0 --> closed, index 1 --> LR, index 2 --> LRB, index 3 --> LRT, index 4 --> LRBT
         public GameObject entryRoom;
-        public GameObject[] backgrounds;
         public GameObject endPoint;
         public Vector2 spawnLocation;
 

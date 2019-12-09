@@ -14,8 +14,6 @@ namespace Game.RandomRoom {
                     int randRoom = Random.Range( 0, levelGenerator.rooms.Length );
                     Instantiate( levelGenerator.rooms[ randRoom ], transform.position, Quaternion.identity );
                 }
-                int randBackgound = Random.Range( 0, levelGenerator.backgrounds.Length );
-                Instantiate( levelGenerator.backgrounds[ randBackgound ], transform.position, Quaternion.identity );
                 _hasSpawned = true;
             }
 
