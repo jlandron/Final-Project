@@ -54,11 +54,11 @@ namespace Game.Movable
             if (other.CompareTag("PlayerGun"))
             {
                 Debug.Log("Particle Collision");
-                DecrementHealth();
+                DecrementHealth(other.transform.parent.GetComponent<WeaponControl>().damage);
             }
         }
 
-        public void DecrementHealth(int amount = 1)
+        public void DecrementHealth(float amount)
         {
             if (m_hitTime > m_timeBetweenHits)
             {

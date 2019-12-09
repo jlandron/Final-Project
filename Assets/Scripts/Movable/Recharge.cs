@@ -6,7 +6,7 @@ namespace Game.Movable {
         [SerializeField]
         private DrainingBattery battery;
         [SerializeField]
-        private float maxCharge = 100;
+        public float maxCharge = 100;
         [SerializeField]
         private float currentCharge;
         [SerializeField]

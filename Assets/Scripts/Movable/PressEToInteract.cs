@@ -36,8 +36,16 @@ namespace Game.Movable
         bool loading = false;
         private Inventory player;
         private string alternateTextToShow = "You must find the key to move on";
+        private string insufficientScrapTextToShow = "Insufficient Scrap";
 
         private AudioSource audioData;
+
+        [SerializeField]
+        public bool flareUpgrade = false;
+        [SerializeField]
+        public bool batteryUpgrade = false;
+        [SerializeField]
+        public bool weaponUpgrade = false;
 
         private void Start()
         {
@@ -72,7 +80,51 @@ namespace Game.Movable
                 audioData.Play();
                 Debug.Log("Showing Text");
                 wantToShow.text = textToShow;
-                if (isLevelEnd)
+                if(flareUpgrade)
+                {
+                    if(player.scrapCount >= 20)
+                    {
+                        wantToShow.text = "Flare Capacity Increased + 3";
+                        player.FlareMax += 3;
+                        player.FlareCount = player.FlareMax;
+
+                        player.scrapCount -= 20;
+                    }
+                    else
+                    {
+                        wantToShow.text = insufficientScrapTextToShow;
+                    }
+                }
+                else if (batteryUpgrade)
+                {
+                    if (player.scrapCount >= 10)
+                    {
+                        wantToShow.text = "Battery Capacity Increased + 10%";
+                        player.gameObject.GetComponent<Recharge>().maxCharge += 10;
+
+                        player.scrapCount -= 10;
+
+                    }
+                    else
+                    {
+                        wantToShow.text = insufficientScrapTextToShow;
+                    }
+                }
+                else if (weaponUpgrade)
+                {
+                    if (player.scrapCount >= 30)
+                    {
+                        wantToShow.text = "Weapon Damage Increased";
+                        player.gameObject.GetComponent<WeaponControl>().damage += 1f;
+
+                        player.scrapCount -= 30;
+                    }
+                    else
+                    {
+                        wantToShow.text = insufficientScrapTextToShow;
+                    }
+                }
+                else if (isLevelEnd)
                 {
                     if (player.HasLevelKey)
                     {

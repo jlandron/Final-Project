@@ -128,11 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1717276010126264622, guid: b4e6b229f903f4449bd2443b0267661e,
-        type: 3}
-      propertyPath: m_Name
-      value: __app
-      objectReference: {fileID: 0}
     - target: {fileID: 1717276010126264609, guid: b4e6b229f903f4449bd2443b0267661e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,6 +182,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717276010126264622, guid: b4e6b229f903f4449bd2443b0267661e,
+        type: 3}
+      propertyPath: m_Name
+      value: __app
       objectReference: {fileID: 0}
     - target: {fileID: 1717276010126264623, guid: b4e6b229f903f4449bd2443b0267661e,
         type: 3}
@@ -775,6 +775,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 160847489}
     m_Modifications:
+    - target: {fileID: 1992463798011621116, guid: f3a2553a196f84146a74a09bb022d665,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6dff2a58fadfbdd43b65915bced75f3c,
+        type: 3}
     - target: {fileID: 1992463798455234377, guid: f3a2553a196f84146a74a09bb022d665,
         type: 3}
       propertyPath: m_Name
@@ -895,12 +901,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 442
       objectReference: {fileID: 0}
-    - target: {fileID: 1992463798011621116, guid: f3a2553a196f84146a74a09bb022d665,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6dff2a58fadfbdd43b65915bced75f3c,
-        type: 3}
     - target: {fileID: 1992463799557523447, guid: f3a2553a196f84146a74a09bb022d665,
         type: 3}
       propertyPath: m_Text
@@ -1163,6 +1163,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 160847489}
     m_Modifications:
+    - target: {fileID: 1992463798011621116, guid: f3a2553a196f84146a74a09bb022d665,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 806de9ef9d6fc044390a164d9c034fc1,
+        type: 3}
     - target: {fileID: 1992463798455234377, guid: f3a2553a196f84146a74a09bb022d665,
         type: 3}
       propertyPath: m_Name
@@ -1273,12 +1279,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1992463798011621116, guid: f3a2553a196f84146a74a09bb022d665,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 806de9ef9d6fc044390a164d9c034fc1,
-        type: 3}
     - target: {fileID: 1992463799557523447, guid: f3a2553a196f84146a74a09bb022d665,
         type: 3}
       propertyPath: m_Text
@@ -1494,8 +1494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 635, y: -279}
-  m_SizeDelta: {x: 577.5, y: 108.4}
+  m_AnchoredPosition: {x: 635, y: -288}
+  m_SizeDelta: {x: 611.2, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1247440012
 MonoBehaviour:
@@ -1528,7 +1528,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press SPACE to Jump
+  m_Text: Press SPACE to Jump     Hold SPACE to Use Jetpack
 --- !u!222 &1247440013
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1835,11 +1835,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9148744008264894783, guid: d4930f423f091704fb2d1f93145cab6b,
-        type: 3}
-      propertyPath: m_Name
-      value: MenuBackgroundWithLight
-      objectReference: {fileID: 0}
     - target: {fileID: 9148744008264894777, guid: d4930f423f091704fb2d1f93145cab6b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1894,6 +1889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148744008264894783, guid: d4930f423f091704fb2d1f93145cab6b,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuBackgroundWithLight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4930f423f091704fb2d1f93145cab6b, type: 3}
@@ -1978,6 +1978,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 160847489}
     m_Modifications:
+    - target: {fileID: 1992463798011621116, guid: f3a2553a196f84146a74a09bb022d665,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a4df32d784a20342890ffd5a0a6e70d,
+        type: 3}
     - target: {fileID: 1992463798455234377, guid: f3a2553a196f84146a74a09bb022d665,
         type: 3}
       propertyPath: m_Name
@@ -2088,12 +2094,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1992463798011621116, guid: f3a2553a196f84146a74a09bb022d665,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3a4df32d784a20342890ffd5a0a6e70d,
-        type: 3}
     - target: {fileID: 1992463799557523447, guid: f3a2553a196f84146a74a09bb022d665,
         type: 3}
       propertyPath: m_Text

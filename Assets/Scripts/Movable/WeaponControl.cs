@@ -7,6 +7,8 @@ namespace Game.Movable
         public AudioClip laserSound;
         private AudioSource audioData;
 
+        public float damage = 1f;
+
         [SerializeField]
         private ParticleSystem gun;
         [SerializeField]
