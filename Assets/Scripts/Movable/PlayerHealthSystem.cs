@@ -116,7 +116,6 @@ namespace Game.Movable
                 if (collision.CompareTag("Enemy"))
                 {
                     m_hitTime = 0;
-                    Camera.main.GetComponent<Shaker>().StartShaking(new Vector2(0.25f, 0.25f), 0.25f);
                     DecrementHealth();
                 }
             }
