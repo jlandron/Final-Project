@@ -2029,7 +2029,7 @@ PrefabInstance:
     - target: {fileID: 7075476386591172279, guid: 5747476c963dd2a41941f5e4070b81af,
         type: 3}
       propertyPath: scrapCount
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 622802985, guid: 5747476c963dd2a41941f5e4070b81af, type: 3}
