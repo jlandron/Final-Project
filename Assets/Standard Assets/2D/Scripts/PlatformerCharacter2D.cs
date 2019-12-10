@@ -70,7 +70,7 @@ namespace UnityStandardAssets._2D
                 // Jetpack
                 if (!m_Grounded && Input.GetButton("Jump"))
                 {
-                    m_Rigidbody2D.AddForce(new Vector2(0f, 80f));
+                    m_Rigidbody2D.AddForce(new Vector2(0f, 2500f * Time.deltaTime));
                     Afterburner.SetActive(true);
                     if (!audioData.isPlaying)
                     {
