@@ -70,7 +70,7 @@ namespace UnityStandardAssets._2D
                 // Jetpack
                 if (!m_Grounded && Input.GetButton("Jump"))
                 {
-                    m_Rigidbody2D.AddForce(new Vector2(0f, 45f));
+                    m_Rigidbody2D.AddForce(new Vector2(0f, 80f));
                     Afterburner.SetActive(true);
                     if (!audioData.isPlaying)
                     {
@@ -81,9 +81,9 @@ namespace UnityStandardAssets._2D
                 if(m_Rigidbody2D.velocity.y > 0)
                 {
                     // Limit upward velocity
-                    if (m_Rigidbody2D.velocity.magnitude > 10f)
+                    if (m_Rigidbody2D.velocity.magnitude > 40f)
                     {
-                        m_Rigidbody2D.velocity = m_Rigidbody2D.velocity.normalized * 10f;
+                        m_Rigidbody2D.velocity = m_Rigidbody2D.velocity.normalized * 40f;
                     }
                 }
             }
